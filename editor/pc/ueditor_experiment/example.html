@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>    
+    <script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor.all.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="jquery.js"> </script>
+	<script type="text/javascript" charset="utf-8" src="base64.js"> </script>  
+	<script type="text/javascript" charset="utf-8" src="fnTool.js"> </script>  
+	</head>
+<body scroll="no" style="margin:2px; margin-top:0">
+<div>
+    <script id="editor" type="text/plain" style="width:1024px;height:500px"></script>
+</div>
+</body>
+
+<script type="text/javascript">
+	$(function() {
+		document.oncontextmenu = function() {
+			return false;
+		};
+		window.onhelp = function() {
+			return false
+		};
+		$(document).on('keydown',
+		function(event) {
+			if (event.which == 116 || event.which == 123 || event.ctrlKey && event.which == 82 || event.which == 122 || event.ctrlKey && event.which == 78) {
+				window.event.which = 0;
+				window.event.returnValue = false;
+				return false;
+			}
+		});
+		
+	});
+	
+   var ue = UE.getEditor('editor');
+   ue.ready(function(){
+		window.external.editorLoadSuccess();
+		var isSelectionChange;
+	    ue.addListener('contentchange',function(){
+	        var range=ue.selection.getRange(),parent=range.startContainer.parentNode;
+	        if(parent&&parent.nodeName.toLowerCase()=='p'&&parent.getAttribute('key')){
+	        	var str=parent.innerHTML.replace(/&nbsp;|<br\s*\/?>/img,'');
+	        	if(str.length>1)return;
+	        	parent.removeAttribute('key');
+	        }
+	        if(parent&&parent.nodeName.toLowerCase()=='a'&&!parent.getAttribute('key')){	        	
+	        	var str=parent.innerHTML.replace(/&nbsp;|<br\s*\/?>/img,'');
+	        	if(str.length>1)return;
+	        	parent.parentNode.removeChild(parent);
+	        }
+	    });
+	    $(ue.document).bind('click',function(e){
+		    var target=$(e.target);
+		    if(target.is('img')){
+		    	var oRange = ue.body.createTextRange();		
+				oRange.moveToElementText(target.get(0));		
+				oRange.select();
+		    }   
+		});			
+		$(ue.document).bind('dblclick',function(e){
+			var target=$(e.target);
+			if(target.is('form')&&target.hasClass('inputwrap')){
+		        try{
+		            window.external.openfile(target.parent().attr('key'));
+		        }catch(e){           
+		        }        
+		    }
+		    if(target.is('img')){
+		        try{
+		            window.external.openfile(target.attr('key'));
+		        }catch(e){           
+		        }        
+		    }		    
+		});
+		$(ue.document).bind('keydown',function(e){
+			var target=$(e.target);
+			if((e.ctrlKey&&e.which==88)||e.which==46){
+				ue.execCommand('adjust_paste',ue.selection.getRange());
+				function del_Paste_Keynode(){
+			        var paste_keynode=$(ue.body).find('span.paste_keynode');
+			        if(paste_keynode.length>0){
+			            for(var i=0;i<paste_keynode.length;i++){
+			                var paste_node=paste_keynode.eq(i);
+			                paste_node.html(paste_node.html().replace(/\u200D/g,''));
+			                !paste_node.html()?paste_node.remove():paste_node.children().first().unwrap();
+			            }
+			        }
+			    }
+				del_Paste_Keynode();
+				//ue.execCommand('del_Paste_Keynode');
+			}  
+		});
+		//屏蔽右键菜单
+		$(ue.document).bind('contextmenu',function(){
+			return false;
+		});	
+		
+   });
+
+   var _util=new _tool.Util();
+   function getContent() {
+		var _cont = ue.getContent();
+		return _util.getCont(_cont);
+   }  
+   function setContent(isAppendTo) { 
+		_util.setCont(isAppendTo);
+   }   
+   function setHeight(height) {
+		ue.setHeight(height);
+   }   
+   function setWidth(width) {
+        var doc=document;
+        doc.getElementById('editor').style.width=doc.getElementById('edui1').style.width=doc.getElementById('edui1_iframeholder').style.width=ue.body.style.width=width+'px';        
+   }   
+   function getDescription(num) {
+		var _cont = ue.getContent();
+		return _util.getDescription(_cont, num);
+   }   
+   function insertFile(key,src,type) {
+		_util.insertfile(key,src,type);
+   }
+   function onPaste(filesrc) {
+		_util.insertfile(filesrc,true);
+   }   
+   function insertImage(imgsrc, imgw, imgh) {
+		ue.execCommand('insertImage', {"floatStyle":"left","height":imgh,"src":imgsrc,"title":"img","width":imgw});
+   }
+   function undoRedoReset(){
+   		_util.reset();
+   } 
+   function getFocus(){
+   		ue.focus();
+   }
+   function loadBuild(key,src){
+   		_util.loadBuild(key,src);
+   }
+   //setContent('点击录音文件听我介绍~<ln-audio key="37c7a8ba-5194-4719-888c-47098cf6391c"></ln-audio><ln-photo key="63981b87-a262-4a40-bdc7-05ca0611ac8d"></ln-photo><ln-photo key="09c5e8e6-87a8-43f4-ba46-1c758beaa955"></ln-photo><ln-photo key="e862f425-0504-45c0-a290-463f06545f63"></ln-photo><ln-photo key="894c7f8d-6d48-4b22-8cc3-2062db0d6621"></ln-photo><ln-text key="59175a19-f0c0-498e-87bc-2f74cb656316">Super Note，我们在等你！</ln-text>');
+//console.log(_util);
+   //console.log(_util.getCont('点击录音文件听我介绍~<img key="37c7a8ba-5194-4719-888c-47098cf6391c" type="audio" src="window.external.getSrcByKey(key)"><img key="63981b87-a262-4a40-bdc7-05ca0611ac8d" type="photo" src="window.external.getSrcByKey(key)"><img key="09c5e8e6-87a8-43f4-ba46-1c758beaa955" type="photo" src="window.external.getSrcByKey(key)"><img key="e862f425-0504-45c0-a290-463f06545f63" type="photo" src="window.external.getSrcByKey(key)"><img key="894c7f8d-6d48-4b22-8cc3-2062db0d6621" width="100" height="100" type="photo" src="window.external.getSrcByKey(key)"><p key="59175a19-f0c0-498e-87bc-2f74cb656316">Super Note，我们在等你！</p> '))
+   // setContent('点击录音文件听我介绍~<ln-audio key="37c7a8ba-5194-4719-888c-47098cf6391c"></ln-audio><ln-photo key="63981b87-a262-4a40-bdc7-05ca0611ac8d"></ln-photo><ln-photo key="09c5e8e6-87a8-43f4-ba46-1c758beaa955"></ln-photo><ln-photo key="e862f425-0504-45c0-a290-463f06545f63"></ln-photo><ln-photo key="894c7f8d-6d48-4b22-8cc3-2062db0d6621"></ln-photo><ln-text key="59175a19-f0c0-498e-87bc-2f74cb656316"></ln-text>')
+   //console.log(getContent());
+</script>
+</html>

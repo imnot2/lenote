@@ -1,0 +1,325 @@
+html, body{
+    font-size: 18px;
+    color: #333;
+    margin:0;
+}
+body{
+    position: relative;
+    font: 12px/1.5 Tahoma,"Microsoft Yahei","微软雅黑",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+p{
+    margin:10px 0;
+}
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+.c{
+    clear: both;
+    height: 0;
+    font-size:0;
+}
+.noselect{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ellipsis{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+.loading{
+    background: url("images/loading.gif") no-repeat 0 0 transparent;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -16px;
+}
+#flashcontent{
+    position: absolute;
+}
+@-webkit-keyframes shine-timeline{
+    from{-webkit-box-shadow: 0 0 5px #bbb;}
+    50%{-webkit-box-shadow: 0 0 10px #3F7ADF;}
+    to{-webkit-box-shadow: 0 0 5px #bbb;}
+}
+.light-timeline{
+    border-radius: 2em;
+    -webkit-animation-name: shine-timeline;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#main{
+    padding: 5px 5px 5px 10px;
+    word-wrap:break-word;
+}
+
+/*附件*/
+.attachment{
+    display: block;
+    /*margin: 12px 5px;*/
+    margin: 5px 0;
+    width: 270px;
+    height: 75px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    font: 14px/1.5 "Microsoft Yahei","微软雅黑",Helvetica,Tahoma,Arial,sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -moz-tap-highlight-color: rgba(255, 255, 255, 0);
+    -o-tap-highlight-color: rgba(255, 255, 255, 0);
+    -ms-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    background: url("attachment/default.png") no-repeat 0 2px #ECF0F3;
+    /*box-shadow:0 4px 8px #606569;
+    -webkit-box-shadow:0 4px 8px #606569;
+    -moz-box-shadow:0 4px 8px #606569;*/
+    text-decoration: none;
+    word-wrap: normal;
+    word-break: keep-all;
+}
+.attachment:hover, .attachment:active{
+    text-decoration: none;
+}
+.attachment .info{
+    display: block;
+    width: 190px;
+    padding-left: 70px;
+    overflow: hidden;
+    position: relative;
+    top: 15px;
+    line-height: 22px;
+}
+.attachment .info .title, .attachment .info .desc, .attachment .info .title .name{
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: normal;
+    word-break: keep-all;
+}
+.attachment .info .title{
+    width: 190px;
+    height: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.attachment .info .title .name, .attachment .info .title .ext{
+    float: left;
+    display: block;
+}
+.attachment .info .title .name{
+    max-width: 152px;
+}
+.attachment .info .desc{
+    width: 190px;
+    color: #999;
+    font-size: 12px;
+}
+.attachment .info .desc .size{
+    padding-left: 10px;
+}
+.attachment.apk{
+    background-image: url("attachment/apk.png");
+}
+.attachment.doc, .attachment.docx{
+    background-image: url("attachment/doc.png");
+}
+.attachment.jpg, .attachment.jpeg, .attachment.bmp, .attachment.gif, .attachment.png, .attachment.ico,
+.attachment.pcx, .attachment.tiff, .attachment.dxf, .attachment.exif{
+    background-image: url("attachment/image.png");
+}
+.attachment.ppt, .attachment.pptx{
+    background-image: url("attachment/ppt.png");
+}
+.attachment.xls, .attachment.xlsx{
+    background-image: url("attachment/xls.png");
+}
+.attachment.rar{
+    background-image: url("attachment/rar.png");
+}
+.attachment.zip{
+    background-image: url("attachment/zip.png");
+}
+.attachment.kk, .attachment.amr, .attachment.aac, .attachment.ogg, .attachment.mid, .attachment.ape,
+.attachment.mp3, .attachment.wav, .attachment.wma, .attachment.midi{
+    background-image: url("attachment/audio.png");
+}
+.attachment.avi, .attachment.rmvb, .attachment.mkv, .attachment.wmv, .attachment.flv, .attachment.mp4, .attachment.rm, .attachment.f4v,
+.attachment.mov, .attachment.mpeg, .attachment._3gp{
+    background-image: url("attachment/video.png");
+}
+.attachment.pdf{
+    background-image: url("attachment/pdf.png");
+}
+.attachment.txt, .attachment.rtf, .attachment.jnt{
+    background-image: url("attachment/txt.png");
+}
+
+/*MIX BEGIN*/
+/* audio */
+.audio-play{
+    width: 280px;
+    height: 92px;
+    background: url("images/play.png") no-repeat 0 0 transparent;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -moz-tap-highlight-color: rgba(255, 255, 255, 0);
+    -o-tap-highlight-color: rgba(255, 255, 255, 0);
+    -ms-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    word-wrap: normal;
+    word-break: keep-all;
+}
+.audio-play.active{
+    background-image: url("images/pause.png");
+}
+.audio-play .info{
+    position: absolute;
+    left: 75px;
+    top: 25px;
+    line-height: 18px;
+    font-size: 12px;
+}
+.audio-play .info .title, .audio-play .info .desc{
+    width: 140px;
+    overflow: hidden;
+    word-wrap: normal;
+    word-break: keep-all;
+}
+.audio-play .info .title{
+    color: #000;
+    font-weight: bold;
+    white-space: nowrap;
+    height: 22px;
+    overflow: hidden;
+}
+.audio-play .info .title .name, .audio-play .info .title .ext{
+    float: left;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.audio-play .info .title .name{
+    max-width: 100px;
+}
+.audio-play .info .desc{
+    color: #999;
+}
+.audio-play .info .desc span{
+    margin-right: 20px;
+}
+
+/*Picture*/
+img.photo{
+    /*border: 1px solid #F1EDED;
+    padding: 5px;
+    box-shadow:2px 2px 5px #CAC1C1;
+    -webkit-box-shadow: 2px 2px 5px #CAC1C1;
+    -moz-box-shadow:2px 2px 5px #CAC1C1;*/
+    padding-left: 5px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* mix */
+.mix{
+    /*margin: 20px 0;*/
+    margin: 8px 0;
+    display: block;
+    background: url("images/line_bg02.png") repeat-y 20px 0 transparent;
+    position: relative;
+}
+.mix p{
+    margin:10px 0;
+}
+.mix .top-bg, .mix .bottom-bg{
+    width: 5px;
+    height: 5px;
+    position: relative;
+    left: 20px;
+}
+.mix .top-bg{
+    background: url("images/line_bg01.png") no-repeat 0 0 transparent;
+    top: -5px;
+}
+.mix .bottom-bg{
+    background: url("images/line_bg03.png") no-repeat 0 0 transparent;
+    bottom: -5px;
+}
+.mix .item{
+    margin: 10px 0;
+    *position: relative;
+}
+.mix .timeline{
+    float:left;
+    width:42px;
+    height:42px;
+    position: relative;
+}
+.mix .timeline .icon{
+    width:42px;
+    height:42px;
+    position: relative;
+    top: -5px;
+    border: 0 none;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    /*background-color: #bbb;*/
+    border-radius: 2em;
+}
+.mix  .item.text .content{
+    margin-left: 12px;
+}
+.mix  .item.audio .timeline .icon{
+    top: 22px;
+}
+.mix  .item.audio .audio-play{
+    /*margin-bottom: 15px;*/
+}
+.mix .content{
+    float: left;
+    margin-left: 10px;
+}
+.mix  .item.audio .content{
+    *position: relative;
+}
+.mix .item.photo .content{
+    margin-left: 10px;
+}
+.mix  .plain{
+    margin-left: 45px;
+}
+.mix img.photo{
+    margin-top: 0;
+    display:block;
+}

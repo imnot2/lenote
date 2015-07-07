@@ -1,0 +1,162 @@
+body{padding:0;margin:0;font-size: 12px}
+a{border:0 none;display: block;}
+dl,dt,dd{margin:0;padding: 0}
+.header{
+	
+	background-color:#122b4b;
+	background-repeat: repeat-x;
+	height: 114px;
+	min-width: 1120px;
+}
+.content{
+	background-image: url(../images/bg.png);
+	_background-image: url(../images/bg4ie6.png);
+	background-repeat: repeat-x;
+	height: 749px;
+	padding-top:37px;
+	position: relative;
+	min-width: 1120px;
+}
+.content .content-wrap,
+.header .wrap,
+.footer .wrap{
+	width: 1120px;
+}
+.content .content-wrap{
+	background-image: url(../images/home-bg.png);
+	_background-image: url(../images/home-bg4ie6.png);
+	height: 559px;
+	margin:0 auto;
+	position: relative;
+	background-position: 14px 0;
+}
+.footer{
+	background-image: url(../images/footer-bg.png);
+	_background-image: url(../images/footer-bg4ie6.png);
+	background-repeat: repeat-x;
+	height: 140px;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	right: 0;
+}
+.header .wrap,
+.footer .wrap{
+	margin:0 auto;
+	position: relative;
+}
+.header .logo{
+	background-image: url(../images/logo.png);
+	_background-image: url(../images/logo4ie6.png);
+	width:351px;
+	height: 89px;
+	position: absolute;
+	top:15px;
+}
+.header .signin,
+.header .register{
+	width:129px;
+	height:50px;
+	position: absolute;
+	top:36px;
+}
+.header .signin{
+	background-image: url(../images/sign-in.png);
+	_background-image: url(../images/sign-in4ie6.png);
+	right: 170px;
+}
+.header .register{
+	background-image: url(../images/register.png);
+	_background-image: url(../images/register4ie6.png);
+	right: 20px;
+}
+.content .download-android,
+.content .download-pad{
+	width:122px;
+	height:43px;
+	position: absolute;
+	left: 39px;
+}
+.content .download-android{
+	top:35px;
+	background-image: url(../images/download-android.png);
+	_background-image: url(../images/download-android4ie6.png);
+}
+.content .download-pad{
+	top:87px;
+	background-image: url(../images/download-pad.png);
+	_background-image: url(../images/download-pad4ie6.png);
+}
+.footer .wrap {
+	height: 100%;
+}
+.footer .wrap dl{
+	bottom: 10px;
+	position: absolute;
+	color:#333;
+}
+.footer .wrap dl dt,
+.footer .wrap dl dd{
+	float: left;
+}
+.footer .wrap dl dt{
+	padding-right:10px;
+}
+.footer .wrap dl a{
+	color:#999;
+	padding:0 5px 0 5px;
+}
+.d1,.d2,
+.d3,.d4,
+.d5,.d6{
+	position: absolute;
+	display: none;
+}
+.d1{
+	background-image: url(../images/d1.png);
+	_background-image: url(../images/d14ie6.png);
+	height: 140px;
+	width: 205px;
+	top: 232px;
+	left: 115px;
+}
+.d2{
+	background-image: url(../images/d2.png);
+	_background-image: url(../images/d24ie6.png);
+	height: 144px;
+	width: 190px;
+	top: 286px;
+	left: 857px;
+}
+.d3{
+	background-image: url(../images/d3.png);
+	_background-image: url(../images/d34ie6.png);
+	height: 110px;
+	width: 71px;
+	top: 327px;
+left: 642px;
+}
+.d4{
+	background-image: url(../images/d4.png);
+	_background-image: url(../images/d44ie6.png);
+	height: 138px;
+	width: 174px;
+	top: 298px;
+	left: 265px;
+}
+.d5{
+	background-image: url(../images/d5.png);
+	_background-image: url(../images/d54ie6.png);
+	height: 92px;
+	width: 203px;
+	top: 349px;
+	left: 685px;
+}
+.d6{
+	background-image: url(../images/d6.png);
+	_background-image: url(../images/d64ie6.png);
+	height: 367px;
+	width: 620px;
+	top: 0px;
+	left: 172px;
+}

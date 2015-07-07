@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9; IE=EmulateIE10" />-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/parser.js"></script>
+    <script type="text/javascript" src="js/observer.js"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script type="text/javascript">
+        window.api = {
+            show: function(html){
+                $('#main').html(analyze.resolve(html));
+                supernote_audio.init();
+            },
+            start: function(id){
+                supernote_audio.start(id);
+            },
+            pause: function(id){
+                supernote_audio.pause(id);
+            },
+            stop: function(id){
+                supernote_audio.stop(id);
+            },
+            slideTo: function(id, second, speed){
+                supernote_audio.slideTo(id, second, speed);
+            }
+        };
+        
+        $(function(){
+            document.oncontextmenu = function(){return false;};
+            window.onhelp = function(){return false};
+            $(document).on('keydown', function(event){
+                if(event.which == 116 || event.which == 123 || event.ctrlKey && event.which == 82 || event.which == 122 || event.ctrlKey && event.which == 78){
+                    window.event.keyCode = 0;
+                    window.event.returnValue = false;
+                    return false;
+                }
+            });
+        });
+        
+        function showHTML(html){
+            $('#main').html(analyze.resolve(html));
+            supernote_audio.init();
+        }
+        
+        function audio_start(id){
+            supernote_audio.start(id);
+        }
+        
+        function audio_pause(id){
+            supernote_audio.pause(id);
+        }
+        
+        function audio_stop(id){
+            supernote_audio.stop(id);
+        }
+        
+        function mix_slideTo(id, second, speed){
+            supernote_audio.slideTo(id, second, speed);
+        }
+        
+        window.View = {
+            getResInfo: function(key){
+                var resources = {
+                    '8dc1b3fd4385c9eccc42839aa964f2a7': {fUrl: 'demo/3.jpg', startTime: 14, mkey: '5eaf8dd758e28cadc41c5087abb76c0a', width: 800, height: 400},
+                    'b631df327b339503127a17dd2077cc50': {fUrl: 'demo/13.jpg'},
+                    '6df405cd926230aca1d0c9741e58497b': {fSize: '18.08KB', fName: '9af053e7-79d3-42ed-a764-c9fe6b0e7564_2.mp3', fSuffix: '.mp3', fullTime: '85000', startTime: 0, mkey: '5eaf8dd758e28cadc41c5087abb76c0a', fUrl: 'demo/2.mp3'},
+                    '8dc1b3fd4385c9ec8042839aa964f2a7': {fUrl: 'demo/5.jpg', startTime: 10, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    'b47211282f4dc1207d05b5fe5955d1f2': {fUrl: 'demo/2.jpg', startTime: 11, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    'f243194194fce8401fbdd6429ec9df88': {fSize: '5.2MB', fName: '3.wav', fullTime: '12000', fUrl: 'demo/3.wav', fSuffix:'.wav'},
+                    'c1c17d0677e876ff70f7f8c629b76097': {fUrl: 'demo/6.jpg', startTime: 13, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    '2964bf210f5292005638bb144a375834': {fUrl: 'demo/7.jpg', startTime: 15, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    'ef357822d446913a220c003070adbcdc': {fUrl: 'demo/8.jpg', startTime: 18, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    '60b916f379f9210340ea28348bc6caaf': {startTime: 20, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    '6db292dd99272a33b72319c063953956': {startTime: 22, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    '356017851a32fb144a1dc1d6bd0d6db0': {fUrl: 'demo/9.jpg', startTime: 25, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    '4866c3f671484f022e982139a3a85ef4': {fUrl: 'demo/10.jpg', startTime: 5, mkey: 'ce6e7ab569ba0e82438fa4fc482d8fd7'},
+                    '22a478c612801ae22bc46536826a64e7': {startTime: 28, mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    'e0cbe91a4ebc797f7930fb06fe8ff9f0': {fSize: '8.08KB', fName: 'huawei.wav', fSuffix:'.wav', fullTime: '21000', startTime: 0, mkey: 'ce6e7ab569ba0e82438fa4fc482d8fd7', fUrl: 'http://localhost/111.wav'},
+                    '0d28ae36be26a842fd59d48334c5ec92': {fUrl: 'demo/11.jpg', startTime: 2, mkey: 'ce6e7ab569ba0e82438fa4fc482d8fd7'},
+                    '002ca4935e8d4d1bbc22d98df8c5ff41': {fUrl: 'demo/12.jpeg', startTime: 10, mkey: 'ce6e7ab569ba0e82438fa4fc482d8fd7'},
+                    '8fba69ce7b92c0cd891318f0220cda68': {fUrl: 'demo/4.jpg'},
+                    '8fba69ce7b9cc0cd891318f0220cda68': {fName: 'test1234567891011121321415.docx', fSize: '11B', fTime: '1384431517000', fUrl: 'files/test.docx', fSuffix: '.docx'},
+                    '8fba69ce7b9ccddd891318f0220cda68': {fName: 'test2.rar',fSize: '12.02KB', fTime: '1280977330000', fUrl: 'files/test2.docx', fSuffix: '.rar', mkey: '5eaf8dd758e28cadc41c5087abb76c0a'},
+                    'c48095c72ae69df61fddaf35ec3679b8': {mkey: 'aa76e387f307c923a3c2e41cd0664f01'},
+                    '01a30e6fc8de8302b3d8fcd0715844c4': {mkey: 'aa76e387f307c923a3c2e41cd0664f01'},
+                    '15ad311a-fe67-4927-a34e-5a8760fa5211': {},
+                    '15ad311a-fe67-1927-a34e-5a8760fa5211': {},
+                    '15ad311a-fe67-2927-a34e-5a8760fa5211': {mkey: '5eaf8dd758e28cadc41c5087abb76c0a'}
+                };
+                return resources[key];
+            }
+        };
+        
+        window.onload = function(){
+            //普通元素
+            var html = ['<p>柳州市公安局110报警服务台接到女青年小覃打来的求助电话称，她在柳石路的住所内，将丈夫打得头破血流。</p>'];
+            html.push('<ln-photo key="b631df327b339503127a17dd2077cc50"></ln-photo>');
+            html.push('<div style="color: #999;">原来，丈夫用仿真钻戒作为七夕节礼物送给她，她感觉受骗，一怒之下动了手。</div>');
+            //mix0单种类元素
+            html.push('<ln-photo key="c48095c72ae69df61fddaf35ec3679b8"></ln-photo>');
+            html.push('撤王金平党籍是沉重选择 不知其嫁女儿');
+            html.push('<ln-text key="15ad311a-fe67-4927-a34e-5a8760fa5211"><br></ln-text>');
+            html.push('<ln-photo key="01a30e6fc8de8302b3d8fcd0715844c4"></ln-photo>');
+            
+            //附件元素
+            html.push('<ln-attachment key="8fba69ce7b9cc0cd891318f0220cda68"></ln-attachment>&nbsp;  <br>');
+            html.push('<ln-attachment key="8fba69ce7b9ccddd891318f0220cda68"></ln-attachment>&nbsp;&nbsp;<br>');
+            
+            //mix1元素
+            html.push('<ln-photo key="8dc1b3fd4385c9eccc42839aa964f2a7"></ln-photo>');
+            html.push('<ln-photo key="8dc1b3fd4385c9eccc42839aa964f2a7"></ln-photo>');
+            html.push('<ln-audio key="6df405cd926230aca1d0c9741e58497b"></ln-audio>');
+            html.push('<ln-photo key="8dc1b3fd4385c9ec8042839aa964f2a7"></ln-photo>');
+            html.push('胡锦涛回安徽祭祖');
+            //mix1元素嵌套在普通元素里
+            html.push('<div style="color:#666;">他守候在会所的大门外，蹑足于宾馆的走廊中，等待“致命一击”的证据出现。');
+            html.push('<ln-photo key="b47211282f4dc1207d05b5fe5955d1f2"></ln-photo>');
+            html.push('为了取证，他穷尽所能：假装随从，核对账单；购买装置，秘拍偷欢</div>');
+            html.push('<ln-text key="15ad311a-fe67-1927-a34e-5a8760fa5211"><br/></ln-text>');
+            html.push('<ln-text key="15ad311a-fe67-2927-a34e-5a8760fa5211"><br></ln-text>');
+            html.push('<ln-attachment key="8fba69ce7b9cc0cd891318f0220cda68"></ln-attachment>');
+            //mix元素之间的普通元素
+            html.push('<p>当然也有人骂他偷拍隐私<ln-audio key="f243194194fce8401fbdd6429ec9df88"></ln-audio>行事下作。</p>');
+            //mix1元素
+            html.push('<ln-photo key="c1c17d0677e876ff70f7f8c629b76097"></ln-photo>');
+            html.push('<ln-photo key="2964bf210f5292005638bb144a375834"></ln-photo>');
+            html.push('<ln-photo key="2964bf210f5292005638bb144a375834"></ln-photo>');
+            html.push('<ln-photo key="ef357822d446913a220c003070adbcdc"></ln-photo><br/>1');
+            html.push('<ln-text key="60b916f379f9210340ea28348bc6caaf">媒体称美国可能大范围调查投行雇佣中国官二代</ln-text>');
+            //mix1元素中嵌套mix1元素
+            html.push('<ln-text key="6db292dd99272a33b72319c063953956">色盲司机无证醉驾闯红灯');
+            html.push('<ln-photo key="356017851a32fb144a1dc1d6bd0d6db0"></ln-photo>');
+            html.push('猫咪偷吃狗粮装死</ln-text>');
+            
+            //mix1元素嵌套mix2元素
+            html.push('<ln-photo key="4866c3f671484f022e982139a3a85ef4"></ln-photo>');
+            html.push('<ln-text key="22a478c612801ae22bc46536826a64e7">男士们经常被问到的一个问题是“老婆和妈妈同时掉水里，你先救谁？”</ln-text>');
+            
+            //普通元素
+            html.push('<div style="color:red;">如今，这个问题有了升级版“<ln-text key="60b916f379f9210380ea28348bc6caaf">老婆和狗狗<ln-text key="abc">同<ln-photo key="c1c17d0677e876ff70f7f8c629b76097"></ln-photo>时</ln-text>掉水里，你先救谁？</ln-text>”</div>');
+            //mix2
+            html.push('<ln-audio key="e0cbe91a4ebc797f7930fb06fe8ff9f0"></ln-audio>');
+            html.push('<span>如今，南非男子格兰汉姆·安利用实际行动给出了答案：先救狗狗。</span>')
+            html.push('<ln-photo key="0d28ae36be26a842fd59d48334c5ec92"></ln-photo>');
+            html.push('<ln-photo key="002ca4935e8d4d1bbc22d98df8c5ff41"></ln-photo>');
+            
+            //不包含在mix中的普通元素
+            html.push('周永康6月23日视察齐鲁石化');
+            html.push('<div>微博上，法官买春事件正持续发酵。有人评价老陈具备典型的“上海人特点”——思维缜密、耐心细致、隐忍数月、出手刁钻……，有人夸他以专业的手法完成了一场“基督山式的复仇”</div>')
+            html.push('<ln-photo key="8fba69ce7b92c0cd891318f0220cda68"></ln-photo>');
+            
+            //声明自定义标签
+            //document.createElement('lnphoto');
+            //document.createElement('lnaudio');
+            //document.createElement('lnattachment');
+            //document.createElement('lntext');
+            //document.createElement('lnvideo');
+            
+            //添加原始的字符串的查看
+            $('#main').replaceWith('<div id="source" style="border: 2px solid #A59E9E;margin: 10px;padding: 10px;color: #999;">' + html.join('') + '</div><div id="main"></div>');
+            
+            //html = ['<LN-PHOTO key="0d28ae36be26a842fd59d48334c5ec92"></LN-PHOTO><br><ln-audio key="e0cbe91a4ebc797f7930fb06fe8ff9f0"></ln-audio><p>&nbsp; <br></p><p><ln-photo key="c1c17d0677e876ff70f7f8c629b76097" _data="dGl0bGU9JnF1b3Q7TGlnaHRob3VzZS5qcGcmcXVvdDsg"></ln-photo></p>'];
+            //html = ['<ln-audio key="6df405cd926230aca1d0c9741e58497b"></ln-audio>&nbsp; '+"\n\r"+'<br/><ln-attachment key="8fba69ce7b9cc0cd891318f0220cda68"></ln-attachment>&nbsp; <br/><ln-photo key="c1c17d0677e876ff70f7f8c629b76097"></ln-photo><ln-text key="60b916f379f9210340ea28348bc6caaf">vhnbb</ln-text><br/>'];
+            $('#main').html(analyze.resolve(html.join(''), true));
+            supernote_audio.init();
+        };
+    </script>
+  </body>
+</html>

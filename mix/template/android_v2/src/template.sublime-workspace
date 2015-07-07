@@ -1,0 +1,1737 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"child",
+				"children"
+			],
+			[
+				"cli",
+				"clientResourceID"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"f",
+				"font-weight"
+			],
+			[
+				"content",
+				"contents"
+			],
+			[
+				"style",
+				"styleType"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"uti",
+				"utils"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"re",
+				"resources"
+			],
+			[
+				"we",
+				"weather_wray"
+			],
+			[
+				"parent",
+				"parent"
+			],
+			[
+				"con",
+				"control"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"get",
+				"getStyle"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ban",
+				"background-image"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"set",
+				"setCursor"
+			],
+			[
+				"setEnd",
+				"setEnd"
+			],
+			[
+				"createTe",
+				"createTextNode"
+			],
+			[
+				"fill",
+				"fillChar"
+			],
+			[
+				"end",
+				"endContainer"
+			],
+			[
+				"find",
+				"findLastNode"
+			],
+			[
+				"pub",
+				"publicLink"
+			],
+			[
+				"preLis",
+				"preList"
+			],
+			[
+				"isE",
+				"isEmptyBlock"
+			],
+			[
+				"getEl",
+				"getElementsByTagName"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"is",
+				"isMarked"
+			],
+			[
+				"TR",
+				"true"
+			],
+			[
+				"NO",
+				"noteID"
+			],
+			[
+				"TAG",
+				"tagID"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"e",
+				"editor"
+			],
+			[
+				"removeA",
+				"removeAttr"
+			],
+			[
+				"sp",
+				"split"
+			],
+			[
+				"attr",
+				"attrs"
+			],
+			[
+				"nodety",
+				"nodeType"
+			],
+			[
+				"inn",
+				"innerText"
+			],
+			[
+				"par",
+				"parentNode"
+			],
+			[
+				"remov",
+				"remove"
+			],
+			[
+				"star",
+				"startContainer"
+			],
+			[
+				"previ",
+				"previousSibling"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"fir",
+				"firstChild"
+			],
+			[
+				"next",
+				"nextList"
+			],
+			[
+				"pr",
+				"previousSibling"
+			],
+			[
+				"nex",
+				"nextSibling"
+			],
+			[
+				"setE",
+				"setEndAfter"
+			],
+			[
+				"node",
+				"nodeName"
+			],
+			[
+				"col",
+				"collapse"
+			],
+			[
+				"clone",
+				"cloneNode"
+			],
+			[
+				"first",
+				"firstChild"
+			],
+			[
+				"last",
+				"lastChild"
+			],
+			[
+				"_tag",
+				"_tags"
+			],
+			[
+				"name",
+				"names"
+			],
+			[
+				"_t",
+				"_util"
+			],
+			[
+				"w",
+				"wrap"
+			],
+			[
+				"vi",
+				"viewWidth"
+			],
+			[
+				"img",
+				"imgmaxw"
+			],
+			[
+				"ad",
+				"adjustImages"
+			],
+			[
+				"que",
+				"querySelectorAll"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"has",
+				"hasContent"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"fi",
+				"fireEvent"
+			],
+			[
+				"fn",
+				"fnName"
+			],
+			[
+				"JustifyR",
+				"右对齐：JustifyRight"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"I",
+				"I18N"
+			],
+			[
+				"rep",
+				"replace"
+			],
+			[
+				"css",
+				"csstext"
+			],
+			[
+				"line",
+				"lineheight"
+			],
+			[
+				"inser",
+				"insertBefore"
+			],
+			[
+				"clon",
+				"cloneNode"
+			],
+			[
+				"qu",
+				"querySelector"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"coll",
+				"collapsed"
+			],
+			[
+				"key",
+				"keyBoradIsShow"
+			],
+			[
+				"ke",
+				"keyBoradIsShow"
+			],
+			[
+				"ind",
+				"indentcount"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"start",
+				"start"
+			],
+			[
+				"v",
+				"viewh"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"src",
+				"scrolltop"
+			],
+			[
+				"in",
+				"insertNode"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"getA",
+				"getAttribute"
+			],
+			[
+				"cre",
+				"createBookmark"
+			],
+			[
+				"remo",
+				"removeChild"
+			],
+			[
+				"rang",
+				"range"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"inset",
+				"insertBefore"
+			],
+			[
+				"remove",
+				"removeChild"
+			],
+			[
+				"crea",
+				"createRange"
+			],
+			[
+				"setA",
+				"setAttribute"
+			],
+			[
+				"mouse",
+				"mouseup"
+			],
+			[
+				"query",
+				"querySelectorAll"
+			],
+			[
+				"tem",
+				"tempArr"
+			],
+			[
+				"getR",
+				"getRange"
+			],
+			[
+				"hasC",
+				"hasContents"
+			],
+			[
+				"createT",
+				"createTextNode"
+			],
+			[
+				"u200",
+				"u200B"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"las",
+				"lastChild"
+			],
+			[
+				"sta",
+				"startContainer"
+			],
+			[
+				"mor",
+				"morebox"
+			],
+			[
+				"pre",
+				"preW"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"bl",
+				"block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "tpl/diary_02/index.html",
+			"settings":
+			{
+				"buffer_size": 1649,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/template/controls.js",
+			"settings":
+			{
+				"buffer_size": 11418,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/template.js",
+			"settings":
+			{
+				"buffer_size": 8501,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 91 files for \"正在加载\"\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template.js:\n   77          },\n   78          \n   79:         //模板加载后，使模板可视并隐藏正在加载的提示\n   80          isVisible: function(isDisplay){\n   81              function handle(){\n\n1 match in 1 file\n\n\nSearching 91 files for \"正在加载\"\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template.js:\n   77          },\n   78          \n   79:         //模板加载后，使模板可视并隐藏正在加载的提示\n   80          isVisible: function(isDisplay){\n   81              function handle(){\n\n1 match in 1 file\n\n\nSearching 91 files for \"图片加载中\"\n\n0 matches across 0 files\n\n\nSearching 91 files for \"加载中\"\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\i18n\\zh-cn.js:\n    1  i18n.defined('zh-cn', {\n    2:     'loading': '加载中..',\n    3      'Range_Overflow': '最多只能输入%d个字符',\n    4      'place_loading': '地理位置获取中..'\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\layout.js:\n   53                  var div = document.createElement('div');\n   54                  div.className = 'loading light-timeline';\n   55:                 //div.innerHTML = '加载中..';\n   56                  div.innerHTML = i18n.getValue('loading');\n   57                  document.body.appendChild(div);\n\n2 matches across 2 files\n\n\nSearching 91 files for \"loading\"\n\nE:\\mix\\template\\android_v2\\src\\assets\\css\\template.css:\n   38      -webkit-animation-iteration-count: infinite;\n   39  }\n   40: .loading{\n   41:     /*background: url(\"assets/images/loading.gif\") no-repeat 0 0 transparent;\n   42      width: 32px;\n   43      height: 32px;\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template.js:\n   35                      edit_hover: 'default_hover.png',\n   36                      view: 'image.png',\n   37:                     load: 'loading.png' \n   38                  },\n   39                  mood: imagePath + '/mood',\n   ..\n   82                  isDisplay = helper.isTrue(isDisplay);\n   83                  if(isDisplay){\n   84:                     template.layout.showLoading(isDisplay);\n   85                      helper.setVisible(tplWrapper, isDisplay);\n   86                      //触发需要初始化数据的控件\n   ..\n   88                  }else{\n   89                      helper.setVisible(tplWrapper, isDisplay);\n   90:                     template.layout.showLoading(isDisplay);\n   91                      document.body.scrollTop = 0;\n   92                  }\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\controls\\place.js:\n   90                  if(!content){\n   91                      this.state(false, control);\n   92:                     //this.set(control, {content: i18n.getValue('place_loading'), ignoreCheck: true});\n   93                      try{\n   94                          client.getGeoLocation(controls.getID(control));\n   ..\n  117                      if(result !== control.innerHTML) this.set(control, {content: result, ignoreCheck: true});\n  118                  }\n  119:                 //return result === i18n.getValue('place_loading')? '' : result;\n  120                  return result === placeholder? '' : result;\n  121              },\n  ...\n  136                          \n  137                          var placeholder = template.helper.getPlaceholder(control);\n  138:                         //if(!control.hasAttribute(this.initContentProp) && data.content !== i18n.getValue('place_loading')){\n  139                          if(!control.hasAttribute(this.initContentProp) && data.content !== placeholder){\n  140                              control.classList.add('active');\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\i18n\\en-us.js:\n    1  i18n.defined('en-us', {\n    2:     'loading': 'Loading..',\n    3      'Range_Overflow': 'Enter up to %d characters',\n    4:     'place_loading': 'Loading..'\n    5  });\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\i18n\\zh-cn.js:\n    1  i18n.defined('zh-cn', {\n    2:     'loading': '加载中..',\n    3      'Range_Overflow': '最多只能输入%d个字符',\n    4:     'place_loading': '地理位置获取中..'\n    5  });\n\nE:\\mix\\template\\android_v2\\src\\assets\\js\\template\\layout.js:\n   18          //初始化\n   19          init: function(){\n   20:             this.showLoading();\n   21              \n   22              //获取设备宽度用于计算各控件的大小自动适配屏幕\n   ..\n   44          \n   45          //显示加载界面 @isRemove 是否隐藏加载界面\n   46:         showLoading: function(isRemove){\n   47:             var loading = document.querySelector('.loading');\n   48              if(isRemove){\n   49:                 if(loading) loading.parentNode.removeChild(loading);\n   50                  document.body.removeAttribute('style');\n   51:             }else if(!loading){\n   52                  document.body.setAttribute('style','background:none;');\n   53                  var div = document.createElement('div');\n   54:                 div.className = 'loading light-timeline';\n   55                  //div.innerHTML = '加载中..';\n   56:                 div.innerHTML = i18n.getValue('loading');\n   57                  document.body.appendChild(div);\n   58              }\n   ..\n   62          //html页面文字国际化\n   63          translate: function(){\n   64:             var items = document.querySelectorAll('span[_t]'); //<span _t=\"loading..\"></span>\n   65              for(var i = 0; i < items.length; i++){\n   66                  var item = items[i], t = helper.trim(item.getAttribute('_t'));\n\nE:\\mix\\template\\android_v2\\src\\tpl\\diary_01\\index.html:\n   36                              num:'streetNumber' \n   37                          -->\n   38:                         <div maxlength=\"50\" _type=\"place\" format=\"st:co\" id=\"place\" placeholder=\"place_loading\"></div>\n   39                          <div style=\"clear:both;\"></div>\n   40                          <div _type=\"text\" id=\"text\" class=\"text\" placeholder=\"something\"></div>\n\n26 matches across 7 files\n\n\nSearching 92 files for \"loading.png\"\n\n0 matches across 0 files\n",
+			"settings":
+			{
+				"buffer_size": 5817,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "assets/js/template/layout.js",
+			"settings":
+			{
+				"buffer_size": 3014,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/template/controls/text.js",
+			"settings":
+			{
+				"buffer_size": 8661,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/helper.js",
+			"settings":
+			{
+				"buffer_size": 19812,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tpl/diary_02/css/main.css",
+			"settings":
+			{
+				"buffer_size": 1965,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tpl/diary_02/js/main.js",
+			"settings":
+			{
+				"buffer_size": 6445,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "assets/js/template/controls/place.js",
+			"settings":
+			{
+				"buffer_size": 6688,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/template/controls/image.js",
+			"settings":
+			{
+				"buffer_size": 5034,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/template/controls/contacts.js",
+			"settings":
+			{
+				"buffer_size": 4170,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/nodejs/Nodejs.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Bookmarks: Clear All"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/mix/template/android_v2/src",
+		"/E/mix/template/android_v2/src/assets",
+		"/E/mix/template/android_v2/src/assets/js",
+		"/E/mix/template/android_v2/src/assets/js/template",
+		"/E/mix/template/android_v2/src/assets/js/template/controls",
+		"/E/mix/template/android_v2/src/tpl",
+		"/E/mix/template/android_v2/src/tpl/diary_02",
+		"/E/mix/template/android_v2/src/tpl/diary_02/css",
+		"/E/mix/template/android_v2/src/tpl/diary_02/js",
+		"/E/mix/template/android_v2/src/tpl/travel_01",
+		"/E/mix/template/android_v2/src/tpl/travel_01/css"
+	],
+	"file_history":
+	[
+		"/C/Users/user/Desktop/快速排序.js",
+		"/D/Program Files/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Nodejs/Nodejs.sublime-settings",
+		"/D/Program Files/Sublime Text 3/Data/Packages/nodejs/Nodejs.sublime-build",
+		"/C/Users/user/Desktop/A",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/E/website/v2/assets/js/ueditor/dialogs/video/video.css",
+		"/E/website/v2/assets/css/main.css",
+		"/D/Program Files/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/E/website/v2/notes/index.html",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/ueditor.all.js",
+		"/E/doingInMySelf/js/edit_api.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/index.html",
+		"/E/wap/site/static/js/model/user.js",
+		"/D/Program Files/SuperNotes/resource/ueditor/ueditor.all.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/weather.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/css/main.css",
+		"/E/mix/template/android_v2/src/tpl/diary_01/js/main.js",
+		"/E/mix/template/android_v2/src/assets/js/template/layout.js",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/fnTool.js",
+		"/E/editor/IOS/noteEditorV3.0/edit/js/controls.js",
+		"/E/website/v2/assets/js/source/dom.js",
+		"/E/editor/IOS/3.0 todo/edit/index_edite.html",
+		"/E/mix/template/android_v2/src/assets/js/template/api.js",
+		"/E/mix/template/android_v2/src/assets/js/template/client.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/place.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls.js",
+		"/E/mix/template/android_v2/src/assets/js/template.js",
+		"/E/mix/template/android_v2/src/tpl/diary_02/css/main.css",
+		"/E/mix/template/android_v2/src/tpl/diary_02/js/message.js",
+		"/E/mix/template/android_v2/src/tpl/diary_02/index.html",
+		"/E/mix/template/android_v2/src/tpl/diary_02/js/main.js",
+		"/E/editor/IOS/3.0 todo/edit/js/controls.js",
+		"/E/editor/IOS/3.0 todo/edit/dist/utils_v3.js",
+		"/E/mix/template/android_v2/src/assets/js/lenote.js",
+		"/E/website/v2/assets/js/source/stats/avatar.js",
+		"/E/website/v2/assets/js/source/stats/trackDownload.js",
+		"/E/website/v2/assets/js/source/analyze.js",
+		"/E/mix/template/android_v2/src/all.js",
+		"/E/wap/site/knode/index.js",
+		"/E/wap/site/static/js/view/create.js",
+		"/E/wap/site/static/js/helper.js",
+		"/E/website/v2/suggest.html",
+		"/E/wap/site/static/js/require.js",
+		"/E/wap/site/static/js/lib/domReady.js",
+		"/E/wap/site/static/js/app.js",
+		"/E/wap/site/static/js/collection/note.js",
+		"/E/wap/site/static/js/model/note.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/image.js",
+		"/E/mix/template/android_v2/src/tpl/travel_01/css/main.css",
+		"/E/wap/site/static/js/lib/backbone.js",
+		"/C/Users/user/Downloads/jquery-1.11.1.js",
+		"/C/Users/user/Desktop/index_edite.html",
+		"/E/wap/site/node_modules/koa-views/index.js",
+		"/E/wap/site/static/scss/top.scss",
+		"/E/wap/site/static/scss/body.scss",
+		"/E/website/v2/assets/js/all.js",
+		"/E/wap/site/knode/k/dispatch.js",
+		"/E/wap/site/knode/k/lib/couchbase-co.js",
+		"/E/wap/site/node_modules/koa/lib/context.js",
+		"/E/wap/site/node_modules/koa/node_modules/delegates/index.js",
+		"/E/wap/site/node_modules/koa/lib/application.js",
+		"/E/wap/site/model/collect.js",
+		"/E/wap/site/assist/mobile-usage/index.js",
+		"/E/wap/site/knode/k/router.js",
+		"/E/wap/site/model/db.js",
+		"/E/wap/site/assist/apache.txt",
+		"/E/wap/site/app.js",
+		"/E/wap/site/config/config.development.js",
+		"/C/Users/user/Downloads/hammer.js-master/hammer.js",
+		"/E/mix/template/android_v2/src/assets/js/lib/hammer.js",
+		"/E/mix/template/android_v2/src/assets/js/helper.js",
+		"/E/mix/template/android_v2/src/assets/js/template/helper.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/time.js",
+		"/E/mix/template/android_v2/src/tpl/travel_01/js/main.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/js/message.js",
+		"/E/editor/IOS/noteEditorV2.0/edit/js/utils_V2.js",
+		"/C/Users/user/Documents/Tencent Files/510036379/FileRecv/trigger.html",
+		"/E/wap/site/static/js/main.js",
+		"/E/wap/site/static/js/router.js",
+		"/E/website/v2/assets/js/source/lenote.js",
+		"/E/website/v2/assets/js/source/view.js",
+		"/E/wap/site/views/note/index.html",
+		"/E/wap/site/views/index.html",
+		"/E/editor/IOS/noteEditorV3.0/edit/dist/utils_v3.js",
+		"/E/website/v2/assets/js/source/user.js",
+		"/E/website/v2/assets/js/source/main.js",
+		"/E/wap/site/model/getClients.js",
+		"/E/wap/site/knode/k/functions/helper.js",
+		"/E/wap/site/knode/k/functions/import.js",
+		"/E/wap/site/knode/k/functions/mobile-detect.js",
+		"/E/wap/site/knode/k/functions/date.js",
+		"/E/express/microblog/app.js",
+		"/E/express/microblog/routes/index.js",
+		"/E/express/microblog/routes/user.js",
+		"/E/wap/site/views/particle/header.jade",
+		"/E/wap/site/views/particle/footer.jade",
+		"/E/wap/site/views/note/show.html",
+		"/E/wap/site/node_modules/koa/node_modules/accepts/index.js",
+		"/E/wap/site/node_modules/koa-conditional-get/index.js",
+		"/E/editor/pc/ueditor-src/_src/core/domUtils.js",
+		"/E/editor/pc/ueditor-src/_src/plugins/list.js",
+		"/C/Users/user/Downloads/ueditor1_4_2-src/_src/core/Range.js",
+		"/C/Users/user/Downloads/ueditor1_4_2-src/_src/core/domUtils.js",
+		"/E/wap/site/node_modules/jade/index.js",
+		"/E/wap/tasks/build.js",
+		"/E/editor/pc/ueditor-src/_src/plugins/keystrokes.js",
+		"/E/editor/IOS/noteEditorV3.0/edit/js/listener.js",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/ueditor.all (2).js",
+		"/D/lenote-test/lenote-experiment-lan-revision_1937-2014_04_10/resource/ueditor/ueditor.all.js",
+		"/D/lenote-test/lenote-internal-r2827-2014_05_26/resource/ueditor/ueditor.all.js",
+		"/D/lenote-test/lenote-editor-r2633-2014_05_13/resource/ueditor/ueditor.all.js",
+		"/D/Program Files/SuperNotes/resource/ueditor_MASTER/ueditor.all.js",
+		"/E/website/v2/assets/js/source/observer.js",
+		"/E/website/v2/assets/js/source/migrate.js",
+		"/E/website/v2/assets/js/ueditor/dialogs/image/image.js",
+		"/E/website/v2/assets/js/parser/parser_api.js",
+		"/E/website/v2/assets/js/parser/parser.js",
+		"/E/website/v2/assets/js/source/share.js",
+		"/E/website/v2/assets/js/source/event.js",
+		"/E/website/v2/assets/js/ueditor/dialogs/attachment/attachment.html",
+		"/E/website/v2/assets/js/source/tag.js",
+		"/C/Users/user/Downloads/ueditor1_4_2-src/_src/plugins/list.js",
+		"/E/PC_UEDITOR/master/ueditor/fnTool.js",
+		"/D/Program Files/SuperNotes/resource/ueditor_MASTER/listener.js",
+		"/E/website/v2/assets/js/source/lib/jquery.js",
+		"/E/website/v2/assets/js/parser/swfobject.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"E:\\mix\\template\\android_v2\\src",
+			"E:\\mix\\template\\android_v2\\src\\assets",
+			"E:\\mix\\template\\android_v2\\src",
+			"E:\\website\\v2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"loading.png",
+			"setLoadImage",
+			"loading",
+			"加载中",
+			"图片加载中",
+			"正在加载",
+			"preventDefault",
+			"console.log",
+			"config.",
+			"template._options.path['image']",
+			"hammer.min.map",
+			"image.png",
+			"images/image",
+			"textarea",
+			"encopy",
+			"缩略图",
+			"},\n",
+			"find",
+			"unix",
+			"fromCharCode",
+			"kk",
+			"listStyle",
+			"getThumb",
+			"缩略图",
+			"getNoteStyle",
+			"isAudioNote",
+			"showAudio",
+			"startOrPause",
+			"updateIconState",
+			"cleanIconState",
+			"try",
+			"showAudio",
+			"supernote_audio",
+			"\"imgBtn\"",
+			"showAudio",
+			"init:",
+			"init",
+			"supernote_audio",
+			"parser_api",
+			"parse_api",
+			"getPlayer",
+			"supernote-audio",
+			"home",
+			"showAudio",
+			"api",
+			"setDisabled",
+			"disabled",
+			"-disabled",
+			"disabled",
+			"edui-state-disabled",
+			"insertBtn",
+			"getLast",
+			"showAudio",
+			"attachments:",
+			"tags_decode",
+			"getNoteStyle",
+			"getLast",
+			"home.js",
+			"behavior",
+			".kk",
+			"ending",
+			".kk",
+			"showAudio",
+			"autoset",
+			"summ",
+			"disc",
+			"desc",
+			"todos",
+			"setHeight",
+			"calElemHeight",
+			"note-detail",
+			"setHeight",
+			"editor.event.resize",
+			"resize",
+			"point.slider",
+			"resize",
+			"direct",
+			"todos",
+			"keyID",
+			"var n",
+			"cleanUI:",
+			"insertBtn:",
+			"insertBtn",
+			"note.get(",
+			"note.getAll(",
+			"summary",
+			"list_callback",
+			"note.getAll(",
+			"getAll(",
+			"getNote",
+			"backDetail",
+			"insertBtn",
+			"insertBtn:",
+			"new-note",
+			"resize",
+			"insertDate",
+			"note.show(",
+			"note.get(",
+			"node.get(",
+			"   ",
+			"//检查附件是否存在于正文内容中",
+			"clientResourceId",
+			"//检查附件是否存在于正文内容中",
+			"serverUrl",
+			"“",
+			"$('#sidebar-c .note-editor').data('attachments')",
+			"readonly",
+			"id",
+			"dispatchEvent",
+			"bindEvent",
+			"on:",
+			"click:",
+			"click",
+			"onclick",
+			"click:",
+			"trigger",
+			"triggerEvents",
+			"trigger",
+			"insertTitleInput",
+			"标题",
+			"note.get(",
+			"note:",
+			"document.createElement",
+			"checkImportStatus",
+			"importStatus",
+			"checkImportStatus",
+			"importStatus",
+			"/import"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"image.path.",
+			"config.url",
+			"config.src",
+			":",
+			"\"",
+			"keyID",
+			"shareToken",
+			"shareKey",
+			"shareToken",
+			"fs24",
+			"fs18",
+			"key=\"aaaaaaaaaaa\"",
+			"",
+			".1.102",
+			"/v2/",
+			".src",
+			"utils",
+			"le.options",
+			"",
+			" || ",
+			"||",
+			" == ",
+			"==",
+			" && ",
+			"&&",
+			"place",
+			"resize(",
+			"this.isIE()",
+			"",
+			"cSelect",
+			"changeSelection",
+			"change_Selection",
+			"change_Range",
+			"aaaaaa",
+			"	",
+			"",
+			"document",
+			"Util.setAttr",
+			"document",
+			"editor",
+			"Util",
+			"Util.findParent",
+			"Util.getTarget",
+			"Util",
+			"Util.insertWhiteNode",
+			"Util",
+			"Util.addWrap",
+			"Util.select",
+			"document",
+			"size",
+			"time",
+			"title",
+			"",
+			"attach_delete_wrap",
+			"_parse",
+			"_util",
+			"updateAudioStatus",
+			"undateAudioStatus",
+			"which",
+			"$tag",
+			"_tag.attr",
+			"getAttr",
+			"tag.getAttribute",
+			"this.unTags",
+			"_tool.ue",
+			"sTime",
+			"",
+			"resource.fullTime",
+			"resource.fName",
+			"resource.fSize",
+			"resource.fSuffix",
+			"resource.fUrl",
+			"oUtil",
+			"editor",
+			"util"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "E:\\mix\\template\\android_v2\\src"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "tpl/diary_02/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1014,
+								1014
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/js/template/controls.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								870,
+								870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 250.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "assets/js/template.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1667,
+								1667
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5817,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										150,
+										154
+									],
+									[
+										414,
+										418
+									],
+									[
+										736,
+										739
+									],
+									[
+										1061,
+										1064
+									],
+									[
+										1380,
+										1387
+									],
+									[
+										1433,
+										1440
+									],
+									[
+										1718,
+										1725
+									],
+									[
+										1960,
+										1967
+									],
+									[
+										2243,
+										2250
+									],
+									[
+										2584,
+										2591
+									],
+									[
+										2939,
+										2946
+									],
+									[
+										3301,
+										3308
+									],
+									[
+										3602,
+										3609
+									],
+									[
+										3613,
+										3620
+									],
+									[
+										3701,
+										3708
+									],
+									[
+										3712,
+										3719
+									],
+									[
+										3843,
+										3850
+									],
+									[
+										3924,
+										3931
+									],
+									[
+										4101,
+										4108
+									],
+									[
+										4260,
+										4267
+									],
+									[
+										4312,
+										4319
+									],
+									[
+										4347,
+										4354
+									],
+									[
+										4417,
+										4424
+									],
+									[
+										4426,
+										4433
+									],
+									[
+										4457,
+										4464
+									],
+									[
+										4559,
+										4566
+									],
+									[
+										4752,
+										4759
+									],
+									[
+										4881,
+										4888
+									],
+									[
+										5123,
+										5130
+									],
+									[
+										5543,
+										5550
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								1855,
+								1855
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 6,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 969.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "assets/js/template/layout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2363,
+								2363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 728.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/js/template/controls/text.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8661,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								742,
+								742
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/js/helper.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								206,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tpl/diary_02/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								299,
+								299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "tpl/diary_02/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "assets/js/template/controls/place.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4492,
+								4492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1824.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "assets/js/template/controls/image.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2007,
+								2007
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "assets/js/template/controls/contacts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 53.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"i",
+				"E:\\website\\v2\\assets\\js\\ueditor\\dialogs\\image\\image.js"
+			],
+			[
+				"u",
+				"E:\\website\\v2\\assets\\js\\source\\utils.js"
+			],
+			[
+				"",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"all",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"li",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"l",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"fn",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\fnTool.js"
+			],
+			[
+				"ex",
+				"D:\\lenote-test\\lenote-internal-r2827-2014_05_26\\resource\\ueditor\\example.html"
+			],
+			[
+				"v",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\js\\utils_V3.js"
+			],
+			[
+				"a",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\css\\api.css"
+			],
+			[
+				"in",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\index_edite.html"
+			],
+			[
+				"vn",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\js\\I18N.js"
+			],
+			[
+				"confi",
+				"D:\\lenote-test\\lenote-experiment-revision_1977-2014_04_14\\resource\\ueditor\\ueditor.config.js"
+			],
+			[
+				"co",
+				"E:\\mix\\template\\android\\js\\core.js"
+			],
+			[
+				"f",
+				"D:\\lenote-test\\lenote-experiment-revision_1952-2014_04_10\\resource\\ueditor\\fnTool.js"
+			],
+			[
+				"if",
+				"E:\\PC_UEDITOR\\debug\\ueditor\\themes\\iframe.css"
+			],
+			[
+				"ue",
+				"D:\\Program Files\\SuperNotes\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"ut",
+				"C:\\Users\\user\\Desktop\\Editor\\edit\\js\\utils.js"
+			],
+			[
+				"api",
+				"C:\\Users\\user\\Desktop\\edit\\js\\api.js"
+			],
+			[
+				"uti",
+				"C:\\Users\\user\\Desktop\\edit\\js\\utils.js"
+			],
+			[
+				"ap",
+				"C:\\Users\\user\\Desktop\\edit\\js\\api.js"
+			],
+			[
+				"e",
+				"D:\\release\\resource\\ueditor\\example.html"
+			],
+			[
+				"mix",
+				"C:\\Users\\user\\Desktop\\mix\\mix.js"
+			],
+			[
+				"ued",
+				"D:\\release\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"/",
+				"D:\\release\\resource\\ueditor\\example.html"
+			],
+			[
+				"pa",
+				"D:\\release\\resource\\view\\js\\parser.js"
+			],
+			[
+				"d",
+				"E:\\editor\\pc\\src\\view2\\demo.html"
+			],
+			[
+				"p",
+				"E:\\editor\\pc\\src\\view2\\js\\parser.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\wap\\wap.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

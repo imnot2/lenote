@@ -1,0 +1,288 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+//Var Defined
+$fontSize: 62.5%;
+$fontSizeForIE: 63%\9;
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: #aaa
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ccc
+}
+
+::-webkit-input-placeholder{
+    color: #ccc
+}
+
+input:-moz-placeholder{
+    color: #ccc !important
+}
+
+html{
+    //overflow-x: hidden;
+    //overflow-y: auto;
+    overflow: hidden;
+}
+
+body{
+  font: 1.2em/1.5 Tahoma,"Microsoft Yahei",Helvetica,Arial,sans-serif;
+  color: #333;
+  font-size:$fontSize;
+  font-size:$fontSizeForIE;
+  //background-color:#f4f4f4;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);      
+}
+#mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+  .downWrap{
+      margin: 0 auto;
+      background: #fff;
+      position: relative;
+      background: url("../../images/picture.png")  no-repeat center 20px transparent;
+      background-color: #fff;
+      @include background-size(14em);
+      z-index:999;
+      .closeBtn{
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 8px;
+          right: 8px;
+          background: url("../../images/close2.png") no-repeat center transparent;
+          @include background-size(24px);
+        }
+      .info{
+          text-align:center;
+          font-size:16px;
+          padding-top:210px;
+      }
+      .downBtn{
+        display:block;
+        width: 80%;
+        @include border-radius(5px);
+        background-color: #D94A4A;
+        color:#fff;
+        text-align:center;
+        margin:0 auto;
+        margin-top:16px;
+        text-decoration:none;
+        font-size:16px;
+        line-height:48px;
+      }
+    }
+}
+#message{
+    font-size: 1.2em;
+    li{
+        padding: 5px 0;
+        text-align: center;
+        border-bottom: 1px solid #B8CCF6;
+        background-color: #F2F5FA;
+        color: #2E9EF5;
+        &.warn{
+            border-bottom-color: #FDAE06;
+            background-color: #FFFBF2;
+            color: #FC8F05;
+        }
+        &.error{
+            border-bottom-color: #F8C1CC;
+            background-color: #FAF3F2;
+            color: #FC0A30;
+        }
+    }
+}
+
+#overlay{
+    background-color: #666;
+    @include opacity(.7);
+    //position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10000;
+    &.transparent{
+        //@include transparent;
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+@mixin keyframes{
+    @-moz-keyframes loading{
+        @content;
+    }
+    @-webkit-keyframes loading{
+        @content;
+    }
+    @keyframes loading{
+        @content;
+    }
+}
+
+%loading{
+    -webkit-animation: loading .8s linear infinite;
+    -moz-animation: loading .8s linear infinite;
+    -ms-animation: loading .8s linear infinite;
+    -o-animation-name: loading .8s linear infinite;
+    animation: loading .8s linear infinite;
+}
+
+@include keyframes{
+    from{
+        @include transform(rotate(0deg) translateZ(0));
+    }
+    to{
+        @include transform(rotate(360deg) translateZ(0));
+    }
+}
+
+#notify{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20em;
+    height: 8.5em;
+    @include box-sizing(border-box);
+    padding: 15px;
+    margin-left: -10em;
+    margin-top: -4.25em;
+    display: block;
+    z-index: 10001;
+    line-height: 22px;
+    background-color: rgba(52,52,52,.8);
+    @include border-radius(3px);
+    border: 1px solid #2c2c2c;
+    color: #fff;
+    text-align: center;
+    @include clearfix;
+    .circle{
+        background: inline-image("loading.png") 0 1px no-repeat;
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        @include background-size(40px 40px);
+        @extend %loading;
+        margin-top: 15px;
+    }
+    .content{
+        float: left;
+        text-align: left;
+        max-width: 11.25em;
+        overflow:hidden;
+        .title{
+            margin-top: 3px;
+            display: block;
+            font-size: 1.6em;
+        }
+        .tip{
+            display: block;
+            color: #b0b0b0;
+            margin-top: 5px;
+            line-height: 18px;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.ellipsis{
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.popup-menu{
+    position: absolute;
+    right: 0;
+    top: 55px;
+    z-index: 10001;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-top: 0 none;
+    color: #555;
+    overflow: hidden;
+    padding: 0 10px;
+    display: none;
+    @include opacity(0.6);
+    dd{
+        white-space: nowrap;
+        padding: 0 12px;
+        line-height: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-bottom: 1px solid #eee;
+        &.last{
+            border-bottom: 0 none;
+        }
+    }
+}
+
+@function average($count){
+    @return 100% / $count;
+}
+ul.grid{
+    position: relative;
+    @include clearfix;
+    li{
+        @include box-sizing(border-box);
+        float: left;
+        position: relative;
+        padding: 0 6px;
+        min-height: 1px;
+        &.col-3{
+            width: average(3);
+        }
+        .thumbnail{
+            position: relative;
+            border: 1px solid #ccc;
+            img{
+                width: 100%;
+                display:block; //fix 4px gap
+                @include box-shadow(rgba(#bbb4b4, 0.8) 2px 3px 8px);
+            }
+            .title{
+                position: absolute;
+                left:0;
+                bottom: 0;
+                z-index: 999;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                color: #eee;
+                background-color: #000;
+                font-size: 14px;
+                @include opacity(0.5);
+                span{
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}

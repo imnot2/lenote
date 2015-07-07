@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="乐云记事-随时随地,记录和同步我的笔记" />
+    <meta name="keywords"  content="乐云记事,云笔记,微笔记" />
+    <title>我的笔记 - 乐云记事</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/jquery.lenote.css?v1407809339" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css?v1407809339" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico?v1407809339" type="image/x-icon" />
+  </head>
+  <body>
+     <div id="header">
+        <h1><a href="javascript:;" title="乐云记事" class="logo">乐云记事</a></h1>
+        <div class="client_downloads">
+            <a href="http://susapi.lenovomm.com/adpserver/DLBIDFS?ds=20069_20531368&rt=POL" class="pc" title="PC 客户端下载"></a>
+            <a href="/download.html" target="_blank" class="iphone" title="iPhone 客户端下载"></a>
+            <a href="http://susapi.lenovomm.com/adpserver/GetPackByPN?PackageName=com.lenovo.supernote&ChannelKey=null&UserKey=" class="android" title="Android 客户端下载"></a>
+        </div>
+        <div class="links"><a href="javascript:;" class="accountinfo"></a><img src="/assets/images/top_line.png?v1407809339" alt="|" class="spaceline" /><a href="javascript:;" class="logout">登出</a></div>
+     </div>
+     <div id="main" class="clearfix">
+         <div id="sidebar-a">
+             <div class="wrap scroll-y">
+                 <div class="header" target="notebooks"><i class="icon icon-arrow open"></i>笔记本<a href="javascript:;" class="icon icon-action new-notebook e_notebooks_action" title="新建笔记本"></a></div>
+                 <div class="content notebooks">
+                     <ul class="list list-panel">
+                         <li id="all-notes">
+                             <div class="item ellipsis">
+                                 <i class="icon icon-all-notes"></i><span class="title">所有笔记</span>
+                                 <span class="count clearfix"><span class="l"></span><span class="c">0</span><span class="r"></span></span>
+                             </div>
+                         </li>
+                          <li id="stars-notes">
+                             <div class="item ellipsis">
+                                 <i class="icon icon-all-stars"></i><span class="title">星标笔记</span>
+                                 <span class="count clearfix"><span class="l"></span><span class="c">0</span><span class="r"></span></span>
+                             </div>
+                         </li>
+                     </ul>
+                     <ul class="list list-categories"></ul>
+                     <div class="separate"></div>
+                     <ul class="list">
+                         <li id="myshare">
+                             <div class="item ellipsis">
+                                 <i class="icon"></i><span class="title">我的分享</span>
+                                 <span class="count clearfix"><span class="l"></span><span class="c">0</span><span class="r"></span></span>
+                             </div>
+                         </li>
+                         <li class="trash" id="trash">
+                             <div class="item">
+                                 <i class="icon icon-trash"></i><span class="title">废纸篓</span><span class="count"></span>
+                                 <span class="count clearfix"><span class="l"></span><span class="c">0</span><span class="r"></span></span>
+                                 <i class="icon icon-action e_trash_action dropdown"></i>
+                             </div>
+                         </li>
+                     </ul>
+                </div>
+             </div>
+         </div>
+         <div id="sidebar-b">
+             <div class="wrap">
+                 <div class="toolbar clearfix">
+                    <div class="search clearfix">
+                        <div class="smart-input">
+                            <label for="q" class="smart-label">请输入搜索词</label>
+                            <input name="q" id="q" value="" maxlength="50" type="text" autocomplete="off" class="encopy"/>
+                         </div>
+                        <a href="javascript:;" class="submit" onclick="this.blur();"></a>
+                    </div>
+                 </div>
+                 <div class="content scroll-y"><ul class="list list-notes"></ul></div>
+                 <div class="easytools"><div class="sep"></div><div class="description clearfix"><span class="from ellipsis"></span><span class="count"></span></div></div>
+             </div>
+         </div>
+         <div id="sidebar-c">
+             <div class="toolbar clearfix"><div class="l"></div><div class="r"></div></div>
+             <div class="note-wrap encopy">
+                 <div class="note-info clearfix"><div class="title ellipsis"></div><div class="extra clearfix"></div></div>
+                 <div class="note-meta"></div><div class="note-detail"></div><div class="note-loading"></div>
+                 <div class="note-editor"><div class="wrap"><textarea id="editor_entity" name="editor_entity"></textarea></div></div>
+             </div>
+         </div>
+     </div>
+     <div id="flashcontent" name="flashcontent"></div>
+     <script type="text/javascript" src="/assets/js/all.js?v1407809339"></script>
+  </body>
+</html>

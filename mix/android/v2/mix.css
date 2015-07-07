@@ -1,0 +1,196 @@
+html, body{
+    font-size: 18px;
+    color: #333;
+    margin:0;
+}
+p{
+    margin:10px 0;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+.loading{
+    background: url("images/loading.gif") no-repeat 0 0 transparent;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -16px;
+}
+@-webkit-keyframes shine-timeline{
+    from{-webkit-box-shadow: 0 0 5px #bbb;}
+    50%{-webkit-box-shadow: 0 0 10px #3F7ADF;}
+    to{-webkit-box-shadow: 0 0 5px #bbb;}
+}
+.light-timeline{
+    border-radius: 2em;
+    -webkit-animation-name: shine-timeline;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+/* audio */
+.audio-play{
+    position: relative;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+/*
+.audio-play .board{
+    position: absolute;
+    left: -2px;
+}
+*/
+.audio-play .play{
+    position: absolute;
+    left: 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.audio-play .info{
+    position: absolute;
+    line-height: 18px;
+    font-size: 12px;
+}
+.audio-play .info .title, .audio-play .info .desc{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.audio-play .info .title{
+    color: #000;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.audio-play .info .desc{
+    color: #999;
+}
+.audio-play .info .desc span{
+    margin-right: 20px;
+}
+
+/* Attachment */
+.attachment{
+    margin: 10px 0;
+    width: 95%;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ECF0F3;
+}
+.attachment .filetype{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 6px;
+}
+.attachment .info{
+    padding-left: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 18px;
+    width: 80%;
+}
+.mix .attachment .info{
+    width: 60%;
+}
+.attachment .info .size, .attachment .info .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.attachment .info .size{
+    color: #999;
+    font-size: 12px;
+}
+.attachment .arrow{
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    background: url("images/ancor.png") no-repeat 0 0 transparent;
+    width: 50px;
+    height: 50px;
+}
+
+/*Picture*/
+img.photo{
+    border: 1px solid #F1EDED;
+    padding: 5px;
+    -webkit-box-shadow: 2px 2px 5px #CAC1C1;
+    display: block;
+    margin: 5px 0;
+}
+
+#main{
+    padding: 5px 5px 5px 10px;
+    position: relative;
+}
+/*
+#main .marked{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+}
+*/
+
+/* mix */
+.mix{
+    margin: 20px 0;
+    background: url("images/line_bg02.png") repeat-y 16px 0 transparent;
+}
+.mix .top-bg, .mix .bottom-bg{
+    width: 8px;
+    position: relative;
+    left: 16px;
+}
+.mix .top-bg{
+    background: url("images/line_bg01.png") no-repeat 0 0 transparent;
+    top: -2px;
+    height: 5px;
+}
+.mix .bottom-bg{
+    background: url("images/line_bg03.png") no-repeat 0 0 transparent;
+    bottom: -5px;
+    height: 5px;
+}
+.mix .item{
+    margin: 10px 0;
+}
+.mix .timeline{
+    float:left;
+}
+.mix .timeline .icon{
+    width:40px;
+    height:40px;
+    position: relative;
+    top: -3px;
+}
+.mix  .item.audio .timeline .icon{
+    top: 22px;
+}
+.mix  .item.audio .audio-play{
+    margin-bottom: 5px;
+}
+.mix .content{
+    float: left;
+    margin-left: 5px;
+}
+.mix .item.photo .content{
+    margin-left: 10px;
+}
+.mix  .plain{
+    margin-left: 42px;
+}
+.mix img.photo{
+    margin-top: 0;
+}

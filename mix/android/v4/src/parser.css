@@ -1,0 +1,147 @@
+html, body{
+    font-size: 18px;
+    color: #333;
+    margin:0;
+}
+body{
+    word-break:break-all;
+    /*word-wrap:break-word;
+    white-space:normal;*/
+}
+p{
+    margin:10px 0;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+@-webkit-keyframes shine-timeline{
+    from{-webkit-box-shadow: 0 0 5px #bbb;}
+    50%{-webkit-box-shadow: 0 0 10px #3F7ADF;}
+    to{-webkit-box-shadow: 0 0 5px #bbb;}
+}
+.light-timeline{
+    border-radius: 4em;
+    -webkit-animation-name: shine-timeline;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+.loading{
+    /*background: url("images/loading.gif") no-repeat 0 0 transparent;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;*/
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #FCFCFC;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -30px;
+    overflow: hidden;
+}
+
+/* audio */
+.audio-play{
+    position: relative;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+/*
+.audio-play .board{
+    position: absolute;
+    left: -2px;
+}
+*/
+.audio-play .play{
+    position: absolute;
+    left: 15px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.audio-play .info{
+    position: absolute;
+    line-height: 18px;
+    font-size: 12px;
+}
+.audio-play .info .title, .audio-play .info .desc{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.audio-play .info .title{
+    color: #000;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.audio-play .info .desc{
+    color: #999;
+}
+.audio-play .info .desc span{
+    margin-right: 20px;
+}
+
+/* Attachment */
+.attachment{
+    /*margin: 10px 0;*/
+    margin: 5px 0;
+    width: 95%;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ECF0F3;
+}
+.attachment .filetype{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 6px;
+}
+.attachment .info{
+    padding-left: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 18px;
+    width: 80%;
+}
+.mix .attachment .info{
+    width: 60%;
+}
+.attachment .info .size, .attachment .info .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.attachment .info .size{
+    color: #999;
+    font-size: 12px;
+}
+.attachment .arrow{
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    background: url("images/ancor.png") no-repeat 0 0 transparent;
+    width: 50px;
+    height: 50px;
+}
+
+/*Picture*/
+img.photo{
+    /*display: block;
+    margin: 5px 0;*/
+    margin: 2px 0;
+}
+
+#main{
+    padding: 5px 5px 5px 10px;
+    position: relative;
+    visibility: hidden;
+}

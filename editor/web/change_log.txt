@@ -1,0 +1,17 @@
+web版本的富文本编辑器是基于百度编辑器UEditor1.2.6.1基础上改进的。为了以后升级方便，特记录下更新列表：
+
+Change Log
+themes\default\css\ueditor.css 修改工具栏样式
+ueditor.config.js  配置文件
+dialogs\image\image.html 定制上传图片的弹出框及回调
+dialogs\image\image.js   修改image默认路径
+dialogs\attachment\attachment.html 附件上传
+_src\plugins\image.js  插入图片时支持自定义属性
+_src\ui\editor.js      对于附件类型的链接不弹出修改框
+_src\plugins\link.js   选中资源时禁用链接
+_src\plugins\image.js  选中资源时禁用链接
+_src\plugins\attachment.js  新增加附件cmd用以控制其状态
+_src\plugins\anchor.js      选中资源时禁用链接
+_src\plugins\list.js        选中资源时禁用链接
+_src\plugins\removeformat.js选中资源时禁用链接
+_examples\editor_api.js 编译时添加附件cmd

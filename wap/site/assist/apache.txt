@@ -1,0 +1,87 @@
+<VirtualHost *:80>
+  ServerName demo2.lenote.com
+  
+  DocumentRoot "D:\workspace\dev\git\website\v2"
+  <Directory "D:\workspace\dev\git\website\v2">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    order allow,deny
+    Allow from all
+  </Directory>
+  
+  <IfModule rewrite_module>
+    Options +FollowSymLinks
+    IndexIgnore */*
+    
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^/shared/
+    #RewriteRule /shared/(.*) /notes/share.html?id=$1 [R=permanent,L]
+    RewriteRule /shared/(.*) /notes/share.html?id=$1 [NC,L]
+  </IfModule>
+  
+  Alias /m "D:\workspace\dev\git\wap\site\static"
+  <Directory "D:\workspace\dev\git\wap\site\static">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    order allow,deny
+    Allow from all
+  </Directory>
+  
+  Alias /mobile-usage "D:\workspace\dev\git\wap\site\assist\mobile-usage\web"
+  <Directory "D:\workspace\dev\git\wap\site\assist\mobile-usage\web">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    order allow,deny
+    Allow from all
+  </Directory>
+  
+  proxyrequests off
+  ProxyTimeout 300
+  
+  ProxyPass /m/favicon.ico !
+  ProxyPass /m/css/ !
+  ProxyPass /m/html/ !
+  ProxyPass /m/images/ !
+  ProxyPass /m/js/ !
+  ProxyPass /m/ http://127.0.0.1:3000/
+  ProxyPassReverse /m/ http://127.0.0.1:3000/
+  
+  ProxyPass /a/ http://192.168.1.102:8080/supernote/v2/
+  ProxyPassReverse /a/ http://192.168.1.102:8080/supernote/v2/
+  
+  ProxyPass /account/ http://192.168.1.102:8080/supernotesns/v2/
+  ProxyPassReverse /account/ http://192.168.1.102:8080/supernotesns/v2/
+  
+  ProxyPass /q/ http://192.168.1.102:8080/fulltextsearch/v2/search/
+  ProxyPassReverse /q/ http://192.168.1.102:8080/fulltextsearch/v2/search/
+  
+  ProxyPass /uploads/ http://192.168.1.102:8080/supernotefile/v2/extend/uploadFile/
+  ProxyPassReverse /uploads/ http://192.168.1.102:8080/supernotefile/v2/extend/uploadFile/
+  
+  ProxyPass /download/ http://192.168.1.102:8080/supernotefile/v2/extend/downloadFile/
+  ProxyPassReverse /download/ http://192.168.1.102:8080/supernotefile/v2/extend/downloadFile/
+  
+  ProxyPass /thumbnail/ http://192.168.1.102:8080/supernotefile/v2/extend/thumbnail/
+  ProxyPassReverse /thumbnail/ http://192.168.1.102:8080/supernotefile/v2/extend/thumbnail/
+  
+  ProxyPass /getShareFile/ http://192.168.1.102:8080/supernotefile/v2/extend/getShareFile/
+  ProxyPassReverse /getShareFile/ http://192.168.1.102:8080/supernotefile/v2/extend/getShareFile/
+  
+  ProxyPass /import/ http://192.168.1.102:8080/reptile/v2/
+  ProxyPassReverse /import/ http://192.168.1.102:8080/reptile/v2/
+  
+  <ifmodule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png|exe|t?gz|zip|bz2|sit|rar|pdf|mov|avi|mp3|mp4|rm)$ no-gzip dont-vary
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
+  </ifmodule>
+  
+  #<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css)$">
+  #  Header set Cache-Control "max-age=2592000"
+  #</FilesMatch>
+  
+  ErrorLog  logs/demo2.lenote.com-error.log
+  CustomLog logs/demo2.lenote.com-access.log common
+</VirtualHost>

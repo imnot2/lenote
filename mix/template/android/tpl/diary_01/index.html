@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../../lenoteTemplate.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+    <div id="lenoteTemplate">
+        <div class="header"><img _type="image" id="banner" /></div>
+        <div class="blank"></div>
+        <div id="main"> 
+            <span _type="date" id="date">
+              <span class="mouth" format="m:M"></span>
+              <span class="day" format="d:d"></span>
+              <span class="year" format="y:yyyy"></span>
+            </span>
+            <div id="content" class="content">
+                <div class="note_tag"> <img _type="moods" id="moods" /><img _type="weather" id="weather" auto="true" /> </div>
+                <div id="note_text" class="note_text">
+                    <!-- <div class="vertical_middle">
+                      <div class="vertical_top">
+                        <div maxlength="30" _type="text" class="vertical_bottom" id="address" >aaaa</div>
+                      </div>
+                    </div> -->
+
+                   <!--  
+                    地址对应的字段
+                        co:'country',
+                        pr:'province',
+                        ci:'city',
+                        di:'district',
+                        st:'street',
+                        num:'streetNumber' 
+                    -->
+                    <div maxlength="30" _type="place" info="st:co" id="place"  auto="true"></div>
+                    <div style="clear:both;"></div>
+                    <div _type="text" id="text" class="text"></div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+           <div style="clear:both;"></div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="../../lenoteTemplate.js"></script> 
+    <script type="text/javascript" src="main.js"></script>
+</html>

@@ -1,0 +1,25 @@
+doctype html
+html
+    include particle/header
+    
+    body
+        #container
+            #top: .logo: span 乐云记事
+            
+            if !F.isEmpty(flash)
+                ul#message
+                    each v, k in flash
+                        li(class="#{k}")= v
+            
+            #main
+                if session.user
+                    .openup 打开笔记
+                else
+                    .login 登录
+                    .register 注册
+                p.copyright &copy; 2014 乐云记事
+                
+            #foot_gap
+        
+        - var action = 'index'
+        include particle/footer

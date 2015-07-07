@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="乐云记事-随时随地,记录和同步我的笔记" />
+    <meta name="keywords"  content="乐云记事,云笔记,微笔记" />
+    <title>我要提问 - 乐云记事</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/jquery.lenote.css?v1407809339" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css?v1407809339" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/comingsoon.css?v1407809339" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico?v1407809339" type="image/x-icon" />
+    <script type="text/javascript" src="/assets/js/comingsoon.js?v1407809339"></script>
+  </head>
+  <body>
+      <div id="container" class="suggest">
+         <div id="main">
+             <div class="caption">
+                 <div class="wrap"><div class="title">意见反馈</div><div class="desc">乐乐欢迎您常来玩，请留下您的宝贵建议或在使用过程中遇到的问题，您的支持是我们进步的源泉。</div></div>
+             </div>
+             <div class="form">
+                 <div class="wrap">
+                     <div class="type">
+                         <div class="title">您需要提交的是：</div>
+                         <div class="desc"><span type="1" class="active">改进意见</span><span type="2">问题咨询</span><span type="3">其他</span></div>
+                     </div>
+                     <div class="contact">
+                         <div class="title">您的联系方式：</div>
+                         <input type="text" name="contact" placeholder="请留下你的邮箱、QQ、或手机" />
+                     </div>
+                     <div class="category">
+                         <div class="title">类别：</div>
+                         <div class="selection"><ul><li><a category="1" href="javascript:;" class="active">笔记编辑</a></li></ul><i></i></div>
+                     </div>
+                     <div class="describe">
+                         <div class="title">您想说的：</div>
+                         <textarea name="describe" rows="15" cols="38"></textarea>
+                     </div>
+                     <div class="submit">
+                         <a href="javascript:;" class="btn">提交</a>
+                         <div class="desc">感谢您对乐云记事的支持，我们一直在进步：）</div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div id="footer">
+             <div class="wrap">
+                <div class="shortcut clearfix">
+                    <div class="links clearfix">
+                        <div class="about">
+                            <h5>关于乐云记事</h5>
+                            <ul>
+                                <li><a href="http://www.lenovo.com.cn/Public/public_bottom/legal.shtml">法律公告</a></li>
+                                <li><a href="http://www.lenovo.com.cn/Public/public_bottom/privacy.shtml">隐私保护</a></li>
+                            </ul>
+                        </div>
+                        <div class="download">
+                            <h5>产品下载</h5>
+                            <ul>
+                                <li><a href="http://susapi.lenovomm.com/adpserver/GetPackByPN?PackageName=com.lenovo.supernote&ChannelKey=null&UserKey=">Android Phone</a></li>
+                                <li><a href="http://susapi.lenovomm.com/adpserver/DLBIDFS?ds=20069_20531368&rt=POL">Windows 桌面客户端</a></li>
+                            </ul>
+                        </div>
+                        <div class="partner">
+                            <h5>合作伙伴</h5>
+                            <ul>
+                                <li><a href="http://www.lenovo.com.cn/">联想集团</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="assistant">
+                        <li class="follow"><a href="http://weibo.com/u/3936993678" target="_blank" class="clearfix"><i></i><span>加关注</span></a></li>
+                        <li class="suggest"><a href="/suggest.html" class="clearfix"><i></i><span>提意见</span></a></li>
+                        <li class="help"><a href="/help.html" class="clearfix"><i></i><span>看帮助</span></a></li>
+                    </ul>
+                </div>
+                <div class="declare">
+                    <img src="/assets/images/footer_logo.png?v1407809339" alt="乐云记事" title="乐云记事 &middot; 您的生活好帮手" class="logo" />
+                    <img src="/assets/images/footer_logo_lenovo.png?v1407809339" alt="乐云记事" title="联想 &middot; 乐云记事" class="lenovo" />
+                    <span class="copyright">&copy; 1998 - 2013 Lenovo Inc. All Rights Reserved</span>
+                </div>
+             </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+          $(function(){
+              if(typeof(JSON) == 'undefined') $('body').append('<script type="text/javascript" src="/assets/js/json/json2.js?v1407809339"><\/script>');
+              var container = $('#container'), res = [];
+              if(user.checkLogin()){
+                  res.push('<h1><a href="/notes" title="乐云记事" class="logo">乐云记事</a></h1>');
+                  container.addClass('loged');
+                  res.push('<div class="client_downloads"><a href="' + lenoteConfig.download.pc.link + '" class="pc" title="PC 客户端下载"></a><a href="' + lenoteConfig.download.ios.link + '" class="iphone" title="iPhone 客户端下载"></a><a href="' + lenoteConfig.download.android.link + '" class="android" title="Android 客户端下载"></a></div>');
+                  res.push('<div class="links">');
+                  res.push('<a href="javascript:;" class="accountinfo"></a><img src="/assets/images/top_line.png?v1407809339" alt="|" class="spaceline" /><a href="javascript:;" class="logout">登出</a>');
+                  res.push('</div>');
+                  container.prepend('<div id="header1">' + res.join('') + '</div>');
+                  $('.accountinfo').append(user.getUState('un'));
+                  $('.logout').click(function(){user.logout();});
+              }else{
+                  res.push('<h1><a href="/" title="乐云记事" class="logo">乐云记事</a></h1>');
+                  res.push('<ul class="links clearfix"><li><a href="/" class="active">首页</a></li><li><a href="/download.html">多平台下载</a></li><li><a href="http://weibo.com/u/3936993678" target="_blank">官方微博</a></li></ul>');
+                  res.push('<ul class="act clearfix"><li><a href="javascript:;" class="signin"><span>登&nbsp;录</span></a></li><li><a href="javascript:;" class="register"><span>注&nbsp;册</span></a></li></ul>');
+                  container.prepend('<div id="header"><div class="rainbow"></div><div class="wrap clearfix">' + res.join('') + '</div><div class="shadow"></div></div>');
+                  $('.signin').click(function(){user.login();});
+                  $('.register').click(function(){user.register();});
+                  $('#header ul.links').smartNavHover();
+              }
+              $('.form .type .desc span').click(function(){
+                  $('.form .wrap .type .desc span').removeClass('active');
+                  $(this).addClass('active');
+              });
+              $('.form .category .selection ul').hover(function(){
+                  var _this = $(this), current = _this.find('li a'),
+                       categories = {1: '<li><a category="1" href="javascript:;">笔记编辑</a></li>', 2: '<li><a category="2" href="javascript:;">同步问题</a></li>', 3: '<li><a category="3" href="javascript:;">软件兼容</a></li>', 4: '<li><a category="4" href="javascript:;">其它</a></li>'};
+                  _this.parent().addClass('active');
+                  delete categories[current.attr('category')];
+                  for(var key in categories) _this.append(categories[key]);
+              }, function(){
+                  var _this = $(this);
+                  _this.parent().removeClass('active');
+                  _this.find('li a:not(.active)').closest('li').remove();
+              }).on('click', 'li a', function(){
+                  var a = $('.form .category .selection ul');
+                  a.find('a').removeClass('active');
+                  $(this).addClass('active');
+                  a.find('a:not(.active)').closest('li').remove();
+              });
+              function valid_contact(v){
+                  v = $.trim(utils.strip_tags(v));
+                  if(v == '') return false;
+                  var filter = /^([a-zA-Z0-9]+[-_+.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[-.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
+                  if(filter.test(v)) return true;
+                  filter = /^([+]?\d{1,3}[ ]?)?((\d{3,4}-)?\d{7,8}|(1[3458]\d{9}))$/;
+                  if(filter.test(v)) return true;
+                  filter = /^[1-9]([0-9]{4}|[0-9]{5,10})$/;
+                  return filter.test(v)? true : false;
+              }
+              function _submit(){
+                  var form = $('.form'), btn = $('.form .submit a.btn'), isCheck = true, type = $('.form .type .desc'), contact = $('.form .contact input'),
+                        category = $('.form .category .selection li a').attr('category'), describe = $('.form .describe');
+                  btn.off();
+                  form.find('.error').remove();
+                  var _type = type.children('span.active');
+                  if(_type.length == 0) _type = type.children('span').first().addClass('active');
+                  if(!valid_contact(contact.val())){
+                      isCheck = false;
+                      contact.after('<span class="error">请输入您的邮箱、QQ或手机号码</span>');
+                  }
+                  var textarea = $.trim(utils.strip_tags(describe.children('textarea').val()));
+                  if(textarea == ''){
+                      isCheck = false;
+                      describe.children('.title').append('<span class="error">请输入您想说的</span>');
+                  }
+                  if(isCheck){
+                      $.ajax('/a/collect/feedback', {
+                          type: "POST", dataType: "json", cache: false,
+                          contentType:'application/json; charset=utf-8',
+                          data:  JSON.stringify({type: _type.attr('type'), contact: $.trim(utils.strip_tags(contact.val())), category: category, content: textarea}),
+                          success: function(respose, status){
+                              $('.form').find('.error').remove().end().find('.submit a.btn').on('click', function(){_submit();});
+                              if(status == 'success' && respose.returnCode == '200'){
+                                  $('.form .type .desc span').removeClass('active').first().addClass('active');
+                                  $('.form .contact input').val('');
+                                  $('.form .describe textarea').val('');
+                                  $.lebox.success('提交成功！', 800);
+                              }else{
+                                  $.lebox.error('数据格式错误，请检查！', 1000);
+                              }
+                          },
+                          before: function(){$.lebox.notify('正在提交，请稍后');},
+                          error: function(xhr, msg, eThrow){$.lebox.error('网络错误，请稍后再试！', 1000);}
+                      });
+                  }else{
+                      $('.form .submit a.btn').on('click', function(){_submit();});
+                  }
+              }
+              $('.form .submit a.btn').on('click', function(){_submit();});
+          });
+      </script>
+  </body>
+</html>

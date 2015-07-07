@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style type="text/css">
+      html, body{
+        font-size: 18px;
+        color: #333;
+		margin:0;
+      }
+      p{
+        margin:10px;
+      }
+      .clearfix:after{
+        clear: both;
+        content: ".";
+        display: block;
+        height: 0;
+        font-size:0;
+        visibility: hidden;
+      }
+      .loading{
+        background: url("images/loading.gif") no-repeat 0 0 transparent;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-left: -16px;
+      }
+      #main{
+        padding: 5px 5px 5px 10px;
+        display: none;
+      }
+      .mix{
+        margin: 20px 0;
+        background: url("images/line_bg02.png") repeat-y 17px 0 transparent;
+      }
+      .mix .top-bg, .mix .bottom-bg{
+        width: 8px;
+        position: relative;
+        left: 17px;
+      }
+      .mix .top-bg{
+        background: url("images/line_bg01.png") no-repeat 0 0 transparent;
+        top: -2px;
+        height: 5px;
+      }
+      .mix .bottom-bg{
+        background: url("images/line_bg03.png") no-repeat 0 0 transparent;
+        bottom: -5px;
+        height: 5px;
+      }
+      .mix .item{
+        margin: 10px 0;
+      }
+      .mix .timeline{
+        float:left;
+      }
+      .mix .timeline .icon{
+        width:40px;
+        height:40px;
+      }
+      .mix .content{
+        float: left;
+        margin-left: 5px;
+      }
+      .audio-play{
+        position: relative;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      }
+	  .audio-play .board{
+	    position: absolute;
+		left: -2px;
+	  }
+      .audio-play .play{
+        position: absolute;
+        left: 8px;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      }
+      .audio-play .info{
+        position: absolute;
+        line-height: 18px;
+		font-size: 12px;
+      }
+      .audio-play .info .title, .audio-play .info .desc{
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .audio-play .info .title{
+        color: #000;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      .audio-play .info .desc{
+        color: #999;
+      }
+      .audio-play .info .desc span{
+        margin-right: 20px;
+      }
+      .mix .content .photo, .pic{
+        border: 1px solid #F1EDED;
+        padding: 5px;
+      }
+      .pic{
+        margin-left: 10px;
+      }
+      @-webkit-keyframes shine-timeline{
+        from{-webkit-box-shadow: 0 0 5px #bbb;}
+        50%{-webkit-box-shadow: 0 0 10px #3F7ADF;}
+        to{-webkit-box-shadow: 0 0 5px #bbb;}
+      }
+      .light-timeline{
+        border-radius: 2em;
+        -webkit-animation-name: shine-timeline;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        /*-webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-direction: alternate;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+    
+    <script type="text/javascript">
+      (function(){
+        function loading(){
+          var main = document.querySelector('#main');
+          main.innerHTML = '<div class="loading"></div>';
+        }
+        
+        function build_audio_html(mix_id, audio, width){
+		  var bw = width, bh = parseInt(bw / 3.2), pwh = parseInt(bw / 5.1), pt = parseInt(pwh / 3.4), il = pwh + 20, it = parseInt(bh / 2 - 18), tw = bw - il - 30, id = mix_id + '_audio' + Date.parse(new Date());
+          var res = ['<div class="item clearfix audio" time="0" id="' + id + '" style="min-height:' + bh + 'px;">'];
+		  res.push('<div class="timeline"><img class="icon" src="images/timeline/audio_normal.png"/></div>');
+		  res.push('<div class="content"><div class="audio-play" style="width:' + bw + 'px;height:' + bh + 'px;">');
+		  res.push('<img style="width:' + bw + 'px;height:' + bh + 'px" class="board" src="images/player_bg.png"/><img target="' + id + '" class="play" play="0" belong="' + mix_id + '" src="images/play_normal.png" id="' + audio.getAttribute('id') + '" style="width:' + pwh + 'px;height:' + pwh + 'px;top:' + pt + 'px"/>');
+		  res.push('<div class="info" style="left:' + il + 'px;top:' + it + 'px;"><div class="title" style="width:' + tw + 'px">' + audio.title + '</div><div class="desc" style="width:' + tw + 'px">');
+		  res.push('<span class="size">' + audio.getAttribute('size') + '</span><span class="duration">' + audio.getAttribute('fulltime') + '</span>');
+		  res.push('</div></div></div></div></div>');
+		  return res.join('');
+        }
+        
+        function build_text_html(text, width){
+          var res = ['<div class="item clearfix text" time="' + text.getAttribute('starttime') + '">'];
+		  res.push('<div class="timeline"><img class="icon" src="images/timeline/text_normal.png"/></div>');
+		  res.push('<div class="content" style="width:' + width + 'px">' + text.innerHTML + '</div></div>');
+		  return res.join('');
+        }
+        
+        function build_photo_html(photo, w){
+          return '<img id="' + photo.getAttribute('id') + '" style="margin-left:3px;width:' + w + 'px;height:' + w + 'px;" class="photo" src="' + photo.getAttribute('src') + '"/>';
+        }
+		
+		function build_photos_html(photos, time, width){
+          var _photos = [], count = photos.length, size = (count > 1)? (parseInt(width / 3) - 15) : (parseInt(width - 25));
+          for(var i = 0; i < count; i++){
+            _photos.push(build_photo_html(photos[i], size));
+          }
+          
+		  var res = ['<div class="item clearfix photo" time="' + time + '">'];
+		  res.push('<div class="timeline"><img class="icon" src="images/timeline/image_normal.png"/></div>');
+		  res.push('<div class="content" style="width:' + width + 'px">' + _photos.join('') + '</div></div>');
+		  return res.join('');
+		}
+        
+        function initUI(html){
+          return html.replace(new RegExp('<mix.*?>.*?</mix>', 'gim'), function(_mix_str){
+            var dom = document.createElement('div');
+            dom.innerHTML = _mix_str;
+            var _mix = dom.querySelector('mix');
+            if(_mix){
+              var id = _mix.getAttribute('id');
+              return '<div class="mix" id="' + id + '"></div>';
+            }
+            return '';
+          });
+        }
+        
+        function resolveMix(id, content, deviceWidth){
+		  var main_padding = 10, timeline_icon = 32, content_margin = 5, width = parseInt(deviceWidth) - main_padding - timeline_icon - content_margin;
+          var dom = document.createElement('div'), res = [], photos = [], _photo = '', phototime = 0, _phototime = 0, tmp = '';
+          dom.innerHTML = content;
+          var children = dom.childNodes;
+          for(var i = 0; i < children.length; i++){
+            var child = children[i];
+            //排除非标准的node
+            if(!/^ln-/igm.test(child.nodeName)) continue;
+            
+            var tagName = child.tagName.toLowerCase();
+            switch(tagName){
+              case 'ln-audio': tmp = build_audio_html(id, child, width);break;
+              case 'ln-text': tmp = build_text_html(child, width);break;
+              case 'ln-photo':
+                  _photo = child;
+                  _phototime = child.getAttribute('starttime');
+				  break;
+            }
+            if(tagName == 'ln-photo'){
+              if(phototime == 0 || phototime == _phototime){
+                photos.push(_photo);
+                phototime = _phototime;
+                _photo = '', _phototime = 0;
+              }else if(phototime != _phototime){
+                res.push(build_photos_html(photos, phototime, width));
+                photos = [];
+                phototime = _phototime;
+                photos.push(_photo);
+              }
+            }
+			if(((i + 1 == children.length) || (tagName != 'ln-photo')) && photos.length > 0){
+			  res.push(build_photos_html(photos, phototime, width));
+			  photos = [], phototime = 0;
+			}
+			if(tagName != 'ln-photo'){
+			  res.push(tmp);
+			  tmp = '';
+			}
+          }
+          
+          if(res.length > 0){
+            return '<div class="top-bg"></div><div class="wrap">' + res.join('') + '</div><div class="bottom-bg"></div>';
+          }
+          return '';
+        }
+		
+		function photo_preview(mix_id){
+		  var photos = document.querySelectorAll('#' + mix_id + ' img.photo');
+		  for(var i = 0; i < photos.length; i++){
+		    photos[i].addEventListener('click', function(e){
+             try{
+               //回调android方法
+               console.info(this.getAttribute('id'));
+			   window.View.viewResource(this.getAttribute('id'), '');
+             }catch(e){}
+			}, false);
+		  }
+		}
+		
+		function audio_listener(mix_id){
+		  var audios = document.querySelectorAll('#' + mix_id + '.mix div.audio-play');
+		  for(var i = 0; i < audios.length; i++){
+		    audios[i].addEventListener('click', function(e){
+              var play_img = this.querySelector('img.play');
+			  var target = play_img.getAttribute('target'), belong = play_img.getAttribute('belong');
+			  var icon = document.querySelector('#' + target + ' .timeline .icon');
+			  //updateIconState(icon);
+			  if(!play_img.hasAttribute('already')){
+                play_img.setAttribute('already', true);
+                updateIconState(icon);
+              }
+			  if(play_img.getAttribute('play') == 0){
+			    play_img.setAttribute('play', 1);
+				play_img.setAttribute('src', 'images/play_pause.png');
+				slide(belong, 0, 50, true);
+			  }else{
+			    play_img.setAttribute('play', 0);
+				play_img.setAttribute('src', 'images/play_normal.png');
+			  }
+              try{
+			    //回调android方法
+                console.info(play_img.getAttribute('id'));
+                window.View.viewResource(play_img.getAttribute('id'), belong);
+              }catch(e){}
+			}, false);
+		  }
+		}
+		
+		function cleanIconState(id){
+		  if(!id) return;
+		  var icons = document.querySelectorAll('#' + id + ' .item .timeline .icon[status=active]');
+		  for(var i = 0; i < icons.length; i++){
+		    updateIconState(icons[i]);
+		  }
+		}
+		
+		function updateIconState(icon){
+		  if(!icon) return;
+		  var src = icon.getAttribute('src');
+		  if(src){
+		    var res = src.replace(new RegExp('_normal|_active', 'gim'), function(s){
+			  if(s == '_normal'){
+			    icon.setAttribute('status', 'active');
+                //icon.className = 'light-timeline';
+                icon.classList.add('light-timeline');
+			    return  '_active';
+			  }else{
+			    icon.removeAttribute('status');
+                //icon.className = '';
+                icon.classList.remove('light-timeline');
+			    return '_normal';
+			  }
+			}, false);
+			icon.setAttribute('src', res);
+		  }
+		}
+        
+        function slide(id, second, speed, ignoreUpdateIcon){
+		  var clientHeight = document.documentElement.clientHeight;
+		  var scrollHeight = document.documentElement.scrollHeight;
+		  if(clientHeight >= scrollHeight) return false;
+		  if(!speed) speed = 100;
+		  
+		  var target = document.querySelector('#' + id + ' .item[time="' + second + '"]');
+		  if((target)){
+            if(!ignoreUpdateIcon){
+		      cleanIconState(id);
+			  updateIconState(target.querySelector('.timeline .icon'));
+			}
+            var pos = target.offsetTop - 5, current_pos = document.body.scrollTop, distance = pos - current_pos, duration = Math.abs(distance) / speed;
+			var it = setInterval(function(){
+			  if(distance > 0){
+			    current_pos = current_pos + duration;
+				if(current_pos >= pos){
+				  current_pos = pos;
+				  clearInterval(it);
+				}
+			  }else{
+			    current_pos = current_pos - duration;
+				if(current_pos <= pos){
+				  current_pos = pos;
+				  clearInterval(it);
+				}
+			  }
+			  document.body.scrollTop = current_pos;
+			}, 1);
+		  }
+        }
+        
+        function getResource(key){
+            return window.View.getResourceInfoByResourceId(key);
+        }
+        
+        function buildText(tag){
+            var text = document.createElement('span');
+            text.innerHTML = tag.innerHTML;
+            return text;
+        }
+        
+        function buildPhoto(tag, width){
+            var main_padding = 10, content_margin = 5, width = parseInt(width) - main_padding - content_margin;
+            var photo = document.createElement('img'), src = tag.getAttribute('src');
+            if(!src) src = JSON.parse(getResource(tag.getAttribute('key'))).src;
+            
+            photo.id = tag.id;
+            photo.src = src;
+            photo.className = 'photo pic';
+            var w = parseInt(width - 25), h = w * (4 / 3);
+            photo.style.width  = w + 'px', photo.style.height = h + 'px';
+            return photo;
+        }
+        
+        function buildAudio(tag, width){
+            var main_padding = 10, content_margin = 5, width = parseInt(width) - main_padding - content_margin, audio = document.createElement('div');
+		    var bw = width, bh = parseInt(bw / 3.2), pwh = parseInt(bw / 5.1), pt = parseInt(pwh / 3.4), il = pwh + 20, it = parseInt(bh / 2 - 18), tw = bw - il - 30,
+                id = '_audio' + Date.parse(new Date())+ (new Date).getMilliseconds() + Math.ceil(Math.random() * 100);
+            if(tag.getAttribute('title')){
+                var title = tag.getAttribute('title');
+                var _id = tag.getAttribute('id');
+                var size = tag.getAttribute('size');
+                var fulltime = tag.getAttribute('fulltime');
+            }else{
+                var resource = JSON.parse(getResource(tag.getAttribute('key')));
+                var title = resource.title;
+                var _id = tag.getAttribute('key');
+                var size = resource.size;
+                var fulltime = resource.fulltime;
+            }
+            
+            var res = ['<div class="audio-play" style="width:' + bw + 'px;height:' + bh + 'px;" id="' + id + '">'];
+            res.push('<img style="width:' + bw + 'px;height:' + bh + 'px" class="board" src="images/player_bg.png"/>');
+            res.push('<img class="play" id="' + _id + '" src="images/play_normal.png" play="0" style="width:' + pwh + 'px;height:' + pwh + 'px;top:' + pt + 'px"/>');
+            res.push('<div class="info" style="left:' + il + 'px;top:' + it + 'px;">');
+            res.push('<div class="title" style="width:' + tw + 'px">' + title + '</div>');
+            res.push('<div class="desc" style="width:' + tw + 'px">');
+            res.push('<span class="size">' + size + '</span><span class="duration">' + fulltime + '</span>');
+            res.push('</div></div></div>');
+            
+            audio.setAttribute('style', 'margin-left:5px;');
+            audio.innerHTML = res.join('');
+            
+            //audio.id = id;
+            
+            return audio;
+        }
+        
+        mix = {
+		  /*
+		   * 预加载UI
+		   */
+		  loading: function(){
+		    loading();
+		  },
+		  
+		  /*
+		   * 初始化UI
+		   * @html  笔记内容
+           * @deviceWidth 设备宽度
+		   */
+          init: function(html, deviceWidth){
+            this.deviceWidth = deviceWidth;
+            var main = document.querySelector('#main');
+            main.innerHTML = initUI(html.replace(/\r|\n/igm, ''));
+            
+            var tags = main.querySelectorAll('ln-photo, ln-audio, ln-text');
+            for(var i = 0; i < tags.length; i++){
+                var tag = tags[i];
+                switch(tag.nodeName.toLowerCase()){
+                    case 'ln-text': tag.parentNode.replaceChild(buildText(tag), tag);break;
+                    case 'ln-photo': tag.parentNode.replaceChild(buildPhoto(tag, this.deviceWidth), tag);break;
+                    case 'ln-audio': tag.parentNode.replaceChild(buildAudio(tag, this.deviceWidth), tag);break;
+                }
+            }
+            main.style.display = 'block';
+            photo_preview('main');
+            var audios = main.querySelectorAll('div.audio-play');
+            for(var i = 0; i < audios.length; i++){
+                audios[i].addEventListener('click', function(e){
+                    var play_img = this.querySelector('img.play');
+                    if(play_img.getAttribute('play') == 0){
+                      play_img.setAttribute('play', 1);
+                      play_img.setAttribute('src', 'images/play_pause.png');
+                    }else{
+                      play_img.setAttribute('play', 0);
+                      play_img.setAttribute('src', 'images/play_normal.png');
+                    }
+                  try{
+                    //回调android方法
+                    console.info(play_img.getAttribute('id'));
+                    window.View.viewResource(play_img.getAttribute('id'), this.getAttribute('id'));
+                  }catch(e){}
+                }, false);
+            }
+          },
+          
+          /*
+           * 解析mix并替换mix占位符
+           * @id Mix ID
+           * @content  mix内容
+           */
+          buildMix: function(id, content){
+            var _mix = document.querySelector('#' + id + '.mix');
+            if(_mix){
+              _mix.innerHTML = resolveMix(id, content.replace(/\r|\n/igm, ''), this.deviceWidth);
+              photo_preview(id);
+			  audio_listener(id);
+            }
+          },
+          
+          /*
+           * 暂停或开始
+           * @id  mix ID
+           */
+          startOrPause: function(id){
+            var play = document.querySelector('#' + id + ' .audio-play .play, #' + id + '.audio-play .play');
+            if(play){
+			  if(play.getAttribute('play') == 0){
+			    play.setAttribute('play', 1);
+				play.setAttribute('src', 'images/play_pause.png');
+			  }else{
+			    play.setAttribute('play', 0);
+				play.setAttribute('src', 'images/play_normal.png');
+			  }
+            }
+          },
+          
+		  /*
+		   * 滑动
+		   * @id mix ID
+		   * @second 当前播放的秒数
+		   * @speed  在指定的时间内完成动画，默认为100ms
+		   */
+          slideTo: function(id, second, speed){
+            slide(id, second, speed);
+          },
+		  
+		  /*
+		   * 播放结束还原UI
+		   * @id mix ID
+		   */
+		  end: function(id){
+		    cleanIconState(id);
+			//var play = document.querySelector('#' + id + ' .audio-play .play[play="1"]');
+            var play = document.querySelector('#' + id + ' .audio-play .play, #' + id + '.audio-play .play');
+			if(play){
+              play.removeAttribute('already');
+			  play.setAttribute('play', 0);
+		      play.setAttribute('src', 'images/play_normal.png');
+			}
+		  }
+        }
+      })();
+      
+      /*
+       * 改进
+       * 1.如果以后支持修改调整mix中各元素的时间，则在解析mix元素时就不能按元素位置顺序解析了，因为修改后的mix内各元素不一定都是按照starttime时间来递增排序的，可能时间是乱的了。
+       * 这个时候的解析可以按钮时间顺序来组织解析，即所有解析完毕的元素都放在一个临时变量中，解析完成后再用冒泡等排序算法按starttime排好序后再innerHTML属性写到文档中去。
+       * 还有一种方法是创建一个dom对象，然后根据当前待解析元素的时候其之前或之后的元素并用insertBefore或insertAfter方法将该元素插入到对应的DOM中。
+       * 建议采用第一种排序算法，如果用dom对象方法则解析mix的过程可能会比较复杂。
+       *
+       * 2.性能优化：不再采取每s都回调js/android的api了，这样性能很低，而是采用记住所有元素的time列表的方法--只有当前播放的秒数时间在这个集合中才会回调api。
+       */
+      window.onload = function(){
+        var html = ['<p>柳州市公安局110报警服务台接到女青年小覃打来的求助电话称，她在柳石路的住所内，将丈夫打得头破血流。原来，丈夫用仿真钻戒作为七夕节礼物送给她，她感觉受骗，一怒之下动了手。</p>'];
+        html.push('<mix id="mix1" timestamp=123123123123></mix>');
+        html.push('<p>他守候在会所的大门外，蹑足于宾馆的走廊中，等待“致命一击”的证据出现。为了取证，他穷尽所能：假装随从，核对账单；购买装置，秘拍偷欢；他甚至做过一个详细计划——混进“二奶”的房间，安上秘密摄像头。受访时，老陈心情不错。他时而用手机看看微博。微博上，法官买春事件正持续发酵。有人评价老陈具备典型的“上海人特点”——思维缜密、耐心细致、隐忍数月、出手刁钻……，有人夸他以专业的手法完成了一场“基督山式的复仇”，当然也有人骂他偷拍隐私，行事下作。</p>');
+        
+        html.push('<ln-photo src="images/demo/1.jpg" id="img0"></ln-photo>');
+        html.push('<p style="color:red">第二个mix，<ln-text>测试</ln-text>mix回调两次的问题</p>');
+        html.push('<ln-audio id="audio2" size="12.08KB" title="qq.mp3" fulltime="01:26"></ln-audio>')
+        html.push('<mix id="mix2"></mix>');
+        html.push('<p style="color:red">第二个mix结束</p>');
+        mix.init(html.join(''), 320);
+        
+        var _mix = ['<ln-photo src="images/demo/8.jpg" id="img0" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=9></ln-photo>'];
+        //html.push('<ln-audio src="" id="audio0" size="12.08KB" title="Voice0001_0002_0003_0004_part01.aac" class="lenovo-resource-audio" onclick="window.View.viewResource(aa)" fulltime="01:26"></ln-audio>');
+        _mix.push('<ln-audio src="" id="audio0" size="12.08KB" title="9af053e7-79d3-42ed-a764-c9fe6b0e7564.mp3" class="lenovo-resource-audio" onclick="window.View.viewResource(aa)" fulltime="01:26"></ln-audio>');
+        _mix.push('<ln-photo src="images/demo/5.jpg" id="img1" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=10></ln-photo>');
+        _mix.push('<ln-photo src="images/demo/6.jpg" id="img2" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=10></ln-photo>');
+		_mix.push('<ln-photo src="images/demo/11.jpg" id="img3" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=11></ln-photo>');
+		_mix.push('<ln-photo src="images/demo/9.jpg" id="img4" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=12></ln-photo>');
+		_mix.push('<ln-text class="lenovo-resource-text" starttime=20>男士们经常被问到的一个问题是“老婆和妈妈同时掉水里，你先救谁？”如今，这个问题有了升级版“老婆和狗狗同时掉水里，你先救谁？”如今，南非男子格兰汉姆·安利用实际行动给出了答案：先救狗狗。</ln-text>');
+		_mix.push('<ln-photo src="images/demo/10.jpg" id="img5" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=30></ln-photo>');
+        mix.buildMix('mix1', _mix.join(''));
+        
+        //第二个mix内容解析
+        var _mix = ['<ln-audio src="" id="audio1" size="5.08MB" title="山夫.mp3" class="lenovo-resource-audio" onclick="window.View.viewResource(bb)" fulltime="03:17"></ln-audio>'];
+        _mix.push('<ln-photo src="images/demo/7.jpg" id="img6" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=10></ln-photo>');
+        _mix.push('<ln-photo src="images/demo/12.jpeg" id="img7" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=10></ln-photo>');
+		_mix.push('<ln-photo src="images/demo/13.jpg" id="img8" class="lenovo-resource-img" onclick="window.View.viewResource(ff)" starttime=10></ln-photo>');
+		_mix.push('<ln-text class="lenovo-resource-text" starttime=20>媒体称美国可能大范围调查投行雇佣中国官二代</ln-text>');
+        mix.buildMix('mix2', _mix.join(''));
+      }
+    </script>
+  </body>
+</html>

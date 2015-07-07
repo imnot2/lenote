@@ -1,0 +1,461 @@
+/* line 4, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar, #containerLite .toolbarcontainer .toolbar, #containerClean .toolbarcontainer .toolbar, #container .toolbarsubcontainer .toolbarsub, #containerLite .toolbarsubcontainer .toolbarsub, #containerClean .toolbarsubcontainer .toolbarsub {
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #d94a4a;
+  z-index: 999;
+  padding: 12px 21px;
+}
+/* line 9, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap, #containerLite .toolbarcontainer .toolbar .wrap, #containerClean .toolbarcontainer .toolbar .wrap, #container .toolbarsubcontainer .toolbarsub .wrap, #containerLite .toolbarsubcontainer .toolbarsub .wrap, #containerClean .toolbarsubcontainer .toolbarsub .wrap {
+  width: 100%;
+}
+/* line 11, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap {
+  background: transparent;
+  border: 0 none;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 16, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button {
+  color: #d94a4a;
+  background-color: transparent;
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+/* line 23, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button span, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button span, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button span, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button span, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button span, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button span {
+  font-size: 1.6em;
+}
+/* line 26, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn {
+  background: url("../../images/list.png") no-repeat 0 6px transparent;
+  -moz-background-size: 2.5em;
+  -o-background-size: 2.5em;
+  -webkit-background-size: 2.5em;
+  background-size: 2.5em;
+  padding-left: 3.5em;
+  padding-top: 2px;
+}
+/* line 32, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn {
+  background: url("../../images/search.png") no-repeat center transparent;
+  -moz-background-size: 2em;
+  -o-background-size: 2em;
+  -webkit-background-size: 2em;
+  background-size: 2em;
+}
+/* line 35, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.searchBtn span {
+  text-indent: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 24px;
+}
+/* line 43, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch {
+  background: url("../../images/close2.png") no-repeat center transparent;
+  -moz-background-size: 1.8em;
+  -o-background-size: 1.8em;
+  -webkit-background-size: 1.8em;
+  background-size: 1.8em;
+}
+/* line 46, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.closeSearch span {
+  text-indent: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 24px;
+}
+/* line 54, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.backBtn {
+  background: url("../../images/back.png") no-repeat 0 8px transparent;
+  -moz-background-size: 1.6em 1.8em;
+  -o-background-size: 1.6em 1.8em;
+  -webkit-background-size: 1.6em 1.8em;
+  background-size: 1.6em 1.8em;
+  padding-left: 2.5em;
+  padding-top: 4px;
+}
+/* line 60, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn {
+  background: url("../../images/edit.png") no-repeat 0 0 transparent;
+  -moz-background-size: 26px 28px;
+  -o-background-size: 26px 28px;
+  -webkit-background-size: 26px 28px;
+  background-size: 26px 28px;
+  margin-right: 2em;
+}
+/* line 64, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.editBtn span {
+  text-indent: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 26px;
+}
+/* line 72, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn {
+  background: url("../../images/more.png") no-repeat 0 0 transparent;
+  -moz-background-size: 9px 28px;
+  -o-background-size: 9px 28px;
+  -webkit-background-size: 9px 28px;
+  background-size: 9px 28px;
+}
+/* line 75, ../../scss/body.scss */
+#container .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span, #containerLite .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span, #containerClean .toolbarcontainer .toolbar .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span, #container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.moreBtn span {
+  text-indent: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 9px;
+}
+
+/* line 88, ../../scss/body.scss */
+#container, #containerLite, #containerClean {
+  position: relative;
+}
+/* line 90, ../../scss/body.scss */
+#container .toolbarcontainer, #containerLite .toolbarcontainer, #containerClean .toolbarcontainer {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+/* line 100, ../../scss/body.scss */
+#container .toolbarsubcontainer, #containerLite .toolbarsubcontainer, #containerClean .toolbarsubcontainer {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: none;
+}
+/* line 111, ../../scss/body.scss */
+#container .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn.close, #containerLite .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn.close, #containerClean .toolbarsubcontainer .toolbarsub .wrap .ui-toolbar-wrap .ui-toolbar-button.menuBtn.close {
+  background-image: url("../../images/close2.png");
+  -moz-background-size: 1.8em;
+  -o-background-size: 1.8em;
+  -webkit-background-size: 1.8em;
+  background-size: 1.8em;
+  padding-left: 3.5em;
+  padding-top: 2px;
+}
+/* line 123, ../../scss/body.scss */
+#container .seachWrap, #containerLite .seachWrap, #containerClean .seachWrap {
+  width: 100%;
+  height: 40px;
+  display: none;
+  position: absolute;
+  top: 55px;
+  z-index: 2;
+  background-color: #fff;
+  overflow: hidden;
+  *zoom: 1;
+  border-bottom: 1px solid #dedede;
+}
+/* line 133, ../../scss/body.scss */
+#container .seachWrap .entertBox, #containerLite .seachWrap .entertBox, #containerClean .seachWrap .entertBox {
+  height: 20px;
+  line-height: 20px;
+  font-size: 1.8em;
+  padding: 10px 15px;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: Tahoma, 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+  width: 85%;
+}
+/* line 144, ../../scss/body.scss */
+#container .seachWrap .seachBtn, #containerLite .seachWrap .seachBtn, #containerClean .seachWrap .seachBtn {
+  width: 30px;
+  height: 40px;
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../../images/search.png") no-repeat 5px center transparent;
+  -moz-background-size: 2em;
+  -o-background-size: 2em;
+  -webkit-background-size: 2em;
+  background-size: 2em;
+}
+/* line 153, ../../scss/body.scss */
+#container .seachWrap .seachBtn span, #containerLite .seachWrap .seachBtn span, #containerClean .seachWrap .seachBtn span {
+  text-indent: 100%;
+}
+/* line 158, ../../scss/body.scss */
+#container #content, #containerLite #content, #containerClean #content {
+  position: absolute;
+  width: 100%;
+  top: 55px;
+  bottom: 96px;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+/* line 167, ../../scss/body.scss */
+#container #content.note-editor, #containerLite #content.note-editor, #containerClean #content.note-editor {
+  background-color: #fff;
+}
+/* line 171, ../../scss/body.scss */
+#container #content.note-create, #containerLite #content.note-create, #containerClean #content.note-create {
+  background-color: #fff;
+}
+/* line 175, ../../scss/body.scss */
+#container #content ul.list li, #containerLite #content ul.list li, #containerClean #content ul.list li {
+  border-bottom: 1px solid #ebebeb;
+  cursor: pointer;
+}
+/* line 178, ../../scss/body.scss */
+#container #content ul.list li.sep, #containerLite #content ul.list li.sep, #containerClean #content ul.list li.sep {
+  background-color: #f5f5f5;
+  color: #888;
+  color: #888;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  padding: 0 15px;
+}
+/* line 187, ../../scss/body.scss */
+#container #content ul.list li.item, #containerLite #content ul.list li.item, #containerClean #content ul.list li.item {
+  background-color: #fff;
+  overflow: hidden;
+}
+/* line 191, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry, #containerLite #content ul.list li.item .note-entry .entry, #containerClean #content ul.list li.item .note-entry .entry {
+  height: 74px;
+  padding: 10px 15px;
+}
+/* line 194, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .title, #containerLite #content ul.list li.item .note-entry .entry .title, #containerClean #content ul.list li.item .note-entry .entry .title {
+  color: #333;
+  font-size: 1.8em;
+  white-space: nowrap;
+}
+/* line 199, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary, #containerLite #content ul.list li.item .note-entry .entry .summary, #containerClean #content ul.list li.item .note-entry .entry .summary {
+  color: #888;
+  font-size: 14px;
+  line-height: 16px;
+  height: 48px;
+}
+/* line 205, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary .sumlist li, #containerLite #content ul.list li.item .note-entry .entry .summary .sumlist li, #containerClean #content ul.list li.item .note-entry .entry .summary .sumlist li {
+  border: none;
+}
+/* line 208, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary .sumlist .bold, #containerLite #content ul.list li.item .note-entry .entry .summary .sumlist .bold, #containerClean #content ul.list li.item .note-entry .entry .summary .sumlist .bold {
+  font-weight: bold;
+}
+/* line 211, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary .sumlist .lineThrough, #containerLite #content ul.list li.item .note-entry .entry .summary .sumlist .lineThrough, #containerClean #content ul.list li.item .note-entry .entry .summary .sumlist .lineThrough {
+  text-decoration: line-through;
+  vertical-align: middle;
+}
+/* line 216, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary .disc, #containerLite #content ul.list li.item .note-entry .entry .summary .disc, #containerClean #content ul.list li.item .note-entry .entry .summary .disc {
+  list-style: disc inside;
+}
+/* line 219, ../../scss/body.scss */
+#container #content ul.list li.item .note-entry .entry .summary .decimal, #containerLite #content ul.list li.item .note-entry .entry .summary .decimal, #containerClean #content ul.list li.item .note-entry .entry .summary .decimal {
+  list-style: decimal inside;
+}
+/* line 228, ../../scss/body.scss */
+#container #content .audiobox, #containerLite #content .audiobox, #containerClean #content .audiobox {
+  height: 42px;
+  background: url("../../images/icon_play_normal.png") no-repeat scroll 22px center;
+  background-color: #f1f1f1;
+  color: #888;
+  -moz-background-size: 30px;
+  -o-background-size: 30px;
+  -webkit-background-size: 30px;
+  background-size: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 21px;
+  padding: 20px 0;
+  position: relative;
+}
+/* line 239, ../../scss/body.scss */
+#container #content .audiobox .audiomask, #containerLite #content .audiobox .audiomask, #containerClean #content .audiobox .audiomask {
+  height: 100%;
+  text-align: right;
+  line-height: 82px;
+  padding-right: 22px;
+  font-size: 22px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 250, ../../scss/body.scss */
+#container #content .wrap, #containerLite #content .wrap, #containerClean #content .wrap {
+  -webkit-backface-visibility: hidden;
+  padding: 2em 1.6em 0;
+}
+/* line 257, ../../scss/body.scss */
+#container #content .wrap .titlecontainer, #containerLite #content .wrap .titlecontainer, #containerClean #content .wrap .titlecontainer {
+  margin-bottom: 1.6em;
+}
+/* line 259, ../../scss/body.scss */
+#container #content .wrap .titlecontainer input.title, #containerLite #content .wrap .titlecontainer input.title, #containerClean #content .wrap .titlecontainer input.title {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  outline: 0 none;
+  color: #333;
+  font-size: 2.2em;
+  width: 100%;
+}
+/* line 271, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail, #containerLite #content .wrap .contentcontainer .detail, #containerClean #content .wrap .contentcontainer .detail {
+  color: #555;
+  font-size: 1.6em;
+  outline: 0 none;
+  min-height: 90px;
+}
+/* line 276, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .todo, #containerLite #content .wrap .contentcontainer .detail .todo, #containerClean #content .wrap .contentcontainer .detail .todo {
+  line-height: 24px;
+  padding: 10px 10px 10px 45px;
+  border-bottom: 1px dashed #ccc;
+  background: url("../../images/iconc_checkbox_normal.png") no-repeat scroll 15px center;
+  font-size: 16px;
+  -moz-background-size: 24px;
+  -o-background-size: 24px;
+  -webkit-background-size: 24px;
+  background-size: 24px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 284, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .todo .title, #containerLite #content .wrap .contentcontainer .detail .todo .title, #containerClean #content .wrap .contentcontainer .detail .todo .title {
+  float: left;
+}
+/* line 287, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .todo .time, #containerLite #content .wrap .contentcontainer .detail .todo .time, #containerClean #content .wrap .contentcontainer .detail .todo .time {
+  float: right;
+}
+/* line 291, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .rightIcon, #containerLite #content .wrap .contentcontainer .detail .rightIcon, #containerClean #content .wrap .contentcontainer .detail .rightIcon {
+  border: 1px solid #ccc;
+  background: url("../../images/iconc_bell_normal.png") no-repeat scroll right center;
+  -moz-background-size: 36px;
+  -o-background-size: 36px;
+  -webkit-background-size: 36px;
+  background-size: 36px;
+}
+/* line 295, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .rightIcon .todo, #containerLite #content .wrap .contentcontainer .detail .rightIcon .todo, #containerClean #content .wrap .contentcontainer .detail .rightIcon .todo {
+  border: none;
+}
+/* line 299, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .notChecked, #containerLite #content .wrap .contentcontainer .detail .notChecked, #containerClean #content .wrap .contentcontainer .detail .notChecked {
+  margin-top: 20px;
+}
+/* line 302, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .isChecked, #containerLite #content .wrap .contentcontainer .detail .isChecked, #containerClean #content .wrap .contentcontainer .detail .isChecked {
+  margin-top: 20px;
+}
+/* line 304, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .isChecked .tip, #containerLite #content .wrap .contentcontainer .detail .isChecked .tip, #containerClean #content .wrap .contentcontainer .detail .isChecked .tip {
+  font-size: 16px;
+  background: url("../../images/icon_display.png") no-repeat scroll right center;
+  -moz-background-size: 48px;
+  -o-background-size: 48px;
+  -webkit-background-size: 48px;
+  background-size: 48px;
+}
+/* line 309, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .isChecked .off, #containerLite #content .wrap .contentcontainer .detail .isChecked .off, #containerClean #content .wrap .contentcontainer .detail .isChecked .off {
+  background-image: url("../../images/icon_hide.png");
+}
+/* line 312, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .isChecked .todo, #containerLite #content .wrap .contentcontainer .detail .isChecked .todo, #containerClean #content .wrap .contentcontainer .detail .isChecked .todo {
+  background-image: url("../../images/iconc_checkbox_active.png");
+}
+/* line 314, ../../scss/body.scss */
+#container #content .wrap .contentcontainer .detail .isChecked .todo .title, #containerLite #content .wrap .contentcontainer .detail .isChecked .todo .title, #containerClean #content .wrap .contentcontainer .detail .isChecked .todo .title {
+  text-decoration: line-through;
+  vertical-align: middle;
+}
+/* line 321, ../../scss/body.scss */
+#container #content .wrap .contentcontainer textarea.detail, #containerLite #content .wrap .contentcontainer textarea.detail, #containerClean #content .wrap .contentcontainer textarea.detail {
+  width: 100%;
+  color: #999;
+  font-size: 1.6em;
+  border: 0 none;
+  outline: 0 none;
+  resize: none;
+  overflow: hidden;
+}
+/* line 334, ../../scss/body.scss */
+#container #new, #containerLite #new, #containerClean #new {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  margin-left: -3.125em;
+  width: 6.25em;
+  height: 6.25em;
+  z-index: 1000;
+  background: url("../../images/new.png") no-repeat 0 0 transparent;
+  -moz-background-size: 6.25em;
+  -o-background-size: 6.25em;
+  -webkit-background-size: 6.25em;
+  background-size: 6.25em;
+  cursor: pointer;
+}
+/* line 345, ../../scss/body.scss */
+#container #new.lite, #containerLite #new.lite, #containerClean #new.lite {
+  bottom: 28px;
+}
+
+/* line 353, ../../scss/body.scss */
+#containerLite #content {
+  bottom: 36px;
+  margin-bottom: 5px;
+}
+
+/* line 361, ../../scss/body.scss */
+#containerClean #content {
+  bottom: 10px;
+}
+
+/* line 366, ../../scss/body.scss */
+#main {
+  padding: 3em 1.5em 0;
+  text-align: center;
+}
+/* line 369, ../../scss/body.scss */
+#main .login, #main .register, #main .openup {
+  color: #fff;
+  background-color: #d94a4a;
+  height: 3em;
+  line-height: 3em;
+  font-size: 2em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 379, ../../scss/body.scss */
+#main .register {
+  background-color: #7f7f7f;
+  margin-bottom: 1.5em;
+}
+/* line 384, ../../scss/body.scss */
+#main .openup {
+  margin-bottom: 1.8em;
+}
+/* line 388, ../../scss/body.scss */
+#main .copyright {
+  color: #555;
+  font-size: 1.5em;
+}
+
+/*# sourceMappingURL=body.css.map */

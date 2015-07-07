@@ -1,0 +1,130 @@
+body{
+	font-size: 65%;
+}
+img,.image{
+	border: none;
+	vertical-align: middle;
+}
+textarea{
+	margin: 0;
+	padding: 0;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+#header, #content, #place_wray{
+	width: 1080px;
+	margin: 0 auto;
+}
+#header{
+	position: relative;
+	text-align: center;
+}
+img#banner{
+	width: 1080px;
+	height: 805px;
+}
+img#weather{
+	width: 70px;
+	height: 70px;
+	margin-top: -8px;
+}
+#date{
+	margin: 0;
+	padding: 0;
+	margin-left: 60px;
+	margin-top: 54px;
+	width: 244px;
+	height: 96px;
+	font: 1.2;
+	color: #f1f1f1;
+}
+#date .mouth_wray, #date .year{
+	width: 108px;
+	height: 52px;
+	font-size: 42px;
+	line-height: 52px;
+}
+#date .day{
+	width: 136px;
+	height: 96px;
+	font-size: 118px;
+	line-height: 96px;
+}
+.bar_mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../images/mask.png") no-repeat center top scroll;
+	background-size: 100% 100%;
+}
+.bar_mask .camera{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.view .camera{
+	background-image: none; 
+	background-size: 220px;
+}
+.edit .camera{
+	background-image: url("../images/icon_camera.png");
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: 220px;
+}
+#weather_wray{
+	padding:70px 60px;
+	height: 70px;	
+	font-size: 42px;
+	line-height: 70px;
+	color: #f1f1f1;
+}
+#content{
+	min-height: 600px;
+	background: url("../images/diwen.png") center -13px;
+	background-size: 1px 45px;
+	font-size: 15px;
+	padding: 45px 62px;
+	width: 956px;
+}
+.text{
+	min-height: 600px;
+	line-height: 45px;	
+	color: #888;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	font-size: 14px;
+}
+.text>div{
+	line-height: 45px;	
+}
+.text.active{
+	color: #555;
+}
+#place_wray{
+	height: 60px;
+	/*background: url("../images/diwen_line.png");*/
+	background: url("../images/icon_location.png") right center no-repeat scroll;
+	background-size: 60px;
+	margin-top: 30px;
+}
+#place_wray .place{ 
+	width: 50%;
+	text-align: right;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 70px;
+	font-size: 30px;
+	border: none;
+	white-space:nowrap;
+	overflow: hidden;
+}

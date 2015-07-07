@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="乐云记事-随时随地,记录和同步我的笔记" />
+    <meta name="keywords"  content="乐云记事,云笔记,微笔记" />
+    <title>Coming Soon - 乐云记事</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/lib/jquery.lenote.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/comingsoon.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="/assets/js/comingsoon.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?2282f4e4a3753e3ccc50096dedf11253";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  </head>
+  <body>
+      <div id="container">
+         <div id="main"><div class="wrap"><img src="/assets/images/comingsoon.png" alt="Coming Soon..." /></div></div>
+         
+         <div id="footer">
+             <div class="wrap">
+                <div class="shortcut clearfix">
+                    <div class="links clearfix">
+                        <div class="about">
+                            <h5>关于乐云记事</h5>
+                            <ul>
+                                <li><a href="http://www.lenovo.com.cn/Public/public_bottom/legal.shtml">法律公告</a></li>
+                                <li><a href="http://www.lenovo.com.cn/Public/public_bottom/privacy.shtml">隐私保护</a></li>
+                            </ul>
+                        </div>
+                        <div class="download">
+                            <h5>产品下载</h5>
+                            <ul>
+                                <li><a href="http://susapi.lenovomm.com/adpserver/GetPackByPN?PackageName=com.lenovo.supernote&ChannelKey=null&UserKey=">Android Phone</a></li>
+                                <li><a href="http://susapi.lenovomm.com/adpserver/DLBIDFS?ds=26401_20388520&rt=POL">Windows 桌面客户端</a></li>
+                            </ul>
+                        </div>
+                        <div class="partner">
+                            <h5>合作伙伴</h5>
+                            <ul>
+                                <li><a href="http://www.lenovo.com.cn/">联想集团</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <ul class="assistant">
+                        <li class="follow"><a href="http://weibo.com/u/3936993678" target="_blank" class="clearfix"><i></i><span>加关注</span></a></li>
+                        <li class="suggest"><a href="/suggest.html" class="clearfix"><i></i><span>提意见</span></a></li>
+                        <li class="help"><a href="/help.html" class="clearfix"><i></i><span>看帮助</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="declare">
+                    <img src="/assets/images/footer_logo.png" alt="乐云记事" title="乐云记事 &middot; 您的生活好帮手" class="logo" />
+                    <img src="/assets/images/footer_logo_lenovo.png" alt="乐云记事" title="联想 &middot; 乐云记事" class="lenovo" />
+                    <span class="copyright">&copy; 1998 - 2014 Lenovo Inc. All Rights Reserved</span>
+                </div>
+             </div>
+         </div>
+      </div>
+      
+      <script type="text/javascript">
+          $(function(){
+              if(typeof(JSON) == 'undefined') $('body').append('<script type="text/javascript" src="/assets/js/json/json2.js"><\/script>');
+              
+              var container = $('#container'), res = [];
+              if(user.checkLogin()){
+                  res.push('<h1><a href="/notes" title="乐云记事" class="logo">乐云记事</a></h1>');
+                  container.addClass('loged');
+                  res.push('<div class="client_downloads"><a href="' + lenoteConfig.download.pc.link + '" class="pc" title="PC 客户端下载"></a><a href="' + lenoteConfig.download.ios.link + '" class="iphone" title="iPhone 客户端下载"></a><a href="' + lenoteConfig.download.android.link + '" class="android" title="Android 客户端下载"></a></div>');
+                  res.push('<div class="links">');
+                  res.push('<a href="javascript:;" class="accountinfo"></a><img src="/assets/images/top_line.png" alt="|" class="spaceline" /><a href="javascript:;" class="logout">登出</a>');
+                  res.push('</div>');
+                  container.prepend('<div id="header1">' + res.join('') + '</div>');
+                  $('.accountinfo').append(user.getUState('un'));
+                  $('.logout').click(function(){user.logout();});
+              }else{
+                  res.push('<h1><a href="/" title="乐云记事" class="logo">乐云记事</a></h1>');
+                  res.push('<ul class="links clearfix"><li><a href="/">首页</a></li><li><a href="/download.html" class="active">多平台下载</a></li><li><a href="http://weibo.com/u/3936993678" target="_blank">官方微博</a></li><li><a href="http://www.lenovo.com.cn">联想官网</a></li></ul>');
+                  res.push('<ul class="act clearfix"><li><a href="javascript:;" class="signin"><span>登&nbsp;录</span></a></li><li><a href="javascript:;" class="register"><span>注&nbsp;册</span></a></li></ul>');
+                  container.prepend('<div id="header"><div class="rainbow"></div><div class="wrap clearfix">' + res.join('') + '</div><div class="shadow"></div></div>');
+                  $('.signin').click(function(){user.login();});
+                  $('.register').click(function(){user.register();});
+                  $('#header ul.links').smartNavHover();
+              }
+          });
+      </script>
+  </body>
+</html>

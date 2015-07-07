@@ -1,0 +1,1 @@
+i18n.defined('zh-cn', {    'title': '标题',    'from': '从',    'to': '到',    'members': '成员',    'note-taking': '边走边记',    'something': '写些什么吧'});i18n.defined('en-us', {    'title': 'Title',    'from': 'From',    'to': 'To',    'members': 'Members',    'note-taking': 'Note Taking',    'something': 'Something..'});

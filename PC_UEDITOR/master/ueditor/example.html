@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>   
+	</head>
+<body scroll="no" style="margin:0; overflow-y:hidden">
+<div>
+    <script id="editor" type="text/plain" style="width:1024px;height:500px"></script>
+</div>
+</body> 
+<script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="jquery.js"> </script>
+<script type="text/javascript" charset="utf-8" src="base64.js"> </script>  
+<script type="text/javascript" charset="utf-8" src="fnTool.js"> </script>  
+<script type="text/javascript" charset="utf-8" src="listener.js"> </script>  
+<script type="text/javascript">
+   var _util=new _tool.Util();
+   function getContent() {
+
+      //给所有本地上传的图片加上_tag属性。方便分配key值时进行查找。
+		var imgs=$(ue.body).find('img');
+		for(var i=0;i<imgs.length;i++){
+			var img=imgs.eq(i);
+			if(!img.attr('key') && /^file/i.test(img.attr('src')))img.attr('_tag',parseInt(Math.random()*100)*new Date().getTime());
+		}
+		var _cont = ue.getContent(function(){
+			var doc = ue.body;
+			if(doc.querySelectorAll('p').length > 1)return true;
+			return doc.querySelectorAll('span','strong','em').length || ue.hasContents();
+		});
+		return _util.getCont(_cont);
+   }  
+   function setContent(isAppendTo) { 
+		//隐藏字体字号下拉框。
+		var popups = document.querySelectorAll(".edui-popup");
+		for(var i=0;i<popups.length;i++){
+			var popup=popups[i];
+			popup.style.display = "none";
+		}
+		_util.setCont(isAppendTo);
+   }   
+   function setHeight(height) {
+		ue.setHeight(height);
+   }   
+   function setWidth(width) {
+   		_util.viewWidth = width - 25;
+        $("#editor,#edui1,#edui1_iframeholder,ue.body").css('width',width+'px');  
+        _tool.AdjustToolbar(width);   
+   }   
+   function getDescription(num) {
+		return _util.getDescription(num);
+   }   
+   function insertFile(key,src,type,clientX,clientY) {
+		_util.insertfile(key,src,type,clientX,clientY);
+   }
+   function onPaste(filesrc) {
+		_util.insertfile(filesrc,true);
+   }   
+   function insertImage(imgsrc, imgw, imgh) {
+		ue.execCommand('insertImage', {"floatStyle":"left","height":imgh,"src":imgsrc,"title":"img","width":imgw});
+   }
+   function undoRedoReset(){
+   		_util.reset();
+   } 
+   function getFocus(){
+   		ue.body.focus();
+   }
+   function replaceSrc(key,src){
+      	_util.replaceSrc(key,src);
+   }
+   function replaceKey(oldkey,newkey){
+   		_util.replaceKey(oldkey,newkey);
+   }
+   function insertHtml(html){
+   		ue.execCommand('insertHtml', html, true);
+   }
+   function align(attr){//left|right|center
+   		ue.execCommand('justify', attr);
+   }
+   function style(attr){//bold|italic|underline
+   		ue.execCommand(attr);
+   }
+   function adjustimages(){
+         _util.adjustimages();
+   }
+</script>
+</html>

@@ -1,0 +1,77 @@
+body{
+	font-family: Helvetica,"冬青黑体","华文黑体";
+}
+.blank {
+	height: 26px;
+	overflow: hidden;
+	clear: both;
+}
+.header{
+	text-align: center;
+}
+#main {
+	margin: 0 auto;
+}
+.date {
+	text-align: right;
+	float: left;
+	display: block;
+	border: 1px dashed rgb(153, 153, 153);
+	color: #333333;
+	border-right: none;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.date .mouth, .date .year {
+	font-size: 42px;
+}
+.date .day {
+	font-size: 60px;
+}
+.date span {
+	display: block;
+}
+.note_tag {
+	text-align: right;
+}
+.content {
+	float: right;
+}
+.moods, .weather{
+	border: 1px dashed rgb(153, 153, 153);
+}
+.text {
+	border: 1px dashed rgb(153, 153, 153);
+	line-height: 24px;
+	height: auto;
+	float: right;
+}
+/*.vertical_middle{ width:786px; background:url(images/dottedbox_main02.png) center repeat-y scroll;}
+.vertical_top{ background:url(images/dottedbox_main01.png) center top no-repeat scroll;}
+.vertical_bottom{ background:url(images/dottedbox_main03.png) center bottom no-repeat scroll;}*/
+/*.address {
+	margin-top: 10px;
+}*/
+.place {
+	margin-top: 10px;
+	border: 1px dashed #999;
+	padding: 2px;
+	float: right;
+    height: 24px;
+    line-height: 24px;
+    color: #aaa;
+}
+.text, .place{
+    color: #aaa;
+}
+#ln-tpl.view .text, #ln-tpl.view .place, .text.active, .place.active{
+    color: #666;
+}
+.note_text {
+	border-left: 1px solid #999;
+}
+#ln-tpl.view .text, #ln-tpl.view .date, #ln-tpl.view .contacts,#ln-tpl.view .place,#ln-tpl.view .moods,#ln-tpl.view .weather{
+	border: 0 none;
+}
+.image{
+	border: none;
+}

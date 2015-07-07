@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web版mix</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="mix.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="mix.js"></script>
+  </head>
+  <body>
+   <div class="mix-container">
+    <!-- 这里的内容由lenoteAnayler.encode生成 -->
+    <div class="mix" id="mix1" resource="mix">
+      <!-- audio标签可以通过检查是否支持audio标签/flash来决定 -->
+      <!--<audio src="images/demo/audio.mp3">a audio clip</audio>-->
+      <audio src="images/demo/audio.mp3"></audio>
+      <div class="audio">
+        <a href="javascript:;" class="play"><span>开始</span></a>
+        <div class="progress">
+          <span class="current">00:00</span>
+          <span class="bar_bg"><span class="bar"></span><span class="point"></span></span>
+          <span class="total">00:24</span>
+        </div>
+        <a href="javascript:;" class="over"><span>停止</span></a>
+      </div>
+      
+      <div class="slideshow">
+        <div class="slideshow-wrap">
+          <ul>
+            <li source="item1"><img src="images/demo/11.jpg"/></li>
+            <li source="item2"><img src="images/demo/2.jpg" alt="lemon"/></li>
+            <li source="item3"><img src="images/demo/5.jpg" alt="lemon"/></li>
+            <li source="item4"><div class="text"><div class="text-wrap">51区，位于美国内华达州南部林肯 郡，距离拉斯韦加斯市中心约130公里。这里一直被认为是美国秘密研制飞行器的地方。而由于1947年“罗斯威尔飞碟坠毁”疑云，这里也被冠以“美国地外生物研究中心”的名号。与不明飞行物有关的一切，似乎都被美国政府“隐藏”在这里。不过，尽管已在猜测、幻想、乃至电影中存在了数十年，但美国政府从来没有承认“51区”的存在，直到2013年。</div></div></li>
+            <li source="item5"><img src="images/demo/6.jpg" alt="lemon"/></li>
+            <li source="item6"><img src="images/demo/7.jpg" alt="lemon"/></li>
+            <li source="item7"><img src="images/demo/8.jpg" alt="lemon"/></li>
+            <li source="item8"><img src="images/demo/9.jpg" alt="lemon"/></li>
+            <li source="item9"><img src="images/demo/3.jpg" alt="lemon"/></li>
+            <li source="item10"><img src="images/demo/4.jpg" alt="lemon"/></li>
+            <li source="item11"><img src="images/demo/10.jpg" alt="lemon"/></li>
+            <li source="item12"><img src="images/demo/1.jpg" alt="lemon"/></li>
+            <li source="item13"><img src="images/demo/12.jpeg" alt="lemon"/></li>
+            <li source="item14"><img src="images/demo/13.jpg" alt="lemon"/></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="slider">
+        <div class="prev noselect"><div class="arrow disable"></div></div>
+        <div class="thumbs-wrap">
+          <ul class="thumbs">
+            <!--这里获取cos的缩略图而非原图-->
+            <!-- target与source属性不再需要了，可以去除 -->
+            <li time="2" next="4" target="item1"><a href="javascript:;"><img src="images/demo/11.jpg" alt="lemon"/></a></li>
+            <li time="4" next="8" target="item2"><a href="javascript:;"><img src="images/demo/2.jpg" alt="lemon"/></a></li>
+            <li time="4" next="8" target="item3"><a href="javascript:;"><img src="images/demo/5.jpg" alt="lemon"/></a></li>
+            <li time="4" next="8" target="item4"><a href="javascript:;"><div class="text">51区，位于美国内华达州南部林肯 郡，距离拉斯韦加斯市中心约130公里。这里一直被认为是美国秘密研制飞行器的地方。而由于1947年“罗斯威尔飞碟坠毁”疑云，这里也被冠以“美国地外生物研究中心”的名号。与不明飞行物有关的一切，似乎都被美国政府“隐藏”在这里。不过，尽管已在猜测、幻想、乃至电影中存在了数十年，但美国政府从来没有承认“51区”的存在，直到2013年。</div></a>
+            <li time="4" next="8" target="item5"><a href="javascript:;"><img src="images/demo/6.jpg" alt="lemon"/></a></li>
+            <li time="4" next="8" target="item6"><a href="javascript:;"><img src="images/demo/7.jpg" alt="lemon"/></a></li>
+            <li time="8" next="20" target="item7"><a href="javascript:;"><img src="images/demo/8.jpg" alt="lemon"/></a></li>
+            <li time="20" next="30" target="item8"><a href="javascript:;"><img src="images/demo/9.jpg" alt="lemon"/></a></li>
+            <li time="30" next="35" target="item9"><a href="javascript:;"><img src="images/demo/3.jpg" alt="lemon"/></a></li>
+            <li time="35" next="36" target="item10"><a href="javascript:;"><img src="images/demo/4.jpg" alt="lemon"/></a></li>
+            <li time="35" next="36" target="item11"><a href="javascript:;"><img src="images/demo/10.jpg" alt="lemon"/></a></li>
+            <li time="36" next="37" target="item12"><a href="javascript:;"><img src="images/demo/1.jpg" alt="lemon"/></a></li>
+            <li time="37" next="40" target="item13"><a href="javascript:;"><img src="images/demo/12.jpeg" alt="lemon"/></a></li>
+            <li time="40" target="item14"><a href="javascript:;"><img src="images/demo/13.jpg" alt="lemon"/></a></li>
+          </ul>
+        </div>
+        <div class="next noselect"><div class="arrow"></div></div>
+        <div class="c"></div>
+      </div>
+    </div>
+   </div>
+  </body>
+</html>

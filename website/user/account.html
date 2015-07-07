@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="乐云记事-随时随地,记录和同步我的笔记" />
+    <meta name="keywords"  content="乐云记事,云笔记" />
+    <title>帐户信息 - 乐云记事 - 随时随地,记录和同步我的笔记</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+     <div id="main"></div>
+     
+     <script type="text/javascript" src="/assets/js/all.js"></script>
+     <script type="text/javascript">
+         $(function(){
+             user.getUserInfo(function(status, response){
+                 if(status){
+                     $('#main').append('<p>最后登录时间：' + new Date(response.lastLoginTime).format('yyyy-MM-dd hh:mm:ss') + '</p>');
+                     $('#main').append('<p>空间大小：' + response.usedSpace + '/' + response.totalSpace + '</p>');
+                     $('#main').append('<p><a href="javascript:user.resetpwd()">修改密码</a></p>');
+                 }else{
+                     alert('获取用户信息失败');
+                 }
+             });
+         });
+     </script>
+  </body>
+</html>

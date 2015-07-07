@@ -1,0 +1,4 @@
+todo:
+在web中需要使用ueditor的浏览器类型接口判断不同的浏览器支持的不同特效
+增加图片加载失败时的默认图片：使用img的onerror方法
+添加判断是否支持flash和html5，如不支持则用flash替换

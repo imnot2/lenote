@@ -1,0 +1,413 @@
+::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-thumb{border-radius:3px;background-color: #aaa;}
+::-webkit-scrollbar-thumb:hover{background-color: #ccc;}
+
+/*Global Style*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0; 
+}
+body{
+    font: 12px/1.5 "Microsoft Yahei","微软雅黑",Helvetica,Tahoma,Arial,sans-serif;
+    line-height: 1.5;
+    color:#333;
+}
+*html {/* IE6  Fixed */
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+ul,li,dl,dt,dd{
+    list-style-type: none;
+}
+a{
+    color: #06A4F3;
+    text-decoration: none;
+    outline: none;
+}
+a:visited{
+    text-decoration : none;
+    color: #2E9BD1;
+}
+a:hover, a:active{
+    text-decoration : underline;
+    color: #2E9BD1;
+}
+img{
+    border: 0 none;
+}
+
+/*Common Style*/
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+.ellipsis{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+/*modal box*/
+div#lebox-overlay.fixed.userful{
+    background-color: #333;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+div#lebox-wrap.modal.userful{
+    padding: 0;
+    margin: 50px 0 0;
+    overflow: visible;
+}
+div#lebox-wrap.modal.userful div.top{
+    display: none;
+}
+div#lebox-wrap.modal.userful .content{
+    width: 808px;
+    height: 608px;
+    /*overflow-x: hidden;
+    overflow-y: auto;*/
+    overflow: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+div#lebox-wrap.modal.userful .content .close{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url("/assets/images/close.png") no-repeat 0 0 transparent;
+    position: absolute;
+    right: -22px;
+    top: -22px;
+}
+
+/*Container Style*/
+#container{
+    margin: 0 auto;
+    min-width: 980px;
+    _width: 980px;
+    _overflow: visible;
+}
+#header, #main, #footer{
+    width: 100%;
+}
+
+/* Header Style*/
+#header{
+    height: 140px;
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;*/
+    background-color: #fff;
+    /*border-bottom: 1px solid #F8F8F8;
+    filter: alpha(opacity=90);
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;*/
+    /*IE 6*/
+    /*_position:absolute;
+    _top: expression(eval(document.documentElement.scrollTop) + 'px');*/
+}
+#header .wrap{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#header h1{
+    background: url("/assets/images/nd/logo.png") no-repeat 0 0 transparent;
+    width: 158px;
+    height: 109px;
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    top: 15px;
+}
+#header h1 a.logo{
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    height: 100%;
+}
+#header .flinks{
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    font-size: 16px;
+    color: #999;
+    margin-top: 10px;
+}
+#header .flinks .title,
+#header .flinks ul,
+#header .flinks ul li{
+    float: left;
+}
+#header .flinks ul li{
+    padding-left: 18px;
+}
+#header .flinks ul li a{
+    color: #333;
+}
+#header .flinks ul li a.weixin{
+    position: relative;
+}
+#header .flinks ul li a.weixin .qrcode{
+    position: absolute;
+    top: 20px;
+    left: -42px;
+    z-index: 1001;
+    display: none;
+}
+#header .flinks ul li a.weixin:hover .qrcode{
+    display: block;
+}
+#header .links{
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    font-size: 18px;
+}
+#header .links li{
+    float: left;
+    margin-right: 25px;
+    padding: 0 5px;
+}
+#header .links li.spacing{
+    border-left: 1px solid #A09D9D;
+    height: 25px;
+    margin-top: 2px;
+    padding: 0;
+}
+#header .links a{
+    color: #999;
+    display: block;
+    padding-bottom: 22px;
+    border-bottom: 4px solid transparent;
+}
+#header .links a.active{
+    border-color: #c21a17;
+    color: #333;
+    text-decoration: none;
+}
+#header .links a:hover{
+    text-decoration: none;
+}
+#header .act{
+    border: 2px solid #DD4E52;
+    padding: 8px 18px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 18px;
+    right: 0px;
+    color: #D54D5B;
+    font-size: 18px;
+}
+#header .act a{
+    color: #D54D5B;
+}
+#header .act a:hover{
+    text-decoration: underline;
+}
+
+/* Main Style*/
+#main{
+    position: relative;
+    /*padding-top: 141px;
+    _padding-top: 0;  IE 6*/
+}
+#main a:visited{
+    text-decoration: none;
+}
+/*Slider*/
+#main .theme-default .nivoSlider{
+    margin-bottom: 0;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+#main .theme-default .nivo-controlNav{
+    padding: 0;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    /*width: 72px;
+    margin-left: -36px;*/
+    width: 980px;
+    margin-left: -490px;
+    text-align: right;
+    z-index: 999;
+}
+#main .theme-default .nivo-controlNav a{
+    background: url("/assets/images/bullets.png") no-repeat 0 0 transparent;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    text-indent: 100%;
+    *text-indent: 0;
+    *font-size:0;
+    *line-height:0;
+    *position: relative;
+}
+#main .theme-default .nivo-controlNav a.active{
+    background-position: 0 -15px;
+    /*background-position: 0 -13px\9;
+    position: relative\9;
+    top: -1px\9;*/
+}
+/*surface*/
+#main #surface{
+    background-color: #F8F8F8;
+    width: 100%;
+}
+#main #surface .wrap{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#main #clients{
+    background-color: #F8F8F8;
+    padding-top: 60px;
+}
+#main #clients .wrap{
+    margin: 0 auto;
+    width: 980px;
+}
+#main #clients .wrap h5{
+    text-align: center;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 30px;
+}
+/* Footer Style*/
+#footer{
+    height: 400px;
+    /*background: url("/assets/images/footer_bg.png") repeat-x 0 0 transparent;*/
+    background-color: #C54748;
+    position: relative;
+}
+#footer .wrap{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+#footer .shortcut{
+    height: 270px;
+}
+#footer .shortcut .wrap{
+    padding-top: 25px;
+}
+#footer .shortcut .links{
+    float: left;
+}
+#footer .shortcut .links h5{
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+#footer .shortcut .links li a{
+    font-size: 16px;
+    color: #eee;
+    line-height: 30px;
+}
+#footer .shortcut .links li a:visited{
+    text-decoration: none;
+}
+#footer .shortcut .links li a:hover{
+    text-decoration: underline;
+}
+#footer .shortcut .links li a.weixin{
+    position: relative;
+}
+#footer .shortcut .links li a.weixin .qrcode{
+    position: absolute;
+    top: -50px;
+    right: -140px;
+    z-index: 1001;
+    display: none;
+}
+#footer .shortcut .links li a.weixin:hover .qrcode{
+    display: block;
+}
+#footer .shortcut .links .about,
+#footer .shortcut .download,
+#footer .shortcut .partner{
+    float: left;
+}
+#footer .shortcut .download{
+    margin: 0 120px;
+}
+#footer .shortcut .assistant{
+    float: left;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+#footer .shortcut .assistant .qrcode{
+    width: 190px;
+    height: 190px;
+}
+#footer .shortcut .assistant p{
+    margin: 10px 0 0 0;
+    font-size: 15px;
+    color: #ddd;
+}
+#footer .declare{
+    background-color: #2A2829;
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    bottom: 0;
+    /*color: #666;*/
+    color: #888;
+}
+#footer .declare .corporate{
+    float: left;
+}
+#footer .declare .corporate .logo{
+    position: relative;
+    top: 25px;
+}
+#footer .declare .corporate .copyright{
+    font-size: 18px;
+    position: relative;
+    top: 32px;
+    margin: 0;
+}
+#footer .declare .i18n{
+    float: right;
+    position: relative;
+    top: 55px;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+}
+#footer .declare .i18n span{
+    font-size: 25px;
+    vertical-align: top;
+    padding-left: 8px;
+    font-family: KaiTi, "楷体", STKaiti, NSimSun, SimYou, Helvetica, Tahoma, Arial, sans-serif;
+}
+#flashcontent{
+    position: absolute;
+}

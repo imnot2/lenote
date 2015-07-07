@@ -1,0 +1,41 @@
+{
+    "name": "mobile-usage",
+    "version": "0.1.0",
+    "description": "Analyze HTTP access logs and visualize statistics w/ focus on mobile usage",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "github.com/hgoebl/mobile-usage"
+    },
+    "homepage": "https://github.com/hgoebl/mobile-usage/",
+    "keywords": [
+        "logfile",
+        "analyse",
+        "analyze",
+        "weblog",
+        "statistic",
+        "charts",
+        "useragent",
+        "mobile",
+        "phone",
+        "tablet",
+        "detect",
+        "device",
+        "browser",
+        "version"
+    ],
+    "author": {
+        "name": "Heinrich Goebl",
+        "email": "hgoebl@goebl.com",
+        "url": "http://www.goebl.com/"
+    },
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "mobile-detect": "*",
+        "optimist": "~0.6.0"
+    },
+    "devDependencies": {
+        "jshint": "*"
+    }
+}

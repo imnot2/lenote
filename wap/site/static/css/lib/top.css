@@ -1,0 +1,20 @@
+/* line 3, ../../scss/top.scss */
+#top {
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #d94a4a;
+  padding: 1.5em 1.8em;
+}
+/* line 7, ../../scss/top.scss */
+#top .logo {
+  height: 3.5em;
+  line-height: 3.5em;
+  background: url("../../images/logo.png") no-repeat 0 0 transparent;
+  -moz-background-size: 3.5em;
+  -webkit-background-size: 3.5em;
+  background-size: 3.5em;
+  padding-left: 4.2em;
+}
+/* line 13, ../../scss/top.scss */
+#top .logo span {
+  font-size: 2em;
+}

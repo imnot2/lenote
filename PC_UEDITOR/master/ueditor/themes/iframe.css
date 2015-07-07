@@ -1,0 +1,41 @@
+body,p, strong, 
+dl, dt, dd{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 12px/1.5 Tahoma,"Microsoft Yahei","微软雅黑",Helvetica,Arial,sans-serif;
+}
+a { text-decoration: none;}
+a:hover { text-decoration: underline; }
+img { border: none; margin: 0 5px; vertical-align: bottom; }
+
+/*滚动条*/
+/*webkit*/
+::-webkit-scrollbar
+{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: #dedede;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 10px;
+    background-color: #cecece;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 10px;
+    background-color: #cecece;
+}
+::-webkit-scrollbar-thumb:hover
+{  
+    background-color: #ababab;
+}
+::-webkit-scrollbar-thumb:active
+{  
+    background-color: #4f4f4f;
+}

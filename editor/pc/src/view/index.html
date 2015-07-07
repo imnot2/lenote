@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9; IE=EmulateIE10" />
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/parser.js"></script>
+    <script type="text/javascript" src="js/observer.js"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script type="text/javascript">
+        $(function(){
+            document.oncontextmenu = function(){return false;};
+            window.onhelp = function(){return false};
+            $(document).on('keydown', function(event){
+                if(event.which == 116 || event.which == 123 || event.ctrlKey && event.which == 82 || event.which == 122 || event.ctrlKey && event.which == 78){
+                    window.event.keyCode = 0;
+                    window.event.returnValue = false;
+                    return false;
+                }
+            });
+        });
+        
+        function showHTML(html){
+            $('#main').html(analyze.resolve(html));
+            supernote_audio.init();
+        }
+        
+        function audio_start(id){
+            supernote_audio.start(id);
+        }
+        
+        function audio_pause(id){
+            supernote_audio.pause(id);
+        }
+        
+        function audio_stop(id){
+            supernote_audio.stop(id);
+        }
+        
+        function mix_slideTo(id, second, speed){
+            supernote_audio.slideTo(id, second, speed);
+        }
+    </script>
+  </body>
+</html>

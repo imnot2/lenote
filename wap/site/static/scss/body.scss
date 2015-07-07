@@ -1,0 +1,392 @@
+@import "compass/css3";
+@import "compass/utilities/";
+
+%toolbar{
+    background-color:#e9e9e9;
+    border-bottom: 1px solid #d94a4a;
+    z-index: 999;
+    padding: 12px 21px;
+    .wrap{
+        width: 100%;
+        .ui-toolbar-wrap{
+            background: transparent;
+            border: 0 none;
+            height: 30px;
+            line-height: 30px;
+            .ui-toolbar-button{
+                color:#d94a4a;
+                background-color: transparent;
+                border: 0 none;
+                padding: 0;
+                margin: 0;
+                font-size: 1.2em;
+                span{
+                    font-size: 1.6em;
+                }
+                &.menuBtn{
+                    background: url("../../images/list.png") no-repeat 0 6px transparent;
+                    @include background-size(2.5em);
+                    padding-left: 3.5em;
+                    padding-top: 2px;
+                }
+                &.searchBtn{
+                    background: url("../../images/search.png") no-repeat center transparent;
+                    @include background-size(2em);
+                    span{
+                        text-indent: 100%;
+                        display: block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 24px;
+                    }
+                }
+                &.closeSearch{
+                    background: url("../../images/close2.png") no-repeat center transparent;
+                    @include background-size(1.8em);
+                    span{
+                        text-indent: 100%;
+                        display: block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 24px;
+                    }
+                }
+                &.backBtn{
+                    background: url("../../images/back.png") no-repeat 0 8px transparent;
+                    @include background-size(1.6em 1.8em);
+                    padding-left: 2.5em;
+                    padding-top: 4px;
+                }
+                &.editBtn{
+                    background: url("../../images/edit.png") no-repeat 0 0 transparent;
+                    @include background-size(26px 28px);
+                    margin-right: 2em;
+                    span{
+                        text-indent: 100%;
+                        display: block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 26px;
+                    }
+                }
+                &.moreBtn{
+                    background: url("../../images/more.png") no-repeat 0 0 transparent;
+                    @include background-size(9px 28px);
+                    span{
+                        text-indent: 100%;
+                        display: block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#container{
+    position: relative;
+    .toolbarcontainer{
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        .toolbar{
+            @extend %toolbar;
+        }
+    }
+    
+    .toolbarsubcontainer{
+        z-index: 1000;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        display:none;
+        .toolbarsub{
+            @extend %toolbar;
+            .wrap{
+                .ui-toolbar-wrap{
+                    .ui-toolbar-button{
+                        &.menuBtn.close{
+                            background-image: url('../../images/close2.png');
+                            //background-position: 0 10px;
+                            @include background-size(1.8em);
+                            padding-left: 3.5em;
+                            padding-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .seachWrap{
+        width: 100%;
+        height:40px;
+        display:none;
+        position: absolute;
+        top: 55px;
+        z-index: 2;
+        background-color:#fff;
+        @include clearfix;
+        border-bottom:1px solid rgb(222, 222, 222);
+        .entertBox{
+            height:20px;
+            line-height:20px;
+            font-size:1.8em;
+            padding:10px 15px;
+            margin:0;
+            border:none;
+            outline:none;
+            font-family: Tahoma, 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+            width:85%;
+        }
+        .seachBtn{
+            width:30px;
+            height:40px;
+            margin-right:20px;
+            position:absolute;
+            right:0;
+            top:0;   
+            background: url("../../images/search.png") no-repeat 5px center rgba(0, 0, 0, 0);
+            @include background-size(2em);
+            span{
+                text-indent:100%;  
+            }
+        }
+    }
+    #content{
+        //The adaptive Height
+        position: absolute;
+        width: 100%;
+        top: 55px;
+        bottom: 96px;
+        left: 0;
+        z-index: 1;
+        overflow: hidden;
+        &.note-editor{
+            background-color: #fff;
+            //overflow-y: auto;
+        }
+        &.note-create{
+            background-color: #fff;
+        }
+        ul.list{
+            li{
+                border-bottom: 1px solid #ebebeb;
+                cursor: pointer;
+                &.sep{
+                    background-color: #f5f5f5;
+                    color: #888;
+                    color: #888;
+                    height: 26px;
+                    line-height: 26px;
+                    font-size: 14px;
+                    padding: 0 15px;
+                }
+                &.item{
+                    background-color: #fff;
+                    overflow: hidden;
+                    .note-entry{
+                        .entry{
+                            height: 74px;
+                            padding: 10px 15px;
+                            .title{
+                                color: #333;
+                                font-size: 1.8em;
+                                white-space: nowrap;
+                            }
+                            .summary{
+                                color: #888;
+                                font-size: 14px;
+                                line-height: 16px;
+                                height: 48px;
+                                .sumlist{
+                                    li{
+                                        border:none;                                        
+                                    }
+                                    .bold{
+                                        font-weight: bold;
+                                    }
+                                    .lineThrough{
+                                        text-decoration:line-through;
+                                        vertical-align: middle;
+                                    }
+                                }
+                                .disc{
+                                    list-style: disc inside;
+                                }
+                                .decimal{
+                                    list-style: decimal inside;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .audiobox{
+            height:42px;
+            background: url('../../images/icon_play_normal.png') no-repeat scroll 22px center;
+            background-color:#f1f1f1;
+            color:#888;
+            @include background-size(30px);
+            font-size:14px;
+            text-align:center;
+            line-height:21px;
+            padding:20px 0;
+            position:relative;
+            .audiomask{
+                height:100%;
+                text-align:right;
+                line-height:82px;
+                padding-right:22px;
+                font-size:22px;
+                position:absolute;
+                right:0;
+                top:0;
+            }
+        }
+        .wrap{
+            //position: absolute;
+            //z-index: 1;
+            -webkit-backface-visibility: hidden;
+            padding: 2em 1.6em 0;
+            //background-color: #fff;
+            //min-height: 100%;            
+            .titlecontainer{
+                margin-bottom: 1.6em;
+                input.title{
+                    border: 0 none;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                    outline: 0 none;
+                    color: #333;
+                    font-size: 2.2em;
+                    width: 100%;
+                }
+            }
+            .contentcontainer{
+                .detail{
+                    color: #555;
+                    font-size: 1.6em;
+                    outline: 0 none;
+                    min-height: 90px;
+                    .todo{
+                        line-height:24px;
+                        padding:10px 10px 10px 45px;
+                        border-bottom: 1px dashed #ccc;
+                        background: url('../../images/iconc_checkbox_normal.png') no-repeat scroll 15px center;
+                        font-size:16px;
+                        @include background-size(24px);
+                        @include clearfix;
+                        .title{
+                            float:left;
+                        }
+                        .time{
+                            float:right;
+                        }
+                    }
+                    .rightIcon{
+                        border: 1px solid #ccc;
+                        background: url('../../images/iconc_bell_normal.png') no-repeat scroll right center;
+                        @include background-size(36px);                        
+                        .todo{
+                            border:none;
+                        }
+                    }
+                    .notChecked{
+                        margin-top:20px;
+                    }
+                    .isChecked{
+                        margin-top:20px;
+                        .tip{
+                            font-size:16px;
+                            background: url('../../images/icon_display.png') no-repeat scroll right center;
+                            @include background-size(48px);
+                        }
+                        .off{
+                            background-image: url('../../images/icon_hide.png');
+                        }
+                        .todo{
+                            background-image: url('../../images/iconc_checkbox_active.png');
+                            .title{                                
+                                text-decoration:line-through;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+                textarea.detail{
+                    width: 100%;
+                    color: #999;
+                    font-size: 1.6em;
+                    border: 0 none;
+                    outline: 0 none;
+                    resize: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    
+    #new{
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        margin-left: -3.125em;
+        width: 6.25em;
+        height: 6.25em;
+        z-index: 1000;
+        background: url("../../images/new.png") no-repeat 0 0 transparent;
+        @include background-size(6.25em);
+        cursor: pointer;
+        &.lite{
+            bottom: 28px;
+        }
+    }
+}
+
+#containerLite{
+    @extend #container;
+    #content{
+        bottom: 36px;
+        margin-bottom: 5px;
+    }
+}
+
+#containerClean{
+    @extend #container;
+    #content{
+        bottom: 10px;
+    }
+}
+
+#main{
+    padding: 3em 1.5em 0;
+    text-align:center;
+    .login{
+        color: #fff;
+        background-color:#d94a4a;
+        height: 3em;
+        line-height: 3em;
+        font-size: 2em;
+        margin-bottom:1em;
+        cursor:pointer;
+        @include border-radius(5px);
+    }
+    .register{
+        @extend .login;
+        background-color:#7f7f7f;
+        margin-bottom:1.5em;
+    }
+    .openup{
+        @extend .login;
+        margin-bottom:1.8em;
+    }
+    .copyright{
+        color:#555;
+        font-size: 1.5em;
+    }
+}

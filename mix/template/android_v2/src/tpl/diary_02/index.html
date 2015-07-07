@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="stylesheet" type="text/css" href="../../all.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    </head>
+
+    <body>
+        <div id="ln-tpl">
+        	<div id="header">
+        		<img src="images/default.jpeg" _type="image" id="banner" />
+        		<div class="bar_mask">
+                    <div class="camera">
+                        <div id="date" _type="date">
+                            <span class="day fl" format="d:d"></span>
+                            <div class="mouth_wray fr"><span format="m:m"></span>月</div>
+                            <span class="year fr" format="y:yyyy"></span>
+                        </div>
+                        <div id="weather_wray" class="fl"><img _type ="weather" id="weather" src="images/weather/0.png" txt="true" /><span>晴</span></div>  
+                    </div>        			                  
+        		</div>
+        	</div>
+        	<div id="content">
+        		<div id="text" _type="text" placeholder="thistime" isRichText="true"></div>
+        	</div>
+        	<div id="place_wray">
+        		<textarea maxlength="40" id="place"  format="st:num:ci:di:pr:co" class="fr" _type="place"></textarea>
+        	</div>
+        	
+        </div>
+    </body>
+    <script type="text/javascript" src="../../all.js"></script> 
+    <script type="text/javascript" src="js/message.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>

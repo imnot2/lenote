@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="../internal.js?v1407809339"></script>
+    <link rel="stylesheet" type="text/css" href="attachment.css?v1407809339"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="controller">
+        <!--<span id="divStatus"></span>-->
+        <span id="spanButtonPlaceHolder"></span>
+    </div>
+    <div class="fieldset flash" id="fsUploadProgress"></div>
+    <span id="startUpload" style="display: none;"></span>
+</div>
+<script type="text/javascript" src="../../third-party/swfupload/swfupload.js?v1407809339"></script>
+<script type="text/javascript" src="../../third-party/swfupload/swfupload.queue.js?v1407809339"></script>
+<script type="text/javascript" src="../../third-party/swfupload/fileprogress.js?v1407809339"></script>
+<script type="text/javascript" src="callbacks.js?v1407809339"></script>
+<script type="text/javascript" src="fileTypeMaps.js?v1407809339"></script>
+<script type="text/javascript">
+    var swfupload,
+        filesList=[];
+    editor.setOpt({
+        fileFieldName:"upfile"
+    });
+    window.onload = function () {
+        var settings = {
+            upload_url:editor.options.fileUrl,           //附件上传服务器地址
+            file_post_name:editor.options.fileFieldName,      //向后台提交的表单名
+            flash_url:"../../third-party/swfupload/swfupload.swf?v1407809339",
+            flash9_url:"../../third-party/swfupload/swfupload_fp9.swf?v1407809339",
+            post_params:{'nodeID': window.parent.lenoteDom.editor.data.get('id'), "newItems": window.parent.lenoteDom.editor.data.attachments.getNew()},
+            file_size_limit:"25 MB",                                 //文件大小限制，此处仅是前端flash选择时候的限制，具体还需要和后端结合判断
+            file_types:"*.*",                                         //允许的扩展名，多个扩展名之间用分号隔开，支持*通配符
+            file_types_description:"All Files",                      //扩展名描述
+            file_upload_limit:32,                                   //单次可同时上传的文件数目
+            file_queue_limit:15,                                      //队列中可同时上传的文件数目
+            custom_settings:{                                         //自定义设置，用户可在此向服务器传递自定义变量
+                progressTarget:"fsUploadProgress",
+                startUploadId:"startUpload"
+            },
+            debug:false,
+            button_image_url:"../../themes/default/images/filescan.png?v1407809339",
+            button_width:"100",
+            button_height:"25",
+            button_placeholder_id:"spanButtonPlaceHolder",
+            button_text:'<span class="theFont">'+lang.browseFiles+'</span>',
+            button_text_style:".theFont { font-size:14px;}",
+            button_text_left_padding:10,
+            button_text_top_padding:4,
+            swfupload_preload_handler:preLoad,
+            swfupload_load_failed_handler:loadFailed,
+            file_queued_handler:fileQueued,
+            file_queue_error_handler:fileQueueError,
+            file_dialog_complete_handler:function(numFilesSelected, numFilesQueued) {
+                var me = this;        //此处的this是swfupload对象
+                if (numFilesQueued > 0) {
+                    dialog.buttons[0].setDisabled(true);
+                    var start = $G(this.customSettings.startUploadId);
+                    start.style.display = "";
+                    start.onclick = function(){
+                        me.startUpload();
+                        start.style.display = "none";
+                    };
+                }
+            },
+            upload_start_handler:uploadStart,
+            upload_progress_handler:uploadProgress,
+            upload_error_handler:uploadError,
+            upload_success_handler:function (file, serverData) {
+                try{
+                    var info = eval("("+serverData+")");
+                }catch(e){}
+                var progress = new FileProgress(file, this.customSettings.progressTarget);
+                if(info.state=="SUCCESS"){
+                    progress.setComplete();
+                    progress.setStatus("<span style='color: #0b0;font-weight: bold'>"+lang.uploadSuccess+"</span>");
+                    var _data = {filename: file.name, filesize: file.size, filetype: file.type, info: serverData},
+                         _type = window.parent.lenoteTag.getMediaTypeValue(_data.filename);
+                    var attachment = window.parent.lenoteDom.editor.data.attachments.upload(_data, _type);
+                    attachment && filesList.push(attachment);
+                    progress.toggleCancel(true,this,lang.delSuccessFile);
+                }else{
+                    progress.setError();
+                    progress.setStatus('(' + info.returnCode + ')文件上传失败，容量超出');
+                    progress.toggleCancel(true,this,lang.delFailSaveFile);
+                }
+            },
+            upload_complete_handler:uploadComplete,
+            queue_complete_handler:function(numFilesUploaded){
+                dialog.buttons[0].setDisabled(false);
+            }
+        };
+        swfupload = new SWFUpload( settings );
+        dialog.onok = function(){
+            var map = fileTypeMaps, str="";
+            for(var i=0,ci;ci=filesList[i++];){
+                str += window.parent.lenoteTag.getTag(ci, null, true);
+            }
+            var isIEfix = false;
+            if(UE.browser.ie){
+                if(UE.browser.version < 11 && !/^<img[^>]+?>$/igm.test(str)){ //单独的图片上传不需要添加占位符
+                    try{
+                        isIEfix = true;
+                        editor.execCommand("insertHTML", str + '&nbsp;');
+                    }catch(e){}
+                }
+            }
+            if(!isIEfix) editor.execCommand("insertHTML", str);
+            editor.fireEvent('contentchange');
+            swfupload.destroy();
+        };
+        dialog.oncancel = function(){
+            swfupload.destroy();
+        };
+    };
+</script>
+</body>
+</html>

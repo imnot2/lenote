@@ -1,0 +1,500 @@
+/*
+ *  author: gejian1@lenovo.com
+ *  description: share样式表
+ */
+
+/*定义webkit核心的浏览器滚动条样式*/
+::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-thumb{border-radius:3px;background-color: #aaa;}
+::-webkit-scrollbar-thumb:hover{background-color: #ccc;}
+/*定义css3的占位符样式*/
+::-webkit-input-placeholder{color:#ccc;}
+input:-moz-placeholder{color:#ccc !important;}
+
+/*全局样式*/
+/*html{
+    overflow-x: hidden;
+    overflow-y: auto;
+}*/
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td{
+    margin: 0;
+    padding: 0; 
+}
+html, body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    /*overflow-x: auto;
+    overflow-y: hidden;*/
+}
+body{
+    font: 12px/1.5 Tahoma,"Microsoft Yahei","微软雅黑",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #eee;
+    *position: relative;
+    /*overflow: hidden\9;*/
+}
+ul,li,dl,dt,dd{
+    list-style-type: none;
+}
+input, textarea, select{
+    font-family: inherit;
+}
+a{
+    color: #06A4F3;
+    text-decoration: none;
+    outline: none;
+}
+a:visited{
+    text-decoration: none;
+    color: #2E9BD1;
+}
+a:hover, a:active{
+    text-decoration: underline;
+    color: #2E9BD1;
+}
+.encopy{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -khtml-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+
+/*common style*/
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+.scroll-y{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.ellipsis{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+/*Header Style*/
+#header{
+    font-size: 12px;
+    color: #fff;
+    height: 38px;
+    background: url('/assets/images/top_bg.png') repeat-x 0 0 #8a0000;
+    width: 100%;
+}
+#header a{
+    color: #fff;
+}
+#header a:active,#header a:hover,#header a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+#header h1, #header .client_downloads, #header .links{
+    position: absolute;
+    top: 8px;
+}
+#header h1{
+    left: 12px;
+    background: url("/assets/images/logo-small.png") no-repeat 0 0 transparent;
+    font-size: 14px;
+    width: 122px;
+    height: 37px;
+    top: 0px;
+    overflow: hidden;
+}
+#header h1 a.logo{
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+#header .client_downloads{
+    left: 150px
+}
+#header .client_downloads a{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
+}
+#header .client_downloads .pc{
+    background: url("/assets/images/client/windows_normal.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .pc:hover{
+    background: url("/assets/images/client/windows_hover.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .pc:active{
+    background: url("/assets/images/client/windows_active.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .iphone{
+    background: url("/assets/images/client/iphone_normal.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .iphone:hover{
+    background: url("/assets/images/client/iphone_hover.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .iphone:active{
+    background: url("/assets/images/client/iphone_active.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .android{
+    background: url("/assets/images/client/android_normal.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .android:hover{
+    background: url("/assets/images/client/android_hover.png") no-repeat 0 0 transparent;
+}
+#header .client_downloads .android:active{
+    background: url("/assets/images/client/android_active.png") no-repeat 0 0 transparent;
+}
+#header .links{
+    right:12px;
+    color: #BDB9B9;
+    top: 0;
+    *top: -5px;
+    height: 38px;
+    line-height: 38px;
+}
+#header .links .spaceline{
+    padding: 0 12px;
+    position: relative;
+    top: 8px;
+}
+#header .links .accountinfo{
+    background: url("/assets/images/account.png")  no-repeat 0 0 transparent;
+    padding-left: 25px;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    cursor: default;
+}
+#header a.signin{
+    padding-right: 20px;
+}
+
+/*Main Style*/
+#header, #main, #footer{
+    position: relative;
+    visibility: hidden;
+}
+
+#main{
+    margin-top: 25px;
+}
+#main .wrap{
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#main .wrap #content{
+    float: left;
+    width: 720px;
+    height: 100%
+}
+#main .wrap #content .top_bg, #main .wrap #content .bottom_bg{
+    width: 100%;
+    height: 16px;
+    background: url("/assets/images/corner_top_bg.png") no-repeat 0 0 transparent;
+}
+#main .wrap #content .container{
+    background: url("/assets/images/corner_mid_bg.png") repeat-y 0 0 transparent;
+    padding: 0 20px;
+    overflow: hidden;
+}
+#main .wrap #content .bottom_bg{
+    height: 20px;
+    background-image: url("/assets/images/corner_bottom_bg.png");
+}
+#main .wrap #content .container .caption{
+    padding: 5px 0;
+    /*border-bottom: 1px solid #dedede;*/
+}
+#main .wrap #content .container .caption.error{
+    border-bottom: 0 none;
+    font-size: 30px;
+    color: #333;
+    padding-top: 30px;
+}
+#main .wrap #content .container .caption .info{
+    /*margin-bottom: 10px;*/
+    padding-right: 180px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#main .wrap #content .container .caption .info .title{
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    /*float: left;*/
+}
+#main .wrap #content .container .caption .info .toolbar{
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    display: none;
+}
+#main .wrap #content .container .caption .meta,
+#main .wrap #content .container .caption .tags{
+    font-size: 12px;
+    color: #888;
+}
+#main .wrap #content .container .caption .tags{
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+}
+#main .wrap #content .container .caption .tags span.tagname{
+    display: inline-block;
+    margin-right: 8px;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    color: #c21a17;
+    /*border-radius: 12px;
+    background-color: #F5F8FA;
+    padding: 0px 10px;
+    border: 1px solid #b6bdc3;*/
+}
+
+#main .wrap #content .container .detail{
+    overflow: hidden;
+    padding-top: 5px;
+    /*background: url("/assets/images/linebg.png") repeat-x 0 0 transparent;*/    
+    border-top: 1px solid rgb(242, 238, 238);
+}
+#main .wrap #content .container .detail.error{
+    background: url("/assets/images/unavailable.png") no-repeat 0 50px transparent;
+    height: 100%;
+}
+#main .wrap #content .container .detail .reason{
+    padding-top: 140px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 26px;
+}
+
+#main .wrap #sidebar{
+    float: left;
+    width: 226px;
+    height: 100%;
+    margin-left: 20px;
+}
+#main .wrap #sidebar .logo{
+    width: 226px;
+    height: 223px;
+    background: url("/assets/images/logo_intro.png") no-repeat 0 0 transparent;
+    overflow: hidden;
+}
+#main .wrap #sidebar .logo a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#main .wrap #sidebar .clients{
+    /*border-top: 1px solid #dedede;*/
+    background: url("/assets/images/linebg.png") repeat-x 0 0 transparent;
+    margin-top: 15px;
+    padding-top: 20px;
+}
+#main .wrap #sidebar .clients a{
+    display: block;
+    position: relative;
+    width: 226px;
+    height: 74px;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: url("/assets/images/btn_pc.png") no-repeat 0 0 transparent;
+}
+#main .wrap #sidebar .clients a:hover, #main .wrap #sidebar .clients a:active{
+    text-decoration: none;
+}
+#main .wrap #sidebar .clients a span{
+    display: block;
+    white-space: nowrap;
+}
+#main .wrap #sidebar .clients a span.detail{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    left: 70px;
+    top: 18px;
+    overflow: hidden;
+    /*border: 1px solid #333;*/
+}
+#main .wrap #sidebar .clients a span.title{
+    font-size: 14px;
+    /*position: absolute;
+    top: 18px;
+    left: 70px;*/
+}
+#main .wrap #sidebar .clients a span.desc{
+    -webkit-text-size-adjust:none;
+    /*-webkit-transform: scale(0.90);*/
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+    /*position: absolute;
+    top: 38px;
+    left: 70px;*/
+}
+#main .wrap #sidebar .clients a:hover{
+    background-image: url("/assets/images/btn_pc_hover.png");
+}
+#main .wrap #sidebar .clients a:active{
+    background-image: url("/assets/images/btn_pc_active.png");
+}
+#main .wrap #sidebar .clients a.android{
+    background-image: url("/assets/images/btn_android.png");
+}
+#main .wrap #sidebar .clients a.android:hover{
+    background-image: url("/assets/images/btn_android_hover.png");
+}
+#main .wrap #sidebar .clients a.android:active{
+    background-image: url("/assets/images/btn_android_active.png");
+}
+#main .wrap #sidebar .clients a.iphone{
+    background-image: url("/assets/images/btn_iphone.png");
+}
+#main .wrap #sidebar .clients a.iphone:hover{
+    background-image: url("/assets/images/btn_iphone_hover.png");
+}
+#main .wrap #sidebar .clients a.iphone:active{
+    background-image: url("/assets/images/btn_iphone_active.png");
+}
+#main .wrap #sidebar .clients a.iphone span.title{
+    /*top: 26px;*/
+    position: relative;
+    top: 8px;
+}
+#main .wrap #sidebar .qrcode{
+    margin-left: 8px;
+}
+#main .wrap #sidebar .qrcode img{
+    width: 109px;
+    height: 109px;
+    margin-left: 10px;
+}
+#main .wrap #sidebar .qrcode p{
+    margin-left: 18px;
+}
+
+/*data migrate*/
+body.import #main .wrap{
+    text-align: center;
+}
+body.import #main .wrap a.btn{
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 180px auto 20px;
+    background: url("/assets/images/migrate/btn_start.png") no-repeat 0 0 transparent;
+    color: #a2a2a2;
+    font-size: 22px;
+    line-height: 26px;
+}
+body.import #main .wrap a.btn.start:hover{
+    text-decoration: none;
+    background-image: url("/assets/images/migrate/btn_start_hover.png");
+}
+body.import #main .wrap a.btn span{
+    display: block;
+    padding-top: 54px;
+}
+body.import #main .wrap .msg{
+    background: url("/assets/images/migrate/message_bg.png") no-repeat 0 0 transparent;
+    width: 524px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 18px;
+}
+body.import #main .wrap a.btn.importing{
+    cursor: default;
+    background-image: url("/assets/images/migrate/btn_doing.gif");
+}
+body.import #main .wrap a.btn.finished{
+    cursor: default;
+    background-image: url("/assets/images/migrate/finished.png");
+}
+
+/*Footer Style*/
+/*#footer{
+    margin-top: 10px;
+}*/
+#footer .wrap{
+    width: 840px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#footer .wrap .logo{
+    position: relative;
+    top: 15px;
+}
+#footer .wrap .copyright{
+    color: #AFADAD;
+    font-size: 18px;
+    position: relative;
+    top: -8px;
+    margin-left: 20px;
+}
+
+#flashcontent{
+    position: absolute;
+}
+/*语音笔记*/
+#content .note-audios{
+    color: #888;
+    border-top: 1px solid rgb(242, 238, 238);
+}
+#content .note-audios .tip{
+    float: left;
+    line-height: 50px;
+    margin: 0 5px 0 10px;
+}
+#content .note-audios .audio{  
+    width: 170px;  
+    height: 40px;
+    background: url("/assets/images/attachment/audio_nomarl.png") left center no-repeat scroll;
+    padding-left: 30px;
+    float: left;
+    margin: 5px;
+}
+#content .note-audios .audio.active{    
+    background-image: url("/assets/images/attachment/audio_active.png");
+}
+#content .note-audios .title{
+    font-size: 11px;
+}
+#content .note-audios .info{
+    font-size: 10px;
+}
+#content .note-audios .info .time{
+    margin-left: 20px;
+}

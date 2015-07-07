@@ -1,0 +1,39 @@
+html, body, div, h1, p, a, font{
+    margin:0;
+    padding:0;    
+}
+#editor{ 
+    min-height:360px; 
+    line-height: 24px;/* border-top:1px solid #ccc;*/  
+    padding: 0px 15px 24px; 
+    overflow: hidden; 
+    word-break:break-all; 
+    /*font-size: 15px; */
+    color: #aaa; 
+}
+#editor.active{ 
+    color: #555;
+}
+#createTime{
+    color: rgb(128,128,128); 
+    margin: 15px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    padding-left: 18px;
+    background: url(createtime.png) no-repeat left 1px scroll;
+    background-size:9px 11px;
+    display: none;
+}
+#createTime.show{
+    display: block;
+}
+/*
+ *      默认笔记
+ */
+.default{ color: #333 }
+.default p{ text-align: center;}
+.default .fs24{ font-size: 24px; line-height: 36px; }
+.default .fs18{ font-size: 18px; line-height: 27px; }
+.default .red{ color: #d94a4a;}

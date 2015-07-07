@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="mix.css" />
+    <script type="text/javascript" src="mix.js"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script type="text/javascript">
+        /*
+         * 模拟android方法:
+         *   window.View.getMixIdByResourceId(keyId)          查询资源mkey, 如果返回为空则表示非mix元素
+         *   window.View.getResourceInfoByResourceId(keyId)   查询资源信息, 返回json数据：size title fulltime src mkey starttime
+         */
+        View = {
+            getMixIdByResourceId: function(key){
+                var resources = {
+                    '8fba69ce7b9ccddd891318f0220cda68': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '8dc1b3fd4385c9eccc42839aa964f2a7': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '6df405cd926230aca1d0c9741e58497b': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '8dc1b3fd4385c9ec8042839aa964f2a7': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    'b47211282f4dc1207d05b5fe5955d1f2': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    'c1c17d0677e876ff70f7f8c629b76097': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '2964bf210f5292005638bb144a375834': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    'ef357822d446913a220c003070adbcdc': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '60b916f379f9210340ea28348bc6caaf': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '6db292dd99272a33b72319c063953956': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '356017851a32fb144a1dc1d6bd0d6db0': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    '22a478c612801ae22bc46536826a64e7': '5eaf8dd758e28cadc41c5087abb76c0a',
+                    
+                    '4866c3f671484f022e982139a3a85ef4': 'ce6e7ab569ba0e82438fa4fc482d8fd7',
+                    'e0cbe91a4ebc797f7930fb06fe8ff9f0': 'ce6e7ab569ba0e82438fa4fc482d8fd7',
+                    '0d28ae36be26a842fd59d48334c5ec92': 'ce6e7ab569ba0e82438fa4fc482d8fd7',
+                    '002ca4935e8d4d1bbc22d98df8c5ff41': 'ce6e7ab569ba0e82438fa4fc482d8fd7',
+                    
+                    'c48095c72ae69df61fddaf35ec3679b8': 'aa76e387f307c923a3c2e41cd0664f01',
+                    '01a30e6fc8de8302b3d8fcd0715844c4': 'aa76e387f307c923a3c2e41cd0664f01'
+                };
+                return resources[key];
+            },
+            getResourceInfoByResourceId: function(key){
+                var resources = {
+                    '8dc1b3fd4385c9eccc42839aa964f2a7': {src: 'images/demo/3.jpg', starttime: 14, width: 800, height: 200},
+                    'b631df327b339503127a17dd2077cc50': {src: 'images/demo/13.jpg'},
+                    '6df405cd926230aca1d0c9741e58497b': {size: '18.08KB', title: '9af053e7-79d3-42ed-a764-c9fe6b0e7564.mp3', fulltime: '01:26', starttime: 0},
+                    '8dc1b3fd4385c9ec8042839aa964f2a7': {src: 'images/demo/5.jpg', starttime: 10, width: 150, height: 300},
+                    'b47211282f4dc1207d05b5fe5955d1f2': {src: 'images/demo/2.jpg', starttime: 11},
+                    'f243194194fce8401fbdd6429ec9df88': {size: '5.2MB', title: '天都黑了.mp3', fulltime: '12:18'},
+                    'c1c17d0677e876ff70f7f8c629b76097': {src: 'images/demo/6.jpg', starttime: 13},
+                    '2964bf210f5292005638bb144a375834': {src: 'images/demo/7.jpg', starttime: 15},
+                    'ef357822d446913a220c003070adbcdc': {src: 'images/demo/8.jpg', starttime: 18},
+                    '60b916f379f9210340ea28348bc6caaf': {starttime: 20},
+                    '6db292dd99272a33b72319c063953956': {starttime: 22},
+                    '356017851a32fb144a1dc1d6bd0d6db0': {src: 'images/demo/9.jpg', starttime: 25},
+                    '4866c3f671484f022e982139a3a85ef4': {src: 'images/demo/10.jpg', starttime: 5},
+                    '22a478c612801ae22bc46536826a64e7': {starttime: 28},
+                    'e0cbe91a4ebc797f7930fb06fe8ff9f0': {size: '8.08KB', title: '天黑了.mp3', fulltime: '00:21', starttime: 0},
+                    '0d28ae36be26a842fd59d48334c5ec92': {src: 'images/demo/11.jpg', starttime: 2},
+                    '002ca4935e8d4d1bbc22d98df8c5ff41': {src: 'images/demo/12.jpeg', starttime: 10},
+                    '8fba69ce7b92c0cd891318f0220cda68': {src: 'images/demo/4.jpg'},
+                    '8fba69ce7b9cc0cd891318f0220cda68': {title: 'test.txt', suffix: 'txt', size: '10.50MB'},
+                    '8fba69ce7b9ccddd891318f0220cda68': {title: 'test2.ppt', suffix: 'ppt', size: '11.2KB'},
+                };
+                return resources[key];
+            }
+        };
+        
+        window.onload = function(){
+            //普通元素
+            var html = ['<p>柳州市公安局110报警服务台接到女青年小覃打来的求助电话称，她在柳石路的住所内，将丈夫打得头破血流。</p>'];
+            html.push('<ln-photo key="b631df327b339503127a17dd2077cc50"></ln-photo>');
+            html.push('<div style="color: #999;">原来，丈夫用仿真钻戒作为七夕节礼物送给她，她感觉受骗，一怒之下动了手。</div>');
+            //mix0单种类元素
+            html.push('<ln-photo key="c48095c72ae69df61fddaf35ec3679b8"></ln-photo>');
+            html.push('撤王金平党籍是沉重选择 不知其嫁女儿')
+            html.push('<ln-photo key="01a30e6fc8de8302b3d8fcd0715844c4"></ln-photo>');
+            
+            //附件元素
+            html.push('<ln-attachment key="8fba69ce7b9cc0cd891318f0220cda68"></ln-attachment>&nbsp; <br/>');
+            html.push('<ln-attachment key="8fba69ce7b9ccddd891318f0220cda68"></ln-attachment>');
+            
+            //mix1元素
+            html.push('<ln-photo key="8dc1b3fd4385c9eccc42839aa964f2a7"></ln-photo>');
+            html.push('<ln-photo key="8dc1b3fd4385c9eccc42839aa964f2a7"></ln-photo>');
+            html.push('<ln-audio key="6df405cd926230aca1d0c9741e58497b"></ln-audio>');
+            html.push('<ln-photo key="8dc1b3fd4385c9ec8042839aa964f2a7"></ln-photo>');
+            html.push('&nbsp; <br/><ln-attachment key="8fba69ce7b9ccddd891318f0220cda68"></ln-attachment>&nbsp; <br/>');
+            html.push('胡锦涛回安徽祭祖');
+            //mix1元素嵌套在普通元素里
+            html.push('<div style="color:#666;">他守候在会所的大门外，蹑足于宾馆的走廊中，等待“致命一击”的证据出现。');
+            html.push('<ln-photo key="b47211282f4dc1207d05b5fe5955d1f2"></ln-photo>');
+            html.push('为了取证，他穷尽所能：假装随从，核对账单；购买装置，秘拍偷欢</div>');
+            //mix元素之间的普通元素
+            html.push('<p>当然也有人骂他偷拍隐私<ln-audio key="f243194194fce8401fbdd6429ec9df88"></ln-audio>行事下作。</p>');
+            //mix1元素
+            html.push('<ln-photo key="c1c17d0677e876ff70f7f8c629b76097"></ln-photo>');
+            html.push('<ln-photo key="2964bf210f5292005638bb144a375834"></ln-photo>');
+            html.push('<ln-photo key="2964bf210f5292005638bb144a375834"></ln-photo>');
+            html.push('<ln-photo key="ef357822d446913a220c003070adbcdc"></ln-photo>');
+            html.push('<ln-text key="60b916f379f9210340ea28348bc6caaf">媒体称美国可能大范围调查投行雇佣中国官二代</ln-text>');
+            //mix1元素中嵌套mix1元素
+            html.push('<ln-text key="6db292dd99272a33b72319c063953956">色盲司机无证醉驾闯红灯');
+            html.push('<ln-photo key="356017851a32fb144a1dc1d6bd0d6db0"></ln-photo>');
+            html.push('猫咪偷吃狗粮装死</ln-text>');
+            
+            //mix1元素嵌套mix2元素
+            html.push('<ln-photo key="4866c3f671484f022e982139a3a85ef4"></ln-photo>');
+            html.push('<ln-text key="22a478c612801ae22bc46536826a64e7">男士们经常被问到的一个问题是“老婆和妈妈同时掉水里，你先救谁？”</ln-text>');
+            
+            //普通元素
+            html.push('<div style="color:red;">如今，这个问题有了升级版“<ln-text key="60b916f379f9210380ea28348bc6caaf">老婆和狗狗<ln-text key="abc">同<ln-photo key="c1c17d0677e876ff70f7f8c629b76097"></ln-photo>时</ln-text>掉水里，你先救谁？</ln-text>”</div>');
+            //mix2
+            html.push('<ln-audio key="e0cbe91a4ebc797f7930fb06fe8ff9f0"></ln-audio>');
+            html.push('<span>如今，南非男子格兰汉姆·安利用实际行动给出了答案：先救狗狗。</span>')
+            html.push('<ln-photo key="0d28ae36be26a842fd59d48334c5ec92"></ln-photo>');
+            html.push('<ln-photo key="002ca4935e8d4d1bbc22d98df8c5ff41"></ln-photo>');
+            
+            //不包含在mix中的普通元素
+            html.push('周永康6月23日视察齐鲁石化');
+            html.push('<div>微博上，法官买春事件正持续发酵。有人评价老陈具备典型的“上海人特点”——思维缜密、耐心细致、隐忍数月、出手刁钻……，有人夸他以专业的手法完成了一场“基督山式的复仇”</div>')
+            html.push('<ln-photo key="8fba69ce7b92c0cd891318f0220cda68"></ln-photo>');
+            
+            //添加原始的字符串的查看
+            document.querySelector('#main').outerHTML = '<div id="source" style="border: 2px solid #A59E9E;margin: 10px;padding: 10px;color: #999;">' + html.join('') + '</div><div id="main"></div>';
+            
+            analyze.init(html.join(''), 320, true);
+        };
+    </script>
+  </body>
+</html>

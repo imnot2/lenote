@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="../internal.js"></script>
+    <link rel="stylesheet" type="text/css" href="attachment.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="controller">
+        <!--<span id="divStatus"></span>-->
+        <span id="spanButtonPlaceHolder"></span>
+    </div>
+    <div class="fieldset flash" id="fsUploadProgress"></div>
+    <span id="startUpload" style="display: none;"></span>
+</div>
+
+<script type="text/javascript" src="../../third-party/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="../../third-party/swfupload/swfupload.queue.js"></script>
+<script type="text/javascript" src="../../third-party/swfupload/fileprogress.js"></script>
+<script type="text/javascript" src="callbacks.js"></script>
+<script type="text/javascript" src="fileTypeMaps.js"></script>
+<script type="text/javascript">
+    var swfupload,
+        filesList=[];
+    editor.setOpt({
+        fileFieldName:"upfile"
+    });
+    window.onload = function () {
+        var settings = {
+            upload_url:editor.options.fileUrl,           //附件上传服务器地址
+            file_post_name:editor.options.fileFieldName,      //向后台提交的表单名
+            flash_url:"../../third-party/swfupload/swfupload.swf",
+            flash9_url:"../../third-party/swfupload/swfupload_fp9.swf",
+            //post_params:{"PHPSESSID":"<?php echo session_id(); ?>"}, //解决session丢失问题
+            post_params:{'nodeID': window.parent.lenoteDom.editor.data.get('id'), "newItems": window.parent.lenoteDom.editor.data.attachments.getNew()},
+            file_size_limit:"25 MB",                                 //文件大小限制，此处仅是前端flash选择时候的限制，具体还需要和后端结合判断
+            file_types:"*.*",                                         //允许的扩展名，多个扩展名之间用分号隔开，支持*通配符
+            file_types_description:"All Files",                      //扩展名描述
+            file_upload_limit:32,                                   //单次可同时上传的文件数目
+            file_queue_limit:15,                                      //队列中可同时上传的文件数目
+            custom_settings:{                                         //自定义设置，用户可在此向服务器传递自定义变量
+                progressTarget:"fsUploadProgress",
+                startUploadId:"startUpload"
+            },
+            debug:false,
+
+            // 按钮设置
+            button_image_url:"../../themes/default/images/filescan.png",
+            button_width:"100",
+            button_height:"25",
+            button_placeholder_id:"spanButtonPlaceHolder",
+            button_text:'<span class="theFont">'+lang.browseFiles+'</span>',
+            button_text_style:".theFont { font-size:14px;}",
+            button_text_left_padding:10,
+            button_text_top_padding:4,
+
+            // 所有回调函数 in handlers.js
+            swfupload_preload_handler:preLoad,
+            swfupload_load_failed_handler:loadFailed,
+            file_queued_handler:fileQueued,
+            file_queue_error_handler:fileQueueError,
+            //选择文件完成回调
+            file_dialog_complete_handler:function(numFilesSelected, numFilesQueued) {
+                var me = this;        //此处的this是swfupload对象
+                if (numFilesQueued > 0) {
+                    dialog.buttons[0].setDisabled(true);
+                    var start = $G(this.customSettings.startUploadId);
+                    start.style.display = "";
+                    start.onclick = function(){
+                        me.startUpload();
+                        start.style.display = "none";
+                    };
+                }
+            },
+            upload_start_handler:uploadStart,
+            upload_progress_handler:uploadProgress,
+            upload_error_handler:uploadError,
+            upload_success_handler:function (file, serverData) {
+                try{
+                    var info = eval("("+serverData+")");
+                }catch(e){}
+                var progress = new FileProgress(file, this.customSettings.progressTarget);
+                if(info.state=="SUCCESS"){
+                    progress.setComplete();
+                    progress.setStatus("<span style='color: #0b0;font-weight: bold'>"+lang.uploadSuccess+"</span>");
+                    
+                    //filesList.push({url:info.url,type:info.fileType,original:info.original});
+                    var _data = {filename: file.name, filesize: file.size, filetype: file.type, info: serverData},
+                         _type = window.parent.lenoteTag.getMediaTypeValue(_data.filename);
+                    //var attachment = window.parent.lenoteDom.editor.data.attachments.upload(_data, 640);
+                    var attachment = window.parent.lenoteDom.editor.data.attachments.upload(_data, _type);
+                    attachment && filesList.push(attachment);
+                    
+                    //这时可以通过添加参数设置删除按钮是否可见: fileprogress.js->现在已通过添加class解决已上传文件不显示删除按钮
+                    progress.toggleCancel(true,this,lang.delSuccessFile);
+                }else{
+                    progress.setError();
+                    //progress.setStatus(info.state);
+                    //progress.setStatus(info.msg);
+                    progress.setStatus('(' + info.returnCode + ')文件上传失败，容量超出');
+                    progress.toggleCancel(true,this,lang.delFailSaveFile);
+                }
+
+            },
+            //上传完成回调
+            upload_complete_handler:uploadComplete,
+            //队列完成回调
+            queue_complete_handler:function(numFilesUploaded){
+                dialog.buttons[0].setDisabled(false);
+//                var status = $G("divStatus");
+//                var num = status.innerHTML.match(/\d+/g);
+//                status.innerHTML = ((num && num[0] ?parseInt(num[0]):0) + numFilesUploaded) +lang.statusPrompt;
+            }
+        };
+        swfupload = new SWFUpload( settings );
+        //点击OK按钮
+        dialog.onok = function(){
+            var map = fileTypeMaps, str="";
+            for(var i=0,ci;ci=filesList[i++];){
+                //var src = editor.options.UEDITOR_HOME_URL + "dialogs/attachment/fileTypeImages/"+(map[ci.type]||"icon_default.png");
+                //str += "<p style='line-height: 16px;'><img src='"+ src + "' _src='"+src+"' />" +
+                //       "<a href='"+ci.url+"'>" + ci.title + "</a></p>";
+                
+                //str += '<a class="attachment noselect ' + ci.ext + '" key="' + ci.localID + '" href="' + ci.url + '" resource="attachment" title="' + ci.title + '" onselectstart="return false;" unselectable="on" contentEditable="false" target="_blank">' +
+                //          '<span class="info">' +
+                //          '<span class="title"><span class="name">' + ci.name + '</span><span class="ext">' + ci.type + '</span><span class="c"></span></span>' +
+                //          //'<span class="desc"><span class="ctime">' + ci.utime + '</span>,<span class="size">' + ci.sizeof + '</span></span>' +
+                //          '<span class="desc">' + ci.sizeof + '</span>' +
+                //          '</span></a><br/>';
+                
+                //当通过附件上传图片、音频时自动转成ln-audio/ln-photo等标签与pc/android统一，不支持的音频还是显示成附件的样子、只是在上传时转成ln-audio
+                str += window.parent.lenoteTag.getTag(ci, null, true);
+            }
+            //editor.execCommand("insertHTML",str);
+            //处理IE下的bug
+            var isIEfix = false;
+            if(UE.browser.ie){
+                //var _selection = editor.selection, _range = _selection.getRange();
+                //解决ie7-10插入第二个附件时鼠标定位的错位
+                //if(UE.browser.version < 11 && UE.browser.version > 7){
+                if(UE.browser.version < 11 && !/^<img[^>]+?>$/igm.test(str)){ //单独的图片上传不需要添加占位符
+                    try{
+                        //var _node = _range.endContainer,
+                        //     _isAttach = _node && (_node.getAttribute('class') == 'attachskin' || _node.className == 'attachskin' || _node.getAttribute('className') == 'attachskin');
+                        //if(_node && _node.nodeType == 1 && _node.nodeName.toLowerCase() == 'span' && _isAttach){
+                        //    editor.execCommand("insertHTML", str + '&nbsp;');
+                        //}
+                        //editor.execCommand("insertHTML", '&#8203;');
+                        isIEfix = true;
+                        editor.execCommand("insertHTML", str + '&nbsp;');
+                    }catch(e){}
+                    //_range.setStartAfter(_range.endContainer).setCursor(false, true);
+                    //_range.setStartBefore(UE.dom.domUtils.getNextDomNode(_range.endContainer)).setCursor(false, true);
+                }
+            }
+            if(!isIEfix) editor.execCommand("insertHTML", str);
+            editor.fireEvent('contentchange');
+            swfupload.destroy();
+        };
+        dialog.oncancel = function(){
+            swfupload.destroy();
+        };
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+p, strong, 
+dl, dt, dd, ul, ol, li, input {
+    margin: 0;
+    padding: 0;
+}
+body,
+button, input {
+    font: 12px/1.5 Tahoma,"Microsoft Yahei","微软雅黑",Helvetica,Arial,sans-serif;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { border: none; margin: 5px; } 
+
+button, input, select, textarea {
+    font-size: 100%; 
+}
+input{ width: 10px;overflow-x:visible;overflow-y:visible;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clearfix:after {clear: both;content: ".";display: block;font-size: 0;height: 0;visibility: hidden;}
+.fl{ float: left;}
+.ftb{font-weight:bold;}
+.btn{ padding: 0;  border: none;font-family:'sans-serif';}
+.ellipsis{white-space: nowrap; -o-text-overflow: ellipsis;-khtml-text-overflow:ellipsis;text-overflow: ellipsis;}
+.inputwrap{position:absolute; left: 0; top:0; overflow:hidden; text-align: left;}
+
+/*附件*/
+.attach_box{ width:270px; height:80px; overflow: hidden; margin:10px 5px 0 0;  background:#ECF0F3 left 4px no-repeat; display:inline-block; position:relative; }
+.attach_box .inputwrap{padding-left:72px; padding-top: 18px; width: 270px; height: 80px;}
+.attach_box .btn{background-color:#ECF0F3;}
+.attach_box .name{ font-weight:bold;}
+.attach_box .suffix{ font-weight:bold;}
+.attach_box .size{ position:absolute; left:72px;top:47px; font-size:12px; color:#999; }
+
+/*音频*/
+.audio_box { height: 92px; width: 280px; overflow: hidden; margin: 5px;  background:url(default/images/play.png) no-repeat; display:inline-block; position:relative; }
+.audio_box .inputwrap{padding-left:75px; padding-top: 25px;width: 280px; height: 92px;}
+.audio_box .btn{background:transparent;}
+.audio_box .name{ font-weight:bold;}
+.audio_box .suffix{ font-weight:bold;}
+.audio_box .date{ position:absolute; left:160px;top:47px;font-size:12px; color:#999;}
+.audio_box .size{  position:absolute; left:75px;top:47px; font-size:12px; color:#999;}
+/*滚动条*/
+html{
+	scrollbar-arrow-color: rgb(222,222,222);
+	scrollbar-face-color:rgb(206,206,206);
+	scrollbar-3dlight-color:rgb(222,222,222);
+	scrollbar-highlight-color:rgb(222,222,222);
+	scrollbar-shadow-color:rgb(222,222,222);
+	scrollbar-darkshadow-color:rgb(222,222,222);
+	scrollbar-track-color:rgb(222,222,222);
+	scrollbar-base-color:rgb(222,222,222);
+}

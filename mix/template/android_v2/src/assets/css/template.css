@@ -1,0 +1,133 @@
+/* Golbal Settings */
+html, body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    font: 12px/1.5 Tahoma,"Microsoft Yahei","微软雅黑",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    /*font-size: 12px;*/
+    color: #333;
+    overflow-x: hidden;
+    word-break:break-all;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /*display: none;*/
+    visibility: hidden;
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size:0;
+    visibility: hidden;
+}
+@-webkit-keyframes shine-timeline{
+    from{-webkit-box-shadow: 0 0 5px #bbb;}
+    50%{-webkit-box-shadow: 0 0 10px #3F7ADF;}
+    to{-webkit-box-shadow: 0 0 5px #bbb;}
+}
+.light-timeline{
+    border-radius: 4em;
+    -webkit-animation-name: shine-timeline;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+.loading{
+    /*background: url("assets/images/loading.gif") no-repeat 0 0 transparent;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;*/
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #FCFCFC;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -30px;
+    overflow: hidden;
+}
+textarea{
+    background-color: transparent;
+    resize: none;
+    font-family: Helvetica,"冬青黑体","华文黑体";
+}
+/*textarea[_placeholder]{
+    resize: none;
+}
+textarea::-webkit-input-placeholder{
+    color: #fff;
+}*/
+
+/* Template and Controls settings */
+#ln-tpl{
+    /*display: none;*/
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    position: absolute;
+}
+/*.view .text, .view .contacts{
+    text-overflow: ellipsis;
+}*/
+.view .ellipsis{
+    text-overflow: ellipsis;
+}
+.ells{
+    display: none;
+    color: #fff;
+    position: relative;
+    left: 2px;
+    /*top: -6px;
+    font-weight: bold;*/
+}
+.view .ells{
+    display: inline;
+}
+.text, .contacts, .place{
+    height: 30px;
+    line-height: 30px;
+    /*padding: 5px 2px;*/
+    padding: 5px;
+    outline: none;
+}
+.date, .time{
+    padding: 5px 2px;
+}
+.image{
+    border: 2px dashed #c7c7c7; /*#ccc*/
+    /*border-width: 2px;
+    border-image:url("assets/images/dashed.png") 2 repeat;*/
+}
+#ln-tpl.view .image,
+.image.active{
+    border-color: transparent;
+}
+.audio{
+    display: block;
+    border: 0 none;
+    background: url("../images/audio/record.png") no-repeat 0 0 transparent;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+.audio.active{
+    background-image: url("../images/audio/record_active.png");
+}
+.audio.play{
+    background-image: url("../images/audio/play.png");
+}
+.audio.stop{
+    background-image: url("../images/audio/stop.png");
+}
+.view .audio:not([rid]){
+    visibility: hidden;
+}

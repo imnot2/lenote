@@ -1,0 +1,16 @@
+.sumlist{}
+.sumlist li{
+	border: none;
+}
+
+.notChecked .rightIcon{
+	height: 50px;
+	background: url() no-repeat scroll right center;
+	border: 1px solid #000;
+}
+.rightIcon .select{
+	
+}
+.rightIcon .select .time{
+	display: none;
+}

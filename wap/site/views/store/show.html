@@ -1,0 +1,48 @@
+doctype html
+html
+    include header
+    if F.isEmpty(item)
+        body
+    else
+        - var download = C.config.store.download + item.authorID + '/' + item.tid
+        body(class="datasource btn-progress-text _#{item.tid}" data-id="#{item.id}" data-tid="#{item.tid}" data-dw="#{download}/#{item.tid}.zip")
+            #container.show
+                #main
+                    if !F.isEmpty(flash)
+                        ul#message
+                            each v, k in flash
+                                li(class="#{k}")= v
+                    .contentwrap
+                        if !F.isEmpty(item)
+                            - var download = C.config.store.download + item.authorID + '/' + item.tid
+                            .slider-wrap
+                                ul.slider
+                                    if !F.isEmpty(item.thumbnail)
+                                        each thumb in item.thumbnail
+                                            - var img = download + '/thumbnail/' + thumb.fileName
+                                            li.thumb: img(src="#{img}" alt="thumb.#{thumb.index}" onerror="javascript:this.removeAttribute('onerror');this.src='../images/tpl_default.png'")
+                                
+                                .sliderNav
+                                    if !F.isEmpty(item.thumbnail)
+                                        each thumb, index in item.thumbnail
+                                            a(class="point#{index == 0? ' active' : ''}" rel="#{index}") #{index + 1}
+                            
+                            .detail
+                                h1 模板详情
+                                table(cellpadding="0" cellspacing="0")
+                                    tr
+                                        td.head 开发者：
+                                        td.value=item.author
+                                    tr
+                                        td.head 版本：
+                                        td.value=item.version
+                                    tr
+                                        td.head 大小：
+                                        td.value=F.h.calFileSize(item.fileSize)
+                                    tr
+                                        td.head 发布时间：
+                                        td.value=F.h.dateFormat(item.releaseTime)
+                                h2.intro 模板介绍:
+                                    p=F.h.filterXSS(item.introduction)
+            
+            include footer

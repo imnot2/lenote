@@ -1,0 +1,1675 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"set",
+				"setTimeout(function, milliseconds);"
+			],
+			[
+				"get",
+				"getList"
+			],
+			[
+				"res",
+				"resources"
+			],
+			[
+				"re",
+				"resources"
+			],
+			[
+				"o",
+				"oSize"
+			],
+			[
+				"todo",
+				"todoMask"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"h",
+				"html"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"clo",
+				"coloseBtn"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"child",
+				"children"
+			],
+			[
+				"cli",
+				"clientResourceID"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"f",
+				"font-weight"
+			],
+			[
+				"content",
+				"contents"
+			],
+			[
+				"style",
+				"styleType"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"uti",
+				"utils"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"we",
+				"weather_wray"
+			],
+			[
+				"parent",
+				"parent"
+			],
+			[
+				"con",
+				"control"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ban",
+				"background-image"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"setEnd",
+				"setEnd"
+			],
+			[
+				"createTe",
+				"createTextNode"
+			],
+			[
+				"fill",
+				"fillChar"
+			],
+			[
+				"end",
+				"endContainer"
+			],
+			[
+				"find",
+				"findLastNode"
+			],
+			[
+				"pub",
+				"publicLink"
+			],
+			[
+				"preLis",
+				"preList"
+			],
+			[
+				"isE",
+				"isEmptyBlock"
+			],
+			[
+				"getEl",
+				"getElementsByTagName"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"is",
+				"isMarked"
+			],
+			[
+				"TR",
+				"true"
+			],
+			[
+				"NO",
+				"noteID"
+			],
+			[
+				"TAG",
+				"tagID"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"e",
+				"editor"
+			],
+			[
+				"removeA",
+				"removeAttr"
+			],
+			[
+				"sp",
+				"split"
+			],
+			[
+				"attr",
+				"attrs"
+			],
+			[
+				"nodety",
+				"nodeType"
+			],
+			[
+				"inn",
+				"innerText"
+			],
+			[
+				"par",
+				"parentNode"
+			],
+			[
+				"remov",
+				"remove"
+			],
+			[
+				"star",
+				"startContainer"
+			],
+			[
+				"previ",
+				"previousSibling"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"fir",
+				"firstChild"
+			],
+			[
+				"next",
+				"nextList"
+			],
+			[
+				"pr",
+				"previousSibling"
+			],
+			[
+				"nex",
+				"nextSibling"
+			],
+			[
+				"setE",
+				"setEndAfter"
+			],
+			[
+				"node",
+				"nodeName"
+			],
+			[
+				"col",
+				"collapse"
+			],
+			[
+				"clone",
+				"cloneNode"
+			],
+			[
+				"first",
+				"firstChild"
+			],
+			[
+				"last",
+				"lastChild"
+			],
+			[
+				"_tag",
+				"_tags"
+			],
+			[
+				"name",
+				"names"
+			],
+			[
+				"_t",
+				"_util"
+			],
+			[
+				"w",
+				"wrap"
+			],
+			[
+				"vi",
+				"viewWidth"
+			],
+			[
+				"img",
+				"imgmaxw"
+			],
+			[
+				"ad",
+				"adjustImages"
+			],
+			[
+				"que",
+				"querySelectorAll"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"has",
+				"hasContent"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"fi",
+				"fireEvent"
+			],
+			[
+				"fn",
+				"fnName"
+			],
+			[
+				"JustifyR",
+				"右对齐：JustifyRight"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"I",
+				"I18N"
+			],
+			[
+				"rep",
+				"replace"
+			],
+			[
+				"css",
+				"csstext"
+			],
+			[
+				"line",
+				"lineheight"
+			],
+			[
+				"inser",
+				"insertBefore"
+			],
+			[
+				"clon",
+				"cloneNode"
+			],
+			[
+				"qu",
+				"querySelector"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"coll",
+				"collapsed"
+			],
+			[
+				"key",
+				"keyBoradIsShow"
+			],
+			[
+				"ke",
+				"keyBoradIsShow"
+			],
+			[
+				"ind",
+				"indentcount"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"start",
+				"start"
+			],
+			[
+				"v",
+				"viewh"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"src",
+				"scrolltop"
+			],
+			[
+				"in",
+				"insertNode"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"getA",
+				"getAttribute"
+			],
+			[
+				"cre",
+				"createBookmark"
+			],
+			[
+				"remo",
+				"removeChild"
+			],
+			[
+				"rang",
+				"range"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"inset",
+				"insertBefore"
+			],
+			[
+				"remove",
+				"removeChild"
+			],
+			[
+				"crea",
+				"createRange"
+			],
+			[
+				"setA",
+				"setAttribute"
+			],
+			[
+				"mouse",
+				"mouseup"
+			],
+			[
+				"query",
+				"querySelectorAll"
+			],
+			[
+				"tem",
+				"tempArr"
+			],
+			[
+				"getR",
+				"getRange"
+			],
+			[
+				"hasC",
+				"hasContents"
+			],
+			[
+				"createT",
+				"createTextNode"
+			],
+			[
+				"u200",
+				"u200B"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"las",
+				"lastChild"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "site/static/js/view/show.js",
+			"settings":
+			{
+				"buffer_size": 9016,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "site/static/js/store.js",
+			"settings":
+			{
+				"buffer_size": 5040,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/static/js/view/list.js",
+			"settings":
+			{
+				"buffer_size": 9015,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/static/js/model/search.js",
+			"settings":
+			{
+				"buffer_size": 2430,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/static/js/collection/note.js",
+			"settings":
+			{
+				"buffer_size": 2189,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/views/note/index.html",
+			"settings":
+			{
+				"buffer_size": 1477,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/model/clipper.js",
+			"settings":
+			{
+				"buffer_size": 8397,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/test/collect.js",
+			"settings":
+			{
+				"buffer_size": 1678,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 3651 files for \"requirejs.config\"\n\n0 matches across 0 files\n\n\nSearching 87 files for \"new list\"\n\nE:\\wap\\site\\static\\js\\lib\\backbone.js:\n  662      },\n  663  \n  664:     // Update a collection by `set`-ing a new list of models, adding new ones,\n  665      // removing models that are no longer present, and merging models that\n  666      // already exist in the collection, as necessary. Similar to **Model#set**,\n  ...\n  757  \n  758      // When you have more items than you want to add or remove individually,\n  759:     // you can reset the entire set with a new list of models, without firing\n  760      // any granular `add` or `remove` events. Fires `reset` when finished.\n  761      // Useful for bulk operations and optimizations.\n\n2 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 769,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "site/config/config.development.js",
+			"settings":
+			{
+				"buffer_size": 1095,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "site/node_modules/node-readability/src/helpers.js",
+			"settings":
+			{
+				"buffer_size": 20593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/node_modules/node-readability/src/readability.js",
+			"settings":
+			{
+				"buffer_size": 5885,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "site/static/scss/body.scss",
+			"settings":
+			{
+				"buffer_size": 12464,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Bookmarks: Clear All"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/wap",
+		"/E/wap/.idea",
+		"/E/wap/site",
+		"/E/wap/site/static",
+		"/E/wap/site/static/js",
+		"/E/wap/site/static/js/collection",
+		"/E/wap/site/static/js/model",
+		"/E/wap/site/static/js/view"
+	],
+	"file_history":
+	[
+		"/E/wap/site/model/store.js",
+		"/E/wap/site/node_modules/xss/example/strip_tag.js",
+		"/C/Users/user/Desktop/快速排序.js",
+		"/E/wap/site/knode/k/dispatch.js",
+		"/E/wap/site/node_modules/jsdom/lib/jsdom.js",
+		"/E/wap/site/static/js/model/seach.js",
+		"/E/wap/site/static/js/model/user.js",
+		"/E/wap/site/static/js/model/note.js",
+		"/E/wap/site/static/js/main.js",
+		"/E/wap/site/static/js/view/create.js",
+		"/E/wap/site/static/html/403.html",
+		"/E/wap/site/views/particle/footer.jade",
+		"/E/wap/site/knode/k/router.js",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor_degub/fnTool.js",
+		"/E/wap/site/model/clipper.js",
+		"/E/wap/site/test/collect.js",
+		"/E/wap/site/views/note/show.html",
+		"/E/wap/site/static/scss/global.scss",
+		"/E/wap/site/static/scss/body.scss",
+		"/E/wap/site/static/css/lib/global.css",
+		"/C/Users/user/Desktop/backbone.js",
+		"/E/wap/site/static/css/lib/body.css",
+		"/E/wap/site/static/scss/todos.css",
+		"/E/wap/site/static/html/404.html",
+		"/E/wap/site/static/js/lib/dateformat.js",
+		"/E/wap/site/static/js/helper.js",
+		"/E/wap/site/static/js/view/list.js",
+		"/E/wap/site/views/note/index.html",
+		"/E/wap/site/static/html/announce.html",
+		"/E/wap/site/static/js/lib/gmu/gmu.js",
+		"/E/wap/site/static/js/view/home.js",
+		"/E/wap/site/static/js/collection/note.js",
+		"/E/mix/template/android_v2/src/tpl/diary_02/index.html",
+		"/E/editor/IOS/3.0 todo/edit/editor.js",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/E/website/v2/assets/js/ueditor/dialogs/video/video.css",
+		"/E/website/v2/assets/css/main.css",
+		"/D/Program Files/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/E/website/v2/notes/index.html",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/ueditor.all.js",
+		"/E/doingInMySelf/js/edit_api.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/index.html",
+		"/D/Program Files/SuperNotes/resource/ueditor/ueditor.all.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/weather.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/css/main.css",
+		"/E/mix/template/android_v2/src/tpl/diary_01/js/main.js",
+		"/E/mix/template/android_v2/src/assets/js/template/layout.js",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/fnTool.js",
+		"/E/editor/IOS/noteEditorV3.0/edit/js/controls.js",
+		"/E/website/v2/assets/js/source/dom.js",
+		"/E/editor/IOS/3.0 todo/edit/index_edite.html",
+		"/E/mix/template/android_v2/src/assets/js/template/api.js",
+		"/E/mix/template/android_v2/src/assets/js/template/client.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/place.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls.js",
+		"/E/mix/template/android_v2/src/assets/js/template.js",
+		"/E/mix/template/android_v2/src/tpl/diary_02/css/main.css",
+		"/E/mix/template/android_v2/src/tpl/diary_02/js/message.js",
+		"/E/mix/template/android_v2/src/tpl/diary_02/js/main.js",
+		"/E/editor/IOS/3.0 todo/edit/js/controls.js",
+		"/E/editor/IOS/3.0 todo/edit/dist/utils_v3.js",
+		"/E/mix/template/android_v2/src/assets/js/lenote.js",
+		"/E/website/v2/assets/js/source/stats/avatar.js",
+		"/E/website/v2/assets/js/source/stats/trackDownload.js",
+		"/E/website/v2/assets/js/source/analyze.js",
+		"/E/mix/template/android_v2/src/all.js",
+		"/E/wap/site/knode/index.js",
+		"/E/website/v2/suggest.html",
+		"/E/wap/site/static/js/require.js",
+		"/E/wap/site/static/js/lib/domReady.js",
+		"/E/wap/site/static/js/app.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/image.js",
+		"/E/mix/template/android_v2/src/tpl/travel_01/css/main.css",
+		"/E/wap/site/static/js/lib/backbone.js",
+		"/C/Users/user/Downloads/jquery-1.11.1.js",
+		"/C/Users/user/Desktop/index_edite.html",
+		"/E/wap/site/node_modules/koa-views/index.js",
+		"/E/wap/site/static/scss/top.scss",
+		"/E/website/v2/assets/js/all.js",
+		"/E/wap/site/knode/k/lib/couchbase-co.js",
+		"/E/wap/site/node_modules/koa/lib/context.js",
+		"/E/wap/site/node_modules/koa/node_modules/delegates/index.js",
+		"/E/wap/site/node_modules/koa/lib/application.js",
+		"/E/wap/site/model/collect.js",
+		"/E/wap/site/assist/mobile-usage/index.js",
+		"/E/wap/site/model/db.js",
+		"/E/wap/site/assist/apache.txt",
+		"/E/wap/site/app.js",
+		"/E/wap/site/config/config.development.js",
+		"/C/Users/user/Downloads/hammer.js-master/hammer.js",
+		"/E/mix/template/android_v2/src/assets/js/lib/hammer.js",
+		"/E/mix/template/android_v2/src/assets/js/helper.js",
+		"/E/mix/template/android_v2/src/assets/js/template/helper.js",
+		"/E/mix/template/android_v2/src/assets/js/template/controls/time.js",
+		"/E/mix/template/android_v2/src/tpl/travel_01/js/main.js",
+		"/E/mix/template/android_v2/src/tpl/diary_01/js/message.js",
+		"/E/editor/IOS/noteEditorV2.0/edit/js/utils_V2.js",
+		"/C/Users/user/Documents/Tencent Files/510036379/FileRecv/trigger.html",
+		"/E/wap/site/static/js/router.js",
+		"/E/website/v2/assets/js/source/lenote.js",
+		"/E/website/v2/assets/js/source/view.js",
+		"/E/wap/site/views/index.html",
+		"/E/editor/IOS/noteEditorV3.0/edit/dist/utils_v3.js",
+		"/E/website/v2/assets/js/source/user.js",
+		"/E/website/v2/assets/js/source/main.js",
+		"/E/wap/site/model/getClients.js",
+		"/E/wap/site/knode/k/functions/helper.js",
+		"/E/wap/site/knode/k/functions/import.js",
+		"/E/wap/site/knode/k/functions/mobile-detect.js",
+		"/E/wap/site/knode/k/functions/date.js",
+		"/E/express/microblog/app.js",
+		"/E/express/microblog/routes/index.js",
+		"/E/express/microblog/routes/user.js",
+		"/E/wap/site/views/particle/header.jade",
+		"/E/wap/site/node_modules/koa/node_modules/accepts/index.js",
+		"/E/wap/site/node_modules/koa-conditional-get/index.js",
+		"/E/editor/pc/ueditor-src/_src/core/domUtils.js",
+		"/E/editor/pc/ueditor-src/_src/plugins/list.js",
+		"/C/Users/user/Downloads/ueditor1_4_2-src/_src/core/Range.js",
+		"/C/Users/user/Downloads/ueditor1_4_2-src/_src/core/domUtils.js",
+		"/E/wap/site/node_modules/jade/index.js",
+		"/E/wap/tasks/build.js",
+		"/E/editor/pc/ueditor-src/_src/plugins/keystrokes.js",
+		"/E/editor/IOS/noteEditorV3.0/edit/js/listener.js",
+		"/D/lenote-test/lenote-internal-r2939-2014_06_04/resource/ueditor/ueditor.all (2).js",
+		"/D/lenote-test/lenote-experiment-lan-revision_1937-2014_04_10/resource/ueditor/ueditor.all.js"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"E:\\wap\\site\\static",
+			"E:\\wap",
+			"E:\\wap\\site",
+			"E:\\wap\\site\\node_modules",
+			"E:\\wap",
+			"E:\\wap\\site\\static",
+			"E:\\wap\\site",
+			"E:\\wap",
+			"E:\\wap\\site\\static",
+			"E:\\mix\\template\\android_v2\\src",
+			"E:\\wap\\site\\static",
+			"E:\\wap",
+			"E:\\wap\\site\\static",
+			"E:\\wap",
+			"E:\\wap\\site\\static",
+			"E:\\mix\\template\\android_v2\\src",
+			"E:\\website\\v2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getPagination",
+			"length",
+			"clearNotes",
+			"new list",
+			"requirejs.config",
+			"couchbase",
+			"asynRequest",
+			"textContent",
+			"getContent",
+			"Readability",
+			"getContent",
+			"grabArticle",
+			"prepArticle",
+			"cleanHeaders",
+			"getClassWeight",
+			"getConfigFromArguments",
+			"env",
+			"-= 25",
+			"closeSearch",
+			"asynRequest",
+			"error",
+			"include",
+			"entertBox",
+			"clipper",
+			"access",
+			"consuming",
+			"/collect",
+			"seachBtn",
+			"toolbarcontainer",
+			"seachBtn",
+			"toolbarsubcontainer",
+			"toolbarSub",
+			"menuBtn",
+			"注销",
+			"IgnoreTag",
+			"stripIgnoreTag",
+			"console.error",
+			"stripi",
+			"default.jpg",
+			"audiobox",
+			"scroll",
+			"dateFormat",
+			"footer",
+			"_tag",
+			"popup-menu",
+			"popupmenu",
+			"form",
+			"正在加载列表",
+			"set",
+			"%;",
+			"logo_sorry",
+			"notify",
+			"正在加载列表...",
+			"styleType",
+			"initialize",
+			"getNote",
+			"animate",
+			"summ",
+			"animate",
+			"sumlist",
+			"background-size",
+			"format",
+			"getNote",
+			"connectST",
+			"},\n",
+			"hammer.min.map",
+			"image.png",
+			"images/image",
+			"textarea",
+			"encopy",
+			"缩略图",
+			"},\n",
+			"find",
+			"unix",
+			"fromCharCode",
+			"kk",
+			"listStyle",
+			"getThumb",
+			"缩略图",
+			"getNoteStyle",
+			"isAudioNote",
+			"showAudio",
+			"startOrPause",
+			"updateIconState",
+			"cleanIconState",
+			"try",
+			"showAudio",
+			"supernote_audio",
+			"\"imgBtn\"",
+			"showAudio",
+			"init:",
+			"init",
+			"supernote_audio",
+			"parser_api",
+			"parse_api",
+			"getPlayer",
+			"supernote-audio",
+			"home",
+			"showAudio",
+			"api",
+			"setDisabled",
+			"disabled",
+			"-disabled",
+			"disabled",
+			"edui-state-disabled",
+			"insertBtn",
+			"getLast",
+			"showAudio",
+			"attachments:",
+			"tags_decode",
+			"getNoteStyle",
+			"getLast",
+			"home.js",
+			"behavior",
+			".kk",
+			"ending",
+			".kk",
+			"showAudio",
+			"autoset",
+			"summ",
+			"disc",
+			"desc",
+			"todos",
+			"setHeight",
+			"calElemHeight",
+			"note-detail",
+			"setHeight",
+			"editor.event.resize"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			":",
+			"\"",
+			"keyID",
+			"shareToken",
+			"shareKey",
+			"shareToken",
+			"fs24",
+			"fs18",
+			"key=\"aaaaaaaaaaa\"",
+			"",
+			".1.102",
+			"/v2/",
+			".src",
+			"utils",
+			"le.options",
+			"",
+			" || ",
+			"||",
+			" == ",
+			"==",
+			" && ",
+			"&&",
+			"place",
+			"resize(",
+			"this.isIE()",
+			"",
+			"cSelect",
+			"changeSelection",
+			"change_Selection",
+			"change_Range",
+			"aaaaaa",
+			"	",
+			"",
+			"document",
+			"Util.setAttr",
+			"document",
+			"editor",
+			"Util",
+			"Util.findParent",
+			"Util.getTarget",
+			"Util",
+			"Util.insertWhiteNode",
+			"Util",
+			"Util.addWrap",
+			"Util.select",
+			"document",
+			"size",
+			"time",
+			"title",
+			"",
+			"attach_delete_wrap",
+			"_parse",
+			"_util",
+			"updateAudioStatus",
+			"undateAudioStatus",
+			"which",
+			"$tag",
+			"_tag.attr",
+			"getAttr",
+			"tag.getAttribute",
+			"this.unTags",
+			"_tool.ue",
+			"sTime",
+			"",
+			"resource.fullTime",
+			"resource.fName",
+			"resource.fSize",
+			"resource.fSuffix",
+			"resource.fUrl",
+			"oUtil",
+			"editor",
+			"util"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "E:\\wap"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "site/static/js/view/show.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8439,
+								8439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 61.0,
+						"translation.y": 3240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site/static/js/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2110,
+								2110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1946.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "site/static/js/view/list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9015,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								576,
+								576
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "site/static/js/model/search.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "site/static/js/collection/note.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								909,
+								1849
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "site/views/note/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								630,
+								630
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "site/model/clipper.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6207,
+								6214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2895.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "site/test/collect.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1475,
+								1475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 356.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 769,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										217,
+										225
+									],
+									[
+										571,
+										579
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "site/config/config.development.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "site/node_modules/node-readability/src/helpers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12597,
+								12603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7005.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "site/node_modules/node-readability/src/readability.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "site/static/scss/body.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4371,
+								4371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 713.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"store.js",
+				"site\\static\\js\\store.js"
+			],
+			[
+				"store",
+				"site\\model\\store.js"
+			],
+			[
+				"i",
+				"E:\\website\\v2\\assets\\js\\ueditor\\dialogs\\image\\image.js"
+			],
+			[
+				"u",
+				"E:\\website\\v2\\assets\\js\\source\\utils.js"
+			],
+			[
+				"",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"all",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"li",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"l",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\listener.js"
+			],
+			[
+				"fn",
+				"D:\\lenote-test\\lenote-internal-r2939-2014_06_04\\resource\\ueditor\\fnTool.js"
+			],
+			[
+				"ex",
+				"D:\\lenote-test\\lenote-internal-r2827-2014_05_26\\resource\\ueditor\\example.html"
+			],
+			[
+				"v",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\js\\utils_V3.js"
+			],
+			[
+				"a",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\css\\api.css"
+			],
+			[
+				"in",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\index_edite.html"
+			],
+			[
+				"vn",
+				"E:\\editor\\IOS\\noteEditorV3.0\\edit\\js\\I18N.js"
+			],
+			[
+				"confi",
+				"D:\\lenote-test\\lenote-experiment-revision_1977-2014_04_14\\resource\\ueditor\\ueditor.config.js"
+			],
+			[
+				"co",
+				"E:\\mix\\template\\android\\js\\core.js"
+			],
+			[
+				"f",
+				"D:\\lenote-test\\lenote-experiment-revision_1952-2014_04_10\\resource\\ueditor\\fnTool.js"
+			],
+			[
+				"if",
+				"E:\\PC_UEDITOR\\debug\\ueditor\\themes\\iframe.css"
+			],
+			[
+				"ue",
+				"D:\\Program Files\\SuperNotes\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"ut",
+				"C:\\Users\\user\\Desktop\\Editor\\edit\\js\\utils.js"
+			],
+			[
+				"api",
+				"C:\\Users\\user\\Desktop\\edit\\js\\api.js"
+			],
+			[
+				"uti",
+				"C:\\Users\\user\\Desktop\\edit\\js\\utils.js"
+			],
+			[
+				"ap",
+				"C:\\Users\\user\\Desktop\\edit\\js\\api.js"
+			],
+			[
+				"e",
+				"D:\\release\\resource\\ueditor\\example.html"
+			],
+			[
+				"mix",
+				"C:\\Users\\user\\Desktop\\mix\\mix.js"
+			],
+			[
+				"ued",
+				"D:\\release\\resource\\ueditor\\ueditor.all.js"
+			],
+			[
+				"/",
+				"D:\\release\\resource\\ueditor\\example.html"
+			],
+			[
+				"pa",
+				"D:\\release\\resource\\view\\js\\parser.js"
+			],
+			[
+				"d",
+				"E:\\editor\\pc\\src\\view2\\demo.html"
+			],
+			[
+				"p",
+				"E:\\editor\\pc\\src\\view2\\js\\parser.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\mix\\template\\android_v2\\src\\template.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

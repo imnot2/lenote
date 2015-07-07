@@ -1,0 +1,1 @@
+models = new Array();function D(name){    models[name] = models[name] || require('./' + name);    return models[name];}module.exports = D;

@@ -1,0 +1,47 @@
+doctype html
+html
+    include ../particle/header
+    
+    body
+        if F.isEmpty(client)
+            #containerClean
+                .toolbarcontainer: .toolbar: .wrap
+                .toolbarsubcontainer: .toolbarsub: .wrap
+                
+                #content
+                    ul.list
+                
+                #new.lite
+                
+                #foot_gap_clean
+        else
+            #containerLite
+                .toolbarcontainer: .toolbar: .wrap
+                .toolbarsubcontainer: .toolbarsub: .wrap
+                .seachWrap
+                    input.entertBox
+                    .seachBtn: span
+                
+                #content
+                    ul.list
+                
+                #new
+                
+                #foot_gap_lite
+        
+        - var action = 'list'
+        include ../particle/footer
+        
+        script#note(type="text/html").
+            <% if(note.isSep === true){ %>
+                <li class="sep" id="sep_<%= note.datetime %>"><%= note.date %></li>
+            <% }else{%>
+                <li class="item" _id="<%= note.noteID %>">
+                    <div class="note-entry">
+                        <div class="entry">
+                            <div class="title ellipsis"><%= note.title %></div>
+                            <div class="summary ellipsis"><%= note.summary %></div>
+                        </div>
+                    </div>
+                </li>
+            <% } %>

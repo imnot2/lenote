@@ -1,0 +1,523 @@
+#header1{
+    font-size: 12px;
+    color: #fff;
+    height: 38px;
+    background: url('/assets/images/top_bg.png') repeat-x 0 0 #8a0000;
+    position: relative;
+    width: 100%;
+}
+#header1 a{
+    color: #fff;
+}
+#header1 a:active,
+#header1 a:hover,
+#header1 a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+#header1 h1,
+#header1 .client_downloads,
+#header1 .links{
+    position: absolute;
+    top: 8px;
+}
+#header1 h1{
+    left: 12px;
+    background: url("/assets/images/logo-small.png") no-repeat 0 0 transparent;
+    font-size: 14px;
+    width: 122px;
+    height: 37px;
+    top: 0px;
+    overflow: hidden;
+}
+#header1 h1 a.logo{
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+#header1 .client_downloads{
+    left: 150px
+}
+#header1 .client_downloads a{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
+}
+#header1 .client_downloads .pc{
+    background: url("/assets/images/client/windows_normal.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .pc:hover{
+    background: url("/assets/images/client/windows_hover.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .pc:active{
+    background: url("/assets/images/client/windows_active.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .iphone{
+    background: url("/assets/images/client/iphone_normal.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .iphone:hover{
+    background: url("/assets/images/client/iphone_hover.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .iphone:active{
+    background: url("/assets/images/client/iphone_active.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .android{
+    background: url("/assets/images/client/android_normal.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .android:hover{
+    background: url("/assets/images/client/android_hover.png") no-repeat 0 0 transparent;
+}
+#header1 .client_downloads .android:active{
+    background: url("/assets/images/client/android_active.png") no-repeat 0 0 transparent;
+}
+#header1 .links{
+    right:12px;
+    color: #BDB9B9;
+    top: 0;
+    *top: -5px;
+    height: 38px;
+    line-height: 38px;
+}
+#header1 .links .spaceline{
+    padding: 0 12px;
+    position: relative;
+    top: 8px;
+}
+#header1 .links .accountinfo{
+    background: url("/assets/images/account.png")  no-repeat 0 0 transparent;
+    padding-left: 25px;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    cursor: default;
+}
+#header1 a.signin{
+    padding-right: 20px;
+}
+
+#container.loged #main{
+    padding-top: 60px;
+}
+#main .wrap{
+    margin: 25px auto;
+    width: 700px;
+    *padding-top: 25px;
+}
+.loged #main .wrap{
+    *padding-top: 0;
+}
+
+/*help*/
+#container.help{
+    background-color: #eee;
+}
+#container.help #header, #container.help #header1{
+    background-color: #fff;
+}
+#container.help.loged #main{
+    padding-top: 0;
+}
+#container.help #main .caption{
+    font-size: 24px;
+    color: #333;
+}
+#container.help #main .caption .wrap{
+    width: 1024px;
+}
+#container.help #main .qas{
+    background-color: #fff;
+    padding: 35px 0 15px;
+}
+#container.help #main .qas .wrap{
+    width: 1024px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#container.help #main .qas .wrap .qa{
+    margin-bottom: 15px;
+}
+#container.help #main .qas .wrap .qa .title{
+    background: url("/assets/images/qa.png") no-repeat 0 0 transparent;
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    color: #333;
+    margin-bottom: 5px;
+}
+#container.help #main .qas .wrap .qa .reply{
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    background: url("/assets/images/replay.png") no-repeat 28px 8px transparent;
+    text-indent: 40px;
+    padding-left: 5px;
+}
+#container.help #main .suggest{
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+#container.help #main .suggest .wrap{
+    width: 1024px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#container.help #main .suggest .wrap a{
+    display: block;
+    width: 112px;
+    height: 42px;
+    line-height: 42px;
+    background: url("/assets/images/btn_gray.png") no-repeat 0 0 transparent;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+#container.help #main .suggest .wrap a:hover{
+    background-image: url("/assets/images/btn_gray_hover.png");
+    text-decoration: none;
+}
+#container.help #main .suggest .wrap a:active{
+    background-image: url("/assets/images/btn_gray_active.png");
+    text-decoration: none;
+}
+#container.help #main .suggest .wrap .desc{
+    color: #666;
+    font-size: 16px;
+}
+
+/*suggest*/
+#container.suggest{
+    background-color: #eee;
+}
+#container.suggest #header, #container.suggest #header1{
+    background-color: #fff;
+}
+#container.suggest.loged #main{
+    padding-top: 0;
+}
+#container.suggest #main .caption{
+    font-size: 16px;
+    color: #333;
+}
+#container.suggest #main .caption .wrap{
+    width: 1024px;
+}
+#container.suggest #main .caption .wrap .title{
+    font-size: 30px;
+}
+#container.suggest #main .form{
+    background-color: #fff;
+    padding: 35px 0 15px;
+}
+#container.suggest #main .form .wrap{
+    width: 1024px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#container.suggest #main .form .wrap .error{
+    color: #F10606;
+    font-size: 14px;
+    padding-left: 20px;
+}
+#container.suggest #main .form .wrap .type{
+    color: #333;
+}
+#container.suggest #main .form .wrap .type .title{
+    font-size: 18px;
+}
+#container.suggest #main .form .wrap .type .desc{
+    margin: 5px 0 10px;
+    font-size: 16px;
+}
+#container.suggest #main .form .wrap .type .desc span{
+    display: inline-block;
+    background: url("/assets/images/radio.png") no-repeat 0 0 transparent;
+    padding-left: 22px;
+    margin-right: 80px;
+    height: 18px;
+    line-height: 18px;
+    cursor: pointer;
+}
+#container.suggest #main .form .wrap .type .desc span.active{
+    background-image: url("/assets/images/radio_active.png");
+}
+#container.suggest #main .form .wrap .contact{
+    margin: 20px 0;
+    color: #333;
+}
+#container.suggest #main .form .wrap .contact .title{
+    font-size: 18px;
+}
+#container.suggest #main .form .wrap .contact input{
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    width: 280px;
+    color: #333;
+    border: 1px solid #f1f1f1;
+    margin-top: 5px;
+    background-color: #FDFDFD;
+}
+#container.suggest #main .form .wrap .category{
+    margin: 20px 0;
+    color: #333;
+}
+#container.suggest #main .form .wrap .category .title{
+    font-size: 18px;
+}
+#container.suggest #main .form .wrap .category .selection{
+    position: absolute;
+    z-index: 800;
+    background-color: #fff;
+    font-size: 18px;
+    color: #333;
+    width: 130px;
+    border: 2px solid #f1f1f1;
+}
+#container.suggest #main .form .wrap .category .selection i{
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    right: 8px;
+    top: 15px;
+    background: url("/assets/images/btn_arrow.png") no-repeat 0 0 transparent;
+}
+#container.suggest #main .form .wrap .category .selection.active i{
+    background-image: url("/assets/images/btn_arrow_red.png");
+}
+#container.suggest #main .form .wrap .category .selection ul li{
+    height: 36px;
+    line-height: 36px;
+}
+#container.suggest #main .form .wrap .category .selection ul li a{
+    padding-left: 10px;
+    display: block;
+    color: #333;
+}
+#container.suggest #main .form .wrap .category .selection ul li a:hover{
+    background-color:  #e3e3e3;
+    text-decoration: none;
+}
+#container.suggest #main .form .wrap .describe{
+    margin: 60px 0 20px;
+    color: #333;
+}
+#container.suggest #main .form .wrap .describe .title{
+    font-size: 18px;
+}
+#container.suggest #main .form .wrap .describe textarea{
+    border: 1px solid #f1f1f1;
+    background-color: #FDFDFD;
+    width: 280px;
+    height: 225px;
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+}
+#container.suggest #main .form .wrap .submit{
+    margin: 20px 0 10px;
+}
+#container.suggest #main .form .wrap .submit a.btn{
+    display: inline-block;
+    width: 122px;
+    height: 48px;
+    line-height: 48px;
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 18px;
+    background: url("/assets/images/btn_suggest.png") no-repeat 0 0 transparent;
+}
+#container.suggest #main .form .wrap .submit a.btn:hover{
+    background-image: url("/assets/images/btn_suggest_hover.png");
+    text-decoration: none;
+}
+#container.suggest #main .form .wrap .submit a.btn:active{
+    background-image: url("/assets/images/btn_suggest_active.png");
+    text-decoration: none;
+}
+#container.suggest #main .form .wrap .submit .desc{
+    color: #888;
+    font-size: 18px;
+}
+
+#container.download{
+    background-color: #F8F8F8;
+}
+#container.download.loged #main{
+    padding-top: 0;
+}
+#container.download #main .nav .wrap{
+    width: 980px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+#container.download #main .nav li{
+    float: left;
+    margin-right: 55px;
+}
+#container.download #main .nav li.spacing{
+    border-left: 2px solid #ddd;
+    height: 180px;
+}
+#container.download #main .nav a{
+    display: inline-block;
+    /*width: 126px;*/
+    height: 190px;
+    background: url("/assets/images/nd/windows.png") no-repeat 18px 0 transparent;
+    color: #333;
+    font-size: 12px;
+}
+#container.download #main .nav a:hover{
+    text-decoration: none;
+    background-image: url("/assets/images/nd/windows_hover.png");
+}
+#container.download #main .nav a:active{
+    background-image: url("/assets/images/nd/windows_active.png");
+}
+#container.download #main .nav a.android{
+    background-image: url("/assets/images/nd/android.png");
+}
+#container.download #main .nav a.android:hover{
+    background-image: url("/assets/images/nd/android_hover.png");
+}
+#container.download #main .nav a.android:active{
+    background-image: url("/assets/images/nd/android_active.png");
+}
+#container.download #main .nav a.iphone{
+    width: 126px;
+    background-position-x: 0;
+    background-image: url("/assets/images/nd/iphone.png");
+}
+#container.download #main .nav a.iphone:hover{
+    background-image: url("/assets/images/nd/iphone_hover.png");
+}
+#container.download #main .nav a.iphone:active{
+    background-image: url("/assets/images/nd/iphone_active.png");
+}
+#container.download #main .nav a.apad{
+    background-image: url("/assets/images/nd/apad.png");
+}
+#container.download #main .nav a.apad:hover{
+    background-image: url("/assets/images/nd/apad_hover.png");
+}
+#container.download #main .nav a.apad:active{
+    background-image: url("/assets/images/nd/apad_active.png");
+}
+#container.download #main .nav a span{
+    position: relative;
+    top: 135px;
+    display: inline-block;
+    white-space: nowrap;
+}
+#container.download #main .nav a span em{
+    font-style: normal;
+    display: block;
+    font-size: 20px;
+}
+#container.download #main .content{
+    background-color: #fff;
+}
+#container.download #main .content .item,
+#container.download #main .content .item .preview{
+    height: 450px;
+}
+#container.download #main .content .item{
+    white-space: nowrap;
+    overflow: hidden;
+}
+#container.download #main .content .item .wrap{
+    width: 980px;
+    margin-bottom: 0;
+    margin-top: 0;
+    *padding-top: 0;
+    border-top: 2px solid #ddd;
+}
+#container.download #main .content .item.pc{
+    border-top: 1px solid #eee;
+}
+#container.download #main .content .item.pc .wrap{
+    border-top: 0 none;
+}
+#container.download #main .content .item .preview{
+    width: 570px;
+    float: left;
+}
+#container.download #main .content .item .explain{
+    float: left;
+    margin-top: 65px;
+    width: 410px;
+    overflow: hidden;
+}
+#container.download #main .content .item .explain .client.case{
+    font-size: 16px;
+}
+#container.download #main .content .item .explain p{
+    margin: 0;
+}
+#container.download #main .content .item .explain .title{
+    font-size: 24px;
+    color: #333;
+}
+#container.download #main .content .item .explain .subtitle{
+    font-size: 14px;
+    color: #888;
+}
+#container.download #main .content .item .explain .client{
+    margin-top: 20px;
+    white-space: normal;
+}
+#container.download #main .content .item .explain .client .wait{
+    color: #be0800;
+    font-size: 24px;
+}
+#container.download #main .content .item .explain .client a.btn{
+    display: inline-block;
+    position: relative;
+    width: 237px;
+    height: 67px;
+    line-height: 67px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: url("/assets/images/nd/btn_dw.png") no-repeat 0 0 transparent;
+}
+#container.download #main .content .item .explain .client a.btn:hover{
+    text-decoration: none;
+    background-image: url("/assets/images/nd/btn_dw_hover.png");
+}
+#container.download #main .content .item .explain .client a.btn:active{
+    background-image: url("/assets/images/nd/btn_dw_active.png");
+}
+#container.download #main .content .item .explain .client a.btn span.title{
+    font-size: 26px;
+    color: #f4f4f4;
+    font-weight: normal;
+    cursor: pointer;
+}
+#container.download #main .content .item .explain .client p.scope{
+    color: #999;
+    font-size: 14px;
+    margin: 10px 0 0 10px;
+}
+#container.download #main .content .item .explain .client p.info{
+    margin: 10px 0 0 10px;
+    color: #333;
+    font-size: 12px;
+}
+#container.download #main .content .item .explain .client p.info span{
+    padding-right: 15px;
+}
+#container.download #main .content .item .explain .client .qrcode{
+    margin-left: 60px;
+    width: 80px;
+    height: 80px;
+}
+#container.download #main .content .item .explain .client .store{
+    margin: 10px 0 0 10px;
+}

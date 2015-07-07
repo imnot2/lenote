@@ -1,0 +1,88 @@
+@import "compass/layout";
+@import "compass/css3";
+
+@include sticky-footer(96px, '#container', '#foot_gap', '#footer');
+@include sticky-footer(36px, '#containerLite', '#foot_gap_lite', '#footerLite');
+@include sticky-footer(10px, '#containerClean', '#foot_gap_clean', '#footerClean');
+
+#footer{
+    z-index: 1;
+    .client{
+        overflow:hidden;
+        display:block;
+        img{
+            @include inline-block;
+            width: 100%;
+            height: 96px;
+        }
+        .close{
+            @include inline-block;
+            background: url("../../images/close.png") no-repeat 0 0 transparent;
+            width: 2em;
+            height: 2em;
+            @include background-size(2em);
+            position: absolute;
+            top: 50%;
+            right: 3%;
+            margin-top: -1em;
+        }
+    }
+    &.hide{
+        display:none;
+    }
+}
+
+#footerLite{
+    @extend #footer;
+    background-color: #f1f1f1;
+    border-top: 1px solid #dedede;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    span.download{
+        font-size: 14px;
+        color:#555;
+        .client{
+            display: inline;
+            color:#d94a4a;
+            text-decoration:none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &.detail{
+        background-color: #fff;
+        border-top: 0 none;
+        height: 36px;
+        line-height: 36px;
+        text-align: left;
+        #notetime{
+            //position: absolute;
+            //bottom: 0;
+            //z-index: 1000;
+            //width: 100%;
+            //height: 3.5em;
+            //line-height: 3.5em;
+            height: 36px;
+            line-height: 36px;
+            background: url("../../images/note.png") no-repeat 18px 9px #fff;
+            @include background-size(16px);
+            span{
+                font-size: 1.5em;
+                color: #ababab;
+                &.icon{
+                    padding-left: 40px;
+                }
+                &.time{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+#footerClean{
+    @extend #footer;
+    background-color: #fff;
+}

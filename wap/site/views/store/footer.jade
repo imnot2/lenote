@@ -1,0 +1,13 @@
+script(src='/m/js/require.js' data-main='/m/js/store')
+
+script#btnTPL(type="text/html").
+    <% if(type == 'open'){ %>
+        <div class="btn open"><span>打开</span></div>
+    <% }else if(type == 'progress'){ %>
+        <div class="btn progress"><span class="used"></span></div>
+    <% }else if(type == 'progress.text') { %>
+        <div class="text">下载中...</div>
+        <div class="btn progress"><span class="used"></span></div>
+    <% }else{ %>
+        <div class="btn free"><span>免费</span></div>
+    <% } %>

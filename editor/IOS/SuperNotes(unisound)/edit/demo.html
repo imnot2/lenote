@@ -1,0 +1,103 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+        <link href="css/api.css" type="text/css" rel="stylesheet">        
+    </head>
+    <body>
+        <div id="editor" contenteditable="false" style="border-top:1px solid red"></div>
+        <a id="createTime"></a>            
+    </body>
+     <script type="text/javascript" src="script/hammer.min.js"></script>
+     <script type="text/javascript" src="script/xss.js"></script>
+     <script type="text/javascript" src="script/base64.js"></script>
+     <script type="text/javascript" src="editor.js"></script>
+     <script type="text/javascript" src="script/I18N.js"></script>
+     <script type="text/javascript">    
+        editor.init('editor','createTime');
+        //给编辑器注册事件
+        editor.listener();
+        //获取html里所有keys
+        function getAllKeys() { 
+            return editor.api.getAllKeys();
+        };
+        //获取ummary
+        function getSummary(num) {
+            return editor.api.getSummary(num);
+        };
+        //获取Html
+        var getHtml=function () {
+            return editor.options.node.innerHTML;
+        };
+        //获取转换后的文本?html
+        function getContent() {
+            return editor.controls.getContent();
+        };        
+        //插入附件
+        function insertAttach(obj) {
+            editor.controls.insertFile(obj);
+        };
+        //转换html 注入编辑器
+        function setContent(str,width,str2,createtime) {
+            editor.controls.setContent(str,width,str2,createtime);
+        };
+        //是否焦点
+        function isFocus() {
+            return document.activeElement.id == 'editor';
+        };
+        //取消焦点
+        function cancelFocus() {
+            document.activeElement.blur(); 
+        };
+        function setHeight(height){
+            editor.api.setHeight(height);
+        }; 
+        function getTextNode() {
+            return editor.api.getTextNode();
+        };
+        function getNewKeys(){
+            return editor.options.newkeys.join(",");
+        };
+        function adjustTop(val,needScroll){
+            editor.api.adjustTop(val,needScroll);
+        };
+        function keyBoardStatuses(bool){
+            editor.api.keyBoardStatuses(bool);
+        };
+        function resetPhoto(key,src,width){
+            editor.api.resetPhoto(key,src,width);
+        };
+        function isDefaultNote(bool){
+            editor.api.isDefaultNote(bool);
+        };
+        function hasContent(){
+            return editor.controls.hasContent() ? '1' : '0';
+        };
+        function setLanguage(str){
+            editor.api.setLanguage(str);
+        };
+        function isLoaded(){
+            return editor.api.isLoaded();
+        }
+        //命令参考
+         /*            
+            加粗：Bold
+            斜体：Italic
+            下划线：Underline
+            插入有序列表：InsertOrderedList
+            插入无序列表：InsertUnorderedList
+            超出：Outdent
+            缩进：Indent
+            左对齐：JustifyLeft
+            中对齐：JustifyCenter
+            右对齐：JustifyRight
+            撤销：Undo
+            重做：Redo
+            字体大小：FontSize
+         */
+        function cmd(cmdName,val){
+            editor.cmd(cmdName,val);
+        }
+    </script>
+</html>
